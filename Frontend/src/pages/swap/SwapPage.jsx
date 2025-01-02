@@ -1,28 +1,14 @@
-import {
-  Box,
-  Button,
-  Container,
-  ToggleButton,
-  ToggleButtonGroup,
-  Typography,
-} from "@mui/material";
+import { Box, Button, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useState } from "react";
 import { colorLibrary } from "../../color-library";
 
 export default function SwapPage() {
   const { bg, boxBg, text, bgBuy, bgSell } = colorLibrary;
   const [activeTab, setActiveTab] = useState("buy");
-  const [radius, setRadius] = useState("0 1rem 1rem 0");
 
   const handleChange = (_, newAlignment) => {
     if (newAlignment !== null) {
       setActiveTab(newAlignment);
-    }
-    if (newAlignment === "buy") {
-      setRadius("1rem 0 0 1rem");
-    }
-    if (newAlignment === "sell") {
-      setRadius("0 1rem 1rem 0");
     }
   };
 
@@ -55,12 +41,7 @@ export default function SwapPage() {
           Back
         </Button>
       </Box>
-      <Box
-        display={"flex"}
-        // bgcolor={bg}
-        width={"100%"}
-        justifyContent={"center"}
-      >
+      <Box display={"flex"} width={"100%"} justifyContent={"center"}>
         <ToggleButtonGroup
           onChange={handleChange}
           exclusive
