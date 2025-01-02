@@ -7,7 +7,9 @@ import LinearProgress, {
 import { Box, Typography } from "@mui/material";
 import { colorLibrary } from "../color-library";
 
-export default function MemeCoinLinearProgress() {
+export default function MemeCoinLinearProgress({ bondingCurve }) {
+  const bondingPercentage = (bondingCurve / 1500) * 100;
+
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 10,
     borderRadius: 5,
@@ -25,9 +27,9 @@ export default function MemeCoinLinearProgress() {
       <Typography variant="caption" color={colorLibrary.bgBuy}>
         BONDING CURVE
       </Typography>
-      <BorderLinearProgress variant="determinate" value={50} />
+      <BorderLinearProgress variant="determinate" value={bondingPercentage} />
       <Typography variant="caption" color={colorLibrary.text}>
-        50%
+        {bondingPercentage.toFixed(1)}%
       </Typography>
     </Box>
   );

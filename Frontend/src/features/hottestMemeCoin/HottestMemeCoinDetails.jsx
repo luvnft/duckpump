@@ -7,18 +7,15 @@ import {
   Typography,
 } from "@mui/material";
 
+import { useHomeContext } from "../../context/HomePageProvider";
 import { colorLibrary } from "../../color-library";
 import MemeCoinIMHT from "../../ui/MemeCoinIMHT";
 import { useNavigate } from "react-router-dom";
 
-const memeCoinDetails = {
-  img: "duck.jpg",
-  mcap: "11,11",
-  holders: "200",
-  txs: "420",
-};
-
 export default function HottestMemeCoinDetails() {
+  const { hottestMemeCoin } = useHomeContext();
+
+  const { tokenName, mcap, holders, txns } = hottestMemeCoin?.[0];
   const navigate = useNavigate();
 
   function handleNavigate() {
@@ -44,8 +41,8 @@ export default function HottestMemeCoinDetails() {
             padding={"1rem 0"}
           >
             {/* //*title */}
-            <Typography textTransform={"uppercase"}>
-              mamadcoin is skyrocketing 🚀
+            <Typography textTransform={"uppercase"} fontWeight={600}>
+              {tokenName} is skyrocketing 🚀
             </Typography>
 
             <Box
@@ -57,7 +54,12 @@ export default function HottestMemeCoinDetails() {
             >
               {/* //*details: Image , Mcap , Holders , Txs*/}
               <Box component="div" textAlign={"center"} width={"45%"}>
-                <MemeCoinIMHT details={memeCoinDetails} />
+                <MemeCoinIMHT
+                  mcap={mcap}
+                  holders={holders}
+                  txns={txns}
+                  showImg={true}
+                />
               </Box>
 
               {/* //*duck gif */}
