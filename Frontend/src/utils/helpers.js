@@ -49,7 +49,6 @@ export function getCustomRelativeTime(createdAt) {
 }
 
 export function formatBigPrice(value) {
-  console.log(value);
   if (value >= 1e9) {
     return (value / 1e9).toFixed(2) + "B"; // Billions
   } else if (value >= 1e6) {

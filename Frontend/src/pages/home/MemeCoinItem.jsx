@@ -24,6 +24,7 @@ export default function MemeCoinItem({
   mcap,
   holders,
   txns,
+  bondingCurve,
 }) {
   return (
     <Card sx={{ bgcolor: colorLibrary.boxBg, marginY: 2 }}>
@@ -55,7 +56,7 @@ export default function MemeCoinItem({
           </Box>
 
           {/* //*Progress Bar */}
-          <MemeCoinLinearProgress />
+          <MemeCoinLinearProgress bondingCurve={bondingCurve} />
         </CardContent>
       </CardActionArea>
     </Card>

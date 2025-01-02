@@ -22,9 +22,10 @@ export default function MemeCoinsList() {
           tokenName={item?.tokenName}
           creator={item?.creator?.name}
           createdAt={item?.created_At}
-          mcap={item?.Mcap}
+          mcap={item?.mcap}
           holders={item?.holders}
           txns={item?.txns}
+          bondingCurve={item?.bondingCurve}
         />
       ))}
     </Box>

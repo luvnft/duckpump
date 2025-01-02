@@ -16,19 +16,17 @@ export default function MemeCoinIMHT({
   mcap,
   holders,
   txns,
-  details: { img },
   text = colorLibrary.bg,
   value = colorLibrary.bg,
+  showImg = false,
   showIcon = true,
 }) {
-  const totalTxns = txns?.reduce((acc, curr) => {
-    return acc + curr.amount;
-  }, 0);
+  const totalTxns = txns?.reduce((acc, curr) => acc + curr.amount, 0);
 
   return (
     <Box>
       {/* //*MemeCoin icon */}
-      {img && (
+      {showImg && (
         <Avatar
           alt={img}
           src={img}

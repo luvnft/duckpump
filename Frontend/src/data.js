@@ -4,8 +4,11 @@ export const data = [
     symbol: "DASHAKH",
     logo: "",
     tokenAddress: "EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS",
-    Mcap: 1000000000,
+    mcap: 50000000,
+    isHot: true,
     holders: [
+      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
@@ -18,11 +21,11 @@ export const data = [
         timeStamp: "2025-01-02T09:45:00.000Z",
       },
       {
-        amount: 35,
+        amount: 1035,
         timeStamp: "2025-01-02T09:47:30.000Z",
       },
       {
-        amount: 50,
+        amount: 500,
         timeStamp: "2025-01-02T09:50:15.000Z",
       },
       {
@@ -59,13 +62,13 @@ export const data = [
       name: "mamad",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
     },
-    bondingCurve: 1000,
-    boughtAmount: 900,
+    bondingCurve: 500,
+    boughtAmount: 400,
 
     isListed: false,
-    volume: 1500,
+    volume: 1200,
 
-    price: 0.00012,
+    price: 0.012,
     buyers: [
       {
         ts: "2025-01-01T02:40:44.000Z",
@@ -168,21 +171,6 @@ export const data = [
           "I’ve been using this for a while now and I’m seeing great results!",
         timeStamp: "2025-01-02T09:52:45.000Z",
       },
-      {
-        id: 5,
-        telegramId: "fatima2020",
-        userName: "fatima",
-        comment: "Does anyone know if there are any upcoming updates for this?",
-        timeStamp: "2025-01-02T09:55:10.000Z",
-      },
-      {
-        id: 6,
-        telegramId: "reza2024",
-        userName: "reza",
-        comment:
-          "This is a fantastic initiative! Can’t wait to see the progress.",
-        timeStamp: "2025-01-02T09:57:35.000Z",
-      },
     ],
   },
   {
@@ -190,8 +178,12 @@ export const data = [
     symbol: "DOGS",
     logo: "",
     tokenAddress: "EQBZ_cafPyDr5KUTs0aNxh0ZTDhkpEZONmLJA2SNGlLm4Cko",
-    Mcap: 1000000000,
+    mcap: 10000,
     holders: [
+      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
@@ -200,15 +192,15 @@ export const data = [
     ],
     txns: [
       {
-        amount: 15,
+        amount: 215,
         timeStamp: "2025-01-02T09:45:00.000Z",
       },
       {
-        amount: 35,
+        amount: 835,
         timeStamp: "2025-01-02T09:47:30.000Z",
       },
       {
-        amount: 50,
+        amount: 500,
         timeStamp: "2025-01-02T09:50:15.000Z",
       },
       {
@@ -242,14 +234,14 @@ export const data = [
     ],
     created_At: new Date().toString(),
     creator: {
-      name: "mamad",
+      name: "omit",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
     },
-    bondingCurve: 1000,
+    bondingCurve: 1200,
     boughtAmount: 900,
 
     isListed: false,
-    volume: 1500,
+    volume: 1400,
 
     price: 0.00012,
     buyers: [
@@ -376,7 +368,7 @@ export const data = [
     symbol: "$",
     logo: "",
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
-    Mcap: 1000000000,
+    mcap: 2000,
     holders: [
       "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
@@ -386,11 +378,11 @@ export const data = [
     ],
     txns: [
       {
-        amount: 15,
+        amount: 1005,
         timeStamp: "2025-01-02T09:45:00.000Z",
       },
       {
-        amount: 35,
+        amount: 3485,
         timeStamp: "2025-01-02T09:47:30.000Z",
       },
       {
@@ -428,16 +420,16 @@ export const data = [
     ],
     created_At: new Date().toString(),
     creator: {
-      name: "mamad",
+      name: "sori",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
     },
     bondingCurve: 1000,
     boughtAmount: 900,
 
     isListed: false,
-    volume: 1500,
+    volume: 800,
 
-    price: 0.00012,
+    price: 0.0000000125,
     buyers: [
       {
         ts: "2025-01-01T02:40:44.000Z",
@@ -525,13 +517,7 @@ export const data = [
         comment: "I really like this token! It’s amazing.",
         timeStamp: "2025-01-02T09:47:30.000Z",
       },
-      {
-        id: 3,
-        telegramId: "sara987",
-        userName: "sara",
-        comment: "Can anyone explain how this works? I’m new to this.",
-        timeStamp: "2025-01-02T09:50:15.000Z",
-      },
+
       {
         id: 4,
         telegramId: "javad22",
