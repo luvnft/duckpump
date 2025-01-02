@@ -23,7 +23,7 @@ export default function MemeCoinsList() {
           creator={item?.creator?.name}
           createdAt={item?.created_At}
           mcap={item?.Mcap}
-          holders={item?.holder?.length}
+          holders={item?.holders}
           txns={item?.txns}
         />
       ))}
