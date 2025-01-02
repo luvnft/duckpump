@@ -5,6 +5,7 @@ import { HomePageProvider } from "./context/HomePageProvider.jsx";
 import Layout from "./pages/layout/Layout.jsx";
 import Home from "./pages/home/Home.jsx";
 import MemeCoinDetails from "./pages/memeCoinDetails/MemeCoinDetails.jsx";
+import SwapPage from "./pages/swap/SwapPage.jsx";
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
               <Route
                 path="/meme-coin-details/:memeCoinID"
                 element={<MemeCoinDetails />}
+              />
+              <Route
+                path="/meme-coin-details/:memeCoinID/swap"
+                element={<SwapPage />}
               />
             </Route>
           </Routes>
