@@ -8,6 +8,7 @@ import {
 } from "@mui/icons-material";
 import { colorLibrary } from "../color-library";
 import img from "../../public/duck.jpg";
+
 //*this is meme image , market cap , holders and Txs
 //using in hottest meme and meme list items
 export default function MemeCoinIMHT({
@@ -19,6 +20,7 @@ export default function MemeCoinIMHT({
   value = colorLibrary.bg,
   showIcon = true,
 }) {
+  console.log(txns);
   const totalTxns = txns?.reduce((acc, curr) => {
     acc + curr.amount;
   }, 0);
