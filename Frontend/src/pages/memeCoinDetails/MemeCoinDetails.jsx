@@ -7,6 +7,8 @@ import MemeTable from "./body/MemeTable";
 import { useParams, useSearchParams } from "react-router-dom";
 import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
 import CommunityNotes from "./communityNotes/CommunityNotes";
+import BottomDetailsNavigation from "./BottomDetailsNavigation";
+import SwapBtns from "./SwapBtns";
 
 export default function MemeCoinDetails() {
   const { memeCoinID } = useParams();
@@ -18,7 +20,13 @@ export default function MemeCoinDetails() {
   }, [memeCoinID]);
 
   return (
-    <Box display={"flex"} flexDirection={"column"} gap={3}>
+    <Box
+      display={"flex"}
+      flexDirection={"column"}
+      gap={3}
+      height={"100vh"}
+      paddingBottom={"7rem"}
+    >
       {/* //*header (current meme coin card) */}
       <MemeCoinDetailsHeader />
       {/* //* (Meme coin chart) */}
@@ -33,6 +41,12 @@ export default function MemeCoinDetails() {
       {/* //!----------------------------------------------------------------------- */}
       {/* //*community notes */}
       <CommunityNotes />
+
+      {/* //*swap btns */}
+      <SwapBtns />
+
+      {/* //*bottom nav */}
+      <BottomDetailsNavigation />
     </Box>
   );
 }
