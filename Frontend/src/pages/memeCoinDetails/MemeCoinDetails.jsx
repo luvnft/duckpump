@@ -9,6 +9,7 @@ import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvid
 import CommunityNotes from "./communityNotes/CommunityNotes";
 import BottomDetailsNavigation from "./BottomDetailsNavigation";
 import SwapBtns from "./SwapBtns";
+import Transactions from "./transactions/Transactions";
 
 export default function MemeCoinDetails() {
   const { memeCoinID } = useParams();
@@ -24,7 +25,6 @@ export default function MemeCoinDetails() {
       display={"flex"}
       flexDirection={"column"}
       gap={3}
-      height={"100vh"}
       paddingBottom={"7rem"}
     >
       {/* //*header (current meme coin card) */}
@@ -42,9 +42,15 @@ export default function MemeCoinDetails() {
       {/* //*community notes */}
       <CommunityNotes />
 
+      {/* //!----------------------------------------------------------------------- */}
+      {/* //*transactions */}
+      <Transactions />
+
+      {/* //!----------------------------------------------------------------------- */}
       {/* //*swap btns */}
       <SwapBtns />
 
+      {/* //!----------------------------------------------------------------------- */}
       {/* //*bottom nav */}
       <BottomDetailsNavigation />
     </Box>

@@ -4,7 +4,6 @@ import { colorLibrary } from "../../../color-library";
 import { getCustomRelativeTime } from "../../../utils/helpers";
 
 export default function CommentItem({
-  commentId,
   img,
   userId,
   userName,
@@ -19,7 +18,7 @@ export default function CommentItem({
       gap={1}
       bgcolor={colorLibrary.boxBgLighter}
       borderRadius={"1rem"}
-      padding={"0.8rem 0.6rem 1.4rem"}
+      padding={"0.8rem 0.6rem"}
       my={viewAllComment ? 1 : 0}
     >
       {/* //*left side (img ,id , comment)*/}

@@ -1,8 +1,15 @@
 import { Box, Button, Fab } from "@mui/material";
 import React from "react";
 import { colorLibrary } from "../../color-library";
+import { useNavigate } from "react-router-dom";
 
 export default function SwapBtns() {
+  const navigate = useNavigate();
+
+  function handleNavigate() {
+    navigate("/meme-coin-details/:memeCoinID/swap");
+  }
+
   return (
     <Box
       display={"flex"}
@@ -24,6 +31,7 @@ export default function SwapBtns() {
           flexGrow: 1,
           padding: "0.5rem 0",
         }}
+        onClick={handleNavigate}
       >
         BUY
       </Button>
@@ -37,6 +45,7 @@ export default function SwapBtns() {
 
           flexGrow: 1,
         }}
+        onClick={handleNavigate}
       >
         SELL
       </Button>

@@ -4,6 +4,7 @@ import { Close, KeyboardArrowDown } from "@mui/icons-material";
 import { colorLibrary } from "../../../color-library";
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 import CommentItem from "./CommentItem";
+import CommentInput from "./CommentInput";
 
 const drawerBleeding = 56;
 
@@ -70,22 +71,8 @@ export default function ViewAllDrawer({ comments }) {
             />
           ))}
         </Box>
-        <Fab
-          size="small"
-          onClick={toggleDrawer(false)}
-          sx={{
-            position: "fixed",
-            bottom: "1rem",
-            right: "1rem",
-            bgcolor: colorLibrary.bgSell,
-            opacity: 0.6,
-            "& .MuiSvgIcon-root": {
-              color: colorLibrary.bg,
-            },
-          }}
-        >
-          <Close />
-        </Fab>
+
+        <CommentInput />
       </SwipeableDrawer>
     </Box>
   );

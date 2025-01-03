@@ -1,8 +1,8 @@
 import { Person2Rounded, QueryBuilderRounded } from "@mui/icons-material";
 import { Avatar, Box, Typography } from "@mui/material";
 import React from "react";
+
 import { colorLibrary } from "../color-library";
-import moment from "moment";
 import { getCustomRelativeTime } from "../utils/helpers";
 
 /* //*meme cion img , name , creator , time */
