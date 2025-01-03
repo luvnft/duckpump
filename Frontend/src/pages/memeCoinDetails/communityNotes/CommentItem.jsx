@@ -19,7 +19,7 @@ export default function CommentItem({
       gap={1}
       bgcolor={colorLibrary.boxBgLighter}
       borderRadius={"1rem"}
-      padding={"0.5rem 0.6rem"}
+      padding={"0.8rem 0.6rem 1.4rem"}
       my={viewAllComment ? 1 : 0}
     >
       {/* //*left side (img ,id , comment)*/}

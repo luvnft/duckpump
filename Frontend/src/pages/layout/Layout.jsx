@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
+import { Box } from "@mui/material";
+
 import { colorLibrary } from "../../color-library";
-import { Box, Button, Container } from "@mui/material";
-import Header from "../../ui/Header";
 
 const Layout = () => {
   return (
