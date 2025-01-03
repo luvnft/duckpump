@@ -6,7 +6,7 @@ import MemeCoinWallet from "./MemeCoinWallet";
 import { colorLibrary } from "../../../color-library";
 import MiniProgress from "./MiniProgress";
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
-import { calcBondingCurve } from "../../../utils/helpers";
+import { calcBondingCurve, formatBigPrice } from "../../../utils/helpers";
 
 export default function MemeCoinDetailsHeader() {
   const { selectedMemeCoinData } = useSelectedMemeCoinContext();
@@ -15,7 +15,7 @@ export default function MemeCoinDetailsHeader() {
     tokenName,
     symbol,
     created_at,
-    creator,
+    mcap,
     tokenAddress,
     bondingCurve,
     bondingCurveRatio,
@@ -32,15 +32,22 @@ export default function MemeCoinDetailsHeader() {
     >
       <CardActionArea>
         <CardContent sx={{ padding: "0.1rem 0.5rem" }}>
-          <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            {/* //*Left Side: Meme Coin Info img, name , creator , time */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            {/* //*Left Side: Meme Coin Info img, name , symbol ,Mcap , time */}
+
             <MemeCoinINCT
               showSymbol={true}
               tokenName={tokenName}
               symbol={symbol}
-              creator={creator?.name}
+              mcap={mcap}
               createdAt={created_at}
             />
+
             {/* //*Right Side: Meme Coin Wallet and progress*/}
             <Box
               display={"flex"}
@@ -48,7 +55,7 @@ export default function MemeCoinDetailsHeader() {
               gap={1}
               justifyContent={"space-between"}
               alignItems={"flex-end"}
-              maxWidth={"50%"}
+              maxWidth={"40%"}
             >
               <MemeCoinWallet tokenAddress={tokenAddress} />
               <MiniProgress

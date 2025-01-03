@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, IconButton, Snackbar } from "@mui/material";
+import { Typography, IconButton, Snackbar, Box, Button } from "@mui/material";
 import { ContentCopyRounded } from "@mui/icons-material";
 
 import { colorLibrary } from "../../../color-library";
@@ -21,30 +21,24 @@ export default function MemeCoinWallet({ tokenAddress }) {
 
   return (
     <>
-      <Typography
+      <Button
         onClick={handleCopy}
-        variant="caption"
-        bgcolor={colorLibrary.boxBgLighter}
-        color={colorLibrary.title}
-        boxShadow={3}
-        padding={"0.2rem 0.4rem"}
-        borderRadius={"1rem"}
-        display="flex"
-        alignItems="center"
-        gap={0.5}
-        letterSpacing={4}
+        style={{
+          backgroundColor: colorLibrary.boxBgLighter,
+          color: colorLibrary.title,
+          padding: "0.2rem 0.4rem",
+          borderRadius: "1rem",
+          display: "flex",
+          alignItems: "center",
+          gap: "0.5rem",
+          letterSpacing: "1px",
+          fontSize: "0.7rem",
+        }}
       >
-        <IconButton
-          size="small"
-          sx={{
-            color: colorLibrary.title,
-            padding: 0,
-          }}
-        >
-          <ContentCopyRounded fontSize="small" />
-        </IconButton>
+        <ContentCopyRounded />
+
         {convertWalletAddress(tokenAddress)}
-      </Typography>
+      </Button>
 
       {/* //*Snackbar for notification */}
       <Snackbar
@@ -52,7 +46,7 @@ export default function MemeCoinWallet({ tokenAddress }) {
         autoHideDuration={2000}
         onClose={handleClose}
         message="Copied to clipboard!"
-        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        anchorOrigin={{ vertical: "top", horizontal: "left" }}
       />
     </>
   );

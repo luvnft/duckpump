@@ -6,7 +6,7 @@ const SelectedMemeCoinContext = createContext();
 function SelectedMemeCoinProvider({ children }) {
   //*this will set after the user click on a memCoin(1.using in the MemeCoinDetails)
   const [selectedMemeCoinId, setSelectedMemeCoinId] = useState(null);
-  const [selectedMemeCoinData, setSelectedMemeCoinData] = useState(null);
+  const [selectedMemeCoinData, setSelectedMemeCoinData] = useState({});
 
   useEffect(() => {
     setSelectedMemeCoinData(

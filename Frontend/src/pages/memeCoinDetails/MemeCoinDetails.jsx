@@ -10,6 +10,7 @@ import CommunityNotes from "./communityNotes/CommunityNotes";
 import BottomDetailsNavigation from "./BottomDetailsNavigation";
 import SwapBtns from "./SwapBtns";
 import Transactions from "./transactions/Transactions";
+import BackBtn from "../../ui/BackBtn";
 
 export default function MemeCoinDetails() {
   const { memeCoinID } = useParams();
@@ -27,6 +28,8 @@ export default function MemeCoinDetails() {
       gap={3}
       paddingBottom={"7rem"}
     >
+      <BackBtn />
+
       {/* //*header (current meme coin card) */}
       <MemeCoinDetailsHeader />
       {/* //* (Meme coin chart) */}

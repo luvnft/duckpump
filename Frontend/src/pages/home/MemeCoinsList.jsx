@@ -19,6 +19,7 @@ export default function MemeCoinsList() {
     >
       {allMemeCoin.map((item) => (
         <MemeCoinItem
+          key={item?.tokenName}
           tokenName={item?.tokenName}
           creator={item?.creator?.name}
           createdAt={item?.created_At}
