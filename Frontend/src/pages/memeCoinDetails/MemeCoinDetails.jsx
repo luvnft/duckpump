@@ -5,12 +5,20 @@ import MemeChart from "./header/MemeChart";
 import ChartControlBtns from "./header/ChartControlBtns";
 import MemeTable from "./body/MemeTable";
 import { useParams, useSearchParams } from "react-router-dom";
+import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
+import CommunityNotes from "./communityNotes/CommunityNotes";
 
 export default function MemeCoinDetails() {
   const { memeCoinID } = useParams();
+  const { setSelectedMemeCoinId } = useSelectedMemeCoinContext();
+
+  //*We can use it in The <SelectedMemeCoinProvider/> to fetch all necessary data
+  useEffect(() => {
+    setSelectedMemeCoinId(memeCoinID);
+  }, [memeCoinID]);
 
   return (
-    <Box display={"flex"} flexDirection={"column"} gap={1}>
+    <Box display={"flex"} flexDirection={"column"} gap={3}>
       {/* //*header (current meme coin card) */}
       <MemeCoinDetailsHeader />
       {/* //* (Meme coin chart) */}
@@ -23,7 +31,8 @@ export default function MemeCoinDetails() {
       <MemeTable />
 
       {/* //!----------------------------------------------------------------------- */}
-      {/* //*holders */}
+      {/* //*community notes */}
+      <CommunityNotes />
     </Box>
   );
 }

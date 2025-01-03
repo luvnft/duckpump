@@ -3,12 +3,13 @@ import { Typography, IconButton, Snackbar } from "@mui/material";
 import { ContentCopyRounded } from "@mui/icons-material";
 
 import { colorLibrary } from "../../../color-library";
+import { convertWalletAddress } from "../../../utils/helpers";
 
-export default function MemeCoinWallet() {
+export default function MemeCoinWallet({ tokenAddress }) {
   const [open, setOpen] = useState(false); // State for Snackbar
 
   const handleCopy = () => {
-    const textToCopy = "YTUF....EYSE"; // The text to copy
+    const textToCopy = tokenAddress; // The text to copy
     navigator.clipboard.writeText(textToCopy).then(() => {
       setOpen(true); // Show notification
     });
@@ -42,7 +43,7 @@ export default function MemeCoinWallet() {
         >
           <ContentCopyRounded fontSize="small" />
         </IconButton>
-        YTUF....EYSE
+        {convertWalletAddress(tokenAddress)}
       </Typography>
 
       {/* //*Snackbar for notification */}

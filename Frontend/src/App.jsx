@@ -6,26 +6,29 @@ import Layout from "./pages/layout/Layout.jsx";
 import Home from "./pages/home/Home.jsx";
 import MemeCoinDetails from "./pages/memeCoinDetails/MemeCoinDetails.jsx";
 import SwapPage from "./pages/swap/SwapPage.jsx";
+import { SelectedMemeCoinProvider } from "./context/SelectedMemeCoinProvider.jsx";
 
 function App() {
   return (
     <CustomThemeProvider>
       <HomePageProvider>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route
-                path="/meme-coin-details/:memeCoinID"
-                element={<MemeCoinDetails />}
-              />
-              <Route
-                path="/meme-coin-details/:memeCoinID/swap"
-                element={<SwapPage />}
-              />
-            </Route>
-          </Routes>
-        </Router>
+        <SelectedMemeCoinProvider>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route
+                  path="/meme-coin-details/:memeCoinID"
+                  element={<MemeCoinDetails />}
+                />
+                <Route
+                  path="/meme-coin-details/:memeCoinID/swap"
+                  element={<SwapPage />}
+                />
+              </Route>
+            </Routes>
+          </Router>
+        </SelectedMemeCoinProvider>
       </HomePageProvider>
     </CustomThemeProvider>
   );

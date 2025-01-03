@@ -1,11 +1,12 @@
 import moment from "moment";
 import { colorLibrary } from "../color-library";
 
-//for display on header
+//*return the 4 first and last 4 characters of a wallet address
 export function convertWalletAddress(address) {
   return `${String(address).slice(0, 4)}...${String(address).slice(-4)}`;
 }
 
+//*display percentage in green if positive and red if negative
 export function colorPercentage(percentage) {
   if (percentage > 0) {
     return colorLibrary.bgBuy;
@@ -16,6 +17,7 @@ export function colorPercentage(percentage) {
   }
 }
 
+//*formatting time for memeCoin or transactions created at
 export function getCustomRelativeTime(createdAt) {
   const now = moment();
   const duration = moment.duration(now.diff(createdAt));
@@ -48,6 +50,7 @@ export function getCustomRelativeTime(createdAt) {
   }
 }
 
+//*formatting price for Mcap
 export function formatBigPrice(value) {
   if (value >= 1e9) {
     return (value / 1e9).toFixed(2) + "B"; // Billions
@@ -57,4 +60,13 @@ export function formatBigPrice(value) {
     return (value / 1e3).toFixed(2) + "K"; // Thousands
   }
   return value?.toString(); // Smaller values
+}
+
+//*calc bonding curve
+export function calcBondingCurve(value, ratio) {
+  //its mean the coin is listed
+  if (value > ratio) return 100;
+
+  //or calculate the bonding curve
+  return ((value / ratio) * 100)?.toFixed(1);
 }

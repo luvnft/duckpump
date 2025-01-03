@@ -26,6 +26,7 @@ export default function MemeCoinsList() {
           holders={item?.holders}
           txns={item?.txns}
           bondingCurve={item?.bondingCurve}
+          bondingCurveRatio={item?.bondingCurveRatio}
         />
       ))}
     </Box>

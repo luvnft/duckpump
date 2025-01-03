@@ -11,6 +11,9 @@ const data = [
 ];
 
 export default function MemeTableTVTDetails() {
+  // const { selectedMemeCoinData } = useSelectedMemeCoinContext();
+
+  // const { txns,volume } = selectedMemeCoinData || {};
   // *convert title for display on top of progress bar
   function convertTitles(title) {
     switch (title) {

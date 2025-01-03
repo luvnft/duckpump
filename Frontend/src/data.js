@@ -1,5 +1,6 @@
 export const data = [
   {
+    tokenId: 1,
     tokenName: "DASHAKH",
     symbol: "DASHAKH",
     logo: "",
@@ -63,6 +64,7 @@ export const data = [
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
     },
     bondingCurve: 500,
+    bondingCurveRatio: 1500,
     boughtAmount: 400,
 
     isListed: false,
@@ -147,33 +149,91 @@ export const data = [
         telegramId: "omidfh",
         userName: "mamad",
         comment: "this is a comment",
-        timeStamp: "2025-01-02T09:45:00.000Z",
+        timeStamp: new Date().toString(),
       },
       {
         id: 2,
         telegramId: "ali123",
         userName: "ali",
         comment: "I really like this token! It’s amazing.",
-        timeStamp: "2025-01-02T09:47:30.000Z",
+        timeStamp: new Date().toString(),
       },
       {
         id: 3,
         telegramId: "sara987",
         userName: "sara",
         comment: "Can anyone explain how this works? I’m new to this.",
-        timeStamp: "2025-01-02T09:50:15.000Z",
+        timeStamp: new Date().toString(),
       },
       {
         id: 4,
         telegramId: "javad22",
         userName: "javad",
         comment:
+          "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        timeStamp: new Date().toString(),
+      },
+      {
+        id: 5,
+        telegramId: "javad22",
+        userName: "javad",
+        comment:
           "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: "2025-01-02T09:52:45.000Z",
+        timeStamp: new Date().toString(),
+      },
+      {
+        id: 6,
+        telegramId: "javad22",
+        userName: "javad",
+        comment:
+          "I’ve been using this for a while now and I’m seeing great results!",
+        timeStamp: new Date().toString(),
+      },
+      {
+        id: 7,
+        telegramId: "javad22",
+        userName: "javad",
+        comment:
+          "I’ve been using this for a while now and I’m seeing great results!",
+        timeStamp: new Date().toString(),
+      },
+      {
+        id: 8,
+        telegramId: "javad22",
+        userName: "javad",
+        comment:
+          "I’ve been using this for a while now and I’m seeing great results!",
+        timeStamp: new Date().toString(),
+      },
+      {
+        id: 9,
+        telegramId: "javad22",
+        userName: "javad",
+        comment:
+          "I’ve been using this for a while now and I’m seeing great results!",
+        timeStamp: new Date().toString(),
+      },
+      {
+        id: 10,
+        telegramId: "javad22",
+        userName: "javad",
+        comment:
+          "I’ve been using this for a while now and I’m seeing great results!",
+        timeStamp: new Date().toString(),
+      },
+      {
+        id: 11,
+        telegramId: "javad22",
+        userName: "javad",
+        comment:
+          "I’ve been using this for a while now and I’m seeing great results!",
+        timeStamp: new Date().toString(),
       },
     ],
   },
   {
+    tokenId: 2,
+
     tokenName: "DOGS",
     symbol: "DOGS",
     logo: "",
@@ -238,9 +298,11 @@ export const data = [
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
     },
     bondingCurve: 1200,
+    bondingCurveRatio: 1000,
+
     boughtAmount: 900,
 
-    isListed: false,
+    isListed: true,
     volume: 1400,
 
     price: 0.00012,
@@ -364,6 +426,7 @@ export const data = [
     ],
   },
   {
+    tokenId: 3,
     tokenName: "Not",
     symbol: "$",
     logo: "",
@@ -424,6 +487,8 @@ export const data = [
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
     },
     bondingCurve: 1000,
+    bondingCurveRatio: 1500,
+
     boughtAmount: 900,
 
     isListed: false,

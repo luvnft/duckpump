@@ -45,7 +45,7 @@ export default function MemeCoinIMHT({
           fontWeight={"bold"}
           sx={{ textDecoration: "underline" }}
         >
-          {formatBigPrice(mcap)}
+          ${formatBigPrice(mcap)}
         </Typography>
       </Box>
       <Box
@@ -87,7 +87,7 @@ export default function MemeCoinIMHT({
           fontWeight={"bold"}
           color={value}
         >
-          {totalTxns}
+          {formatBigPrice(totalTxns)}
         </Typography>
       </Box>
     </Box>
