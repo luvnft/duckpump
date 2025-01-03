@@ -6,17 +6,10 @@ import { colorLibrary } from "../../../color-library";
 
 export default function SwitchBtn() {
   const [alignment, setAlignment] = useState("price");
-  const [radius, setRadius] = useState("0 1rem 1rem 0");
 
   const handleChange = (_, newAlignment) => {
     if (newAlignment !== null) {
       setAlignment(newAlignment);
-    }
-    if (newAlignment === "mcap") {
-      setRadius("1rem 0 0 1rem");
-    }
-    if (newAlignment === "price") {
-      setRadius("0 1rem 1rem 0");
     }
   };
 
@@ -42,7 +35,7 @@ export default function SwitchBtn() {
           "&.Mui-selected": {
             bgcolor: colorLibrary.title,
             color: colorLibrary.bg,
-            borderRadius: radius,
+            borderRadius: "1rem",
           },
           "&:hover": {
             bgcolor: colorLibrary.hoverBg,

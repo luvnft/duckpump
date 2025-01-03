@@ -11,6 +11,7 @@ import { getCustomRelativeTime } from "../utils/helpers";
 export default function MemeCoinINCT({
   showSymbol,
   tokenName,
+  symbol,
   creator,
   createdAt,
 }) {
@@ -22,8 +23,8 @@ export default function MemeCoinINCT({
         sx={{ width: "4rem", height: "4rem" }}
       />
       <Box>
-        <Typography variant="body2" color={colorLibrary.title}>
-          {tokenName} {showSymbol ? "/ALcn" : ""}
+        <Typography variant="caption" color={colorLibrary.title}>
+          {tokenName} {showSymbol ? `/${symbol}` : ""}
         </Typography>
         <Typography
           variant="caption"

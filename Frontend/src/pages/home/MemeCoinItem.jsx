@@ -10,6 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import MemeCoinLinearProgress from "../../ui/MemeCoinLinearProgress";
+import { calcBondingCurve } from "../../utils/helpers";
 
 const memeCoinDetails = {
   mcap: "11,11",
@@ -25,6 +26,7 @@ export default function MemeCoinItem({
   holders,
   txns,
   bondingCurve,
+  bondingCurveRatio,
 }) {
   return (
     <Card sx={{ bgcolor: colorLibrary.boxBg, marginY: 2 }}>
@@ -56,7 +58,12 @@ export default function MemeCoinItem({
           </Box>
 
           {/* //*Progress Bar */}
-          <MemeCoinLinearProgress bondingCurve={bondingCurve} />
+          <MemeCoinLinearProgress
+            bondingPercentage={calcBondingCurve(
+              bondingCurve,
+              bondingCurveRatio
+            )}
+          />
         </CardContent>
       </CardActionArea>
     </Card>

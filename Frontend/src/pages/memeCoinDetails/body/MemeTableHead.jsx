@@ -1,8 +1,13 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { colorLibrary } from "../../../color-library";
+import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
+import { formatBigPrice } from "../../../utils/helpers";
 
 export default function MemeTableHead() {
+  const { selectedMemeCoinData } = useSelectedMemeCoinContext();
+
+  const { price, volume, mcap } = selectedMemeCoinData || {};
   return (
     <Box
       display={"flex"}
@@ -17,7 +22,7 @@ export default function MemeTableHead() {
       >
         Price <br />
         <Typography color={colorLibrary.text} variant="caption">
-          $0.000012
+          ${price}
         </Typography>
       </Typography>{" "}
       <Typography
@@ -28,7 +33,7 @@ export default function MemeTableHead() {
       >
         volume <br />
         <Typography color={colorLibrary.text} variant="caption">
-          $12k
+          ${volume}
         </Typography>
       </Typography>{" "}
       <Typography
@@ -39,7 +44,7 @@ export default function MemeTableHead() {
       >
         Market Cap <br />
         <Typography color={colorLibrary.text} variant="caption">
-          $1.420
+          ${formatBigPrice(mcap)}
         </Typography>
       </Typography>{" "}
     </Box>

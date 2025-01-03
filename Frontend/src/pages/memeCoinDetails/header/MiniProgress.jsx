@@ -6,7 +6,7 @@ import LinearProgress, {
 import { Box, Typography } from "@mui/material";
 import { colorLibrary } from "../../../color-library";
 
-export default function MiniProgress() {
+export default function MiniProgress({ bondingPercentage }) {
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 15,
     borderRadius: 8,
@@ -27,9 +27,9 @@ export default function MiniProgress() {
         color={colorLibrary.title}
         sx={{ minWidth: "40px", textAlign: "right" }}
       >
-        75.5%
+        {bondingPercentage}%
       </Typography>
-      <BorderLinearProgress variant="determinate" value={50} />
+      <BorderLinearProgress variant="determinate" value={bondingPercentage} />
     </Box>
   );
 }
