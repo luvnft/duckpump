@@ -15,6 +15,7 @@ export default function TransactionItem({
 }) {
   return (
     <Box
+      component={"li"}
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}

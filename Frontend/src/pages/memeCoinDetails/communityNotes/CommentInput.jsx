@@ -2,27 +2,33 @@ import { Box, Fab, TextField } from "@mui/material";
 import React, { useState } from "react";
 import { colorLibrary } from "../../../color-library";
 import { Telegram } from "@mui/icons-material";
+import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 
 export default function CommentInput() {
-  const [comment, setComment] = useState();
-
+  const { selectedMemeCoinData } = useSelectedMemeCoinContext();
+  const [comment, setComment] = useState("");
+  console.log(comment);
   return (
     <Box
       component="form"
       sx={{
         width: "90%",
         position: "fixed",
-        bottom: "2dvh",
+        bottom: "3dvh",
         right: "1rem",
         display: "flex",
         justifyContent: "space-evenly",
         alignItems: "center",
         gap: "1rem",
       }}
+      onSubmit={(e) => {
+        e.preventDefault();
+        setComment("");
+      }}
     >
       <TextField
-        id="query"
-        placeholder={`What do you think about `}
+        id="comment"
+        placeholder={`What do you think about $${selectedMemeCoinData?.tokenName}`}
         fullWidth
         sx={{
           bgcolor: colorLibrary.bgLight3,
@@ -66,6 +72,7 @@ export default function CommentInput() {
             color: colorLibrary.bg,
           },
         }}
+        type="submit"
       >
         <Telegram />
       </Fab>

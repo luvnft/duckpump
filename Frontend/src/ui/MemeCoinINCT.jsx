@@ -1,11 +1,15 @@
-import { Person2Rounded, QueryBuilderRounded } from "@mui/icons-material";
+import {
+  BarChartRounded,
+  Person2Rounded,
+  QueryBuilderRounded,
+} from "@mui/icons-material";
 import { Avatar, Box, Typography } from "@mui/material";
 import React from "react";
 
 import { colorLibrary } from "../color-library";
-import { getCustomRelativeTime } from "../utils/helpers";
+import { formatBigPrice, getCustomRelativeTime } from "../utils/helpers";
 
-/* //*meme cion img , name , creator , time */
+/* //*meme cion img , name , creator or Mcap , time */
 //*use case i meme coin list item
 
 export default function MemeCoinINCT({
@@ -13,6 +17,7 @@ export default function MemeCoinINCT({
   tokenName,
   symbol,
   creator,
+  mcap,
   createdAt,
 }) {
   return (
@@ -20,11 +25,11 @@ export default function MemeCoinINCT({
       <Avatar
         alt="duck"
         src="/duck.jpg"
-        sx={{ width: "4rem", height: "4rem" }}
+        sx={{ width: "3rem", height: "3rem" }}
       />
       <Box>
         <Typography variant="caption" color={colorLibrary.title}>
-          {tokenName} {showSymbol ? `/${symbol}` : ""}
+          {tokenName} {showSymbol ? `/$${symbol}` : ""}
         </Typography>
         <Typography
           variant="caption"
@@ -35,18 +40,32 @@ export default function MemeCoinINCT({
             gap: "4px",
           }}
         >
-          {/* //*First Row */}
-          <Box
-            component="span"
+          {/* //*First Row (creator or Mcap) deferent use in home coin item and details coin header*/}
+          <Typography
             sx={{
               display: "flex",
               alignItems: "center",
               gap: "4px",
+              fontSize: "0.7rem",
             }}
           >
-            <Person2Rounded sx={{ fontSize: "1rem" }} />
-            Created by @{creator}
-          </Box>
+            {creator ? (
+              <>
+                <Person2Rounded sx={{ fontSize: "1rem" }} />
+                <Typography fontSize={"0.7rem"}>
+                  Created by @{creator}
+                </Typography>
+              </>
+            ) : (
+              <>
+                <BarChartRounded sx={{ fontSize: "1rem" }} />
+                Mcap{" "}
+                <Typography color={colorLibrary.title} fontSize={"0.7rem"}>
+                  ${formatBigPrice(mcap)}
+                </Typography>
+              </>
+            )}
+          </Typography>
 
           {/* //*Second Row */}
           <Box

@@ -1,5 +1,6 @@
 import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
+
 import { colorLibrary } from "../../../color-library";
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 import TransactionItem from "./TransactionItem";
@@ -46,7 +47,7 @@ export default function Transactions() {
               tokenAmount={buyer.tokenAmount}
               tokenSymbol={symbol}
             />
-            {index < buyers.length - 1 && (
+            {index < buyers?.length - 1 && (
               <Divider
                 variant="middle"
                 sx={{ borderColor: colorLibrary.bgLight3, width: "80%" }}

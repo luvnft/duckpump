@@ -13,13 +13,14 @@ export default function CommentItem({
 }) {
   return (
     <Box
+      component={"li"}
+      width={"100%"}
       display={"flex"}
+      justifyContent={"space-between"}
       alignItems={"center"}
       gap={1}
       bgcolor={colorLibrary.boxBgLighter}
-      borderRadius={"1rem"}
       padding={"0.8rem 0.6rem"}
-      my={viewAllComment ? 1 : 0}
     >
       {/* //*left side (img ,id , comment)*/}
       <Avatar alt="duck" src="/duck.jpg" sx={{ width: 50, height: 50 }} />

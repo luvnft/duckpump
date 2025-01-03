@@ -8,7 +8,6 @@ import { Box, Typography } from "@mui/material";
 import { colorLibrary } from "../color-library";
 
 export default function MemeCoinLinearProgress({ bondingPercentage }) {
-  console.log(bondingPercentage);
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 10,
     borderRadius: 5,

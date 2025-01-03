@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Button, Box, SwipeableDrawer, Fab } from "@mui/material";
+import {
+  Button,
+  Box,
+  SwipeableDrawer,
+  Fab,
+  styled,
+  Divider,
+} from "@mui/material";
 import { Close, KeyboardArrowDown } from "@mui/icons-material";
 import { colorLibrary } from "../../../color-library";
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
@@ -8,9 +15,19 @@ import CommentInput from "./CommentInput";
 
 const drawerBleeding = 56;
 
+const Puller = styled("div")(({ theme }) => ({
+  width: 30,
+  width: 30,
+  height: 6,
+  backgroundColor: colorLibrary.bgLight3,
+  borderRadius: 3,
+  position: "absolute",
+  top: 8,
+  left: "calc(50% - 15px)",
+}));
+
 export default function ViewAllDrawer({ comments }) {
   const [open, setOpen] = useState(false);
-
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
@@ -51,24 +68,36 @@ export default function ViewAllDrawer({ comments }) {
         }}
       >
         <Box
-          sx={{
-            px: 2,
-            py: 2,
-            height: "100%",
-            overflow: "auto",
-            borderTopLeftRadius: "1rem",
-            borderTopRightRadius: "1rem",
-          }}
+          component={"ul"}
+          display={"flex"}
+          flexDirection={"column"}
+          alignItems={"center"}
+          gap={1}
+          height={"100%"}
+          overflow={"auto"}
+          bgcolor={colorLibrary.boxBgLighter}
+          borderRadius={"1rem"}
+          padding={"0.8rem 0.6rem 1.4rem"}
+          my={10}
         >
-          {comments?.map((comment) => (
-            <CommentItem
-              key={comment?.id}
-              userId={comment?.telegramId}
-              userName={comment?.userName}
-              comment={comment?.comment}
-              timeStamp={comment?.timeStamp}
-              viewAllComment={true}
-            />
+          <Puller />
+          {comments?.map((comment, index) => (
+            <React.Fragment key={comment?.id}>
+              <CommentItem
+                userId={comment?.telegramId}
+                userName={comment?.userName}
+                comment={comment?.comment}
+                timeStamp={comment?.timeStamp}
+                viewAllComment={true}
+              />
+
+              {index < comments?.length - 1 && (
+                <Divider
+                  variant="middle"
+                  sx={{ borderColor: colorLibrary.bgLight3, width: "80%" }}
+                />
+              )}
+            </React.Fragment>
           ))}
         </Box>
 
