@@ -21,14 +21,19 @@ export default function MemeCoinINCT({
   createdAt,
 }) {
   return (
-    <Box display={"flex"} gap={1}>
+    <Box display={"flex"} alignItems={"center"} gap={1}>
       <Avatar
         alt="duck"
         src="/duck.jpg"
-        sx={{ width: "3rem", height: "3rem" }}
+        sx={{ width: "3.2rem", height: "3.2rem" }}
       />
       <Box>
-        <Typography variant="caption" color={colorLibrary.title}>
+        <Typography
+          variant={showSymbol ? "caption" : "body2"}
+          color={colorLibrary.title}
+          fontWeight={500}
+          sx={{ letterSpacing: showSymbol ? 0 : "0.1rem" }}
+        >
           {tokenName} {showSymbol ? `/$${symbol}` : ""}
         </Typography>
         <Typography

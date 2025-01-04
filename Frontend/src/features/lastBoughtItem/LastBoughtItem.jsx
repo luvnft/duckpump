@@ -20,9 +20,10 @@ export default function LastBoughtItem() {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: 1,
+        padding: "0 0.4rem",
         bgcolor: colorLibrary.bgLight1,
         color: colorLibrary.boxBg,
+        borderRadius: "0.5rem",
       }}
     >
       <Box component="div" textAlign={"left"}>

@@ -12,21 +12,25 @@ export default function MemeCoinLinearProgress({ bondingPercentage }) {
     height: 10,
     borderRadius: 5,
     [`&.${linearProgressClasses.colorPrimary}`]: {
-      backgroundColor: theme.palette.grey[500],
+      backgroundColor: colorLibrary.bgProgress2,
     },
     [`& .${linearProgressClasses.bar}`]: {
       borderRadius: 5,
-      backgroundColor: colorLibrary.bgBuy,
+      backgroundColor: colorLibrary.bgProgress1,
     },
   }));
 
   return (
     <Box textAlign={"center"}>
-      <Typography variant="caption" color={colorLibrary.bgBuy}>
+      <Typography
+        fontSize={"0.7rem"}
+        fontWeight={300}
+        color={colorLibrary.title}
+      >
         BONDING CURVE
       </Typography>
       <BorderLinearProgress variant="determinate" value={bondingPercentage} />
-      <Typography variant="caption" color={colorLibrary.text}>
+      <Typography variant="caption" color={colorLibrary.title}>
         {bondingPercentage}%
       </Typography>
     </Box>

@@ -3,6 +3,7 @@ import { Box } from "@mui/material";
 
 import TraderINWTT from "./TraderINWTT";
 import TradedAmount from "./TradedAmount";
+import { motion } from "motion/react";
 
 export default function TransactionItem({
   traderName,
@@ -15,7 +16,9 @@ export default function TransactionItem({
 }) {
   return (
     <Box
-      component={"li"}
+      component={motion.li}
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}
