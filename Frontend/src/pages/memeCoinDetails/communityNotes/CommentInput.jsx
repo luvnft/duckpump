@@ -3,14 +3,15 @@ import React, { useState } from "react";
 import { colorLibrary } from "../../../color-library";
 import { Telegram } from "@mui/icons-material";
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
+import { motion } from "motion/react";
 
 export default function CommentInput() {
   const { selectedMemeCoinData } = useSelectedMemeCoinContext();
   const [comment, setComment] = useState("");
-  console.log(comment);
   return (
     <Box
-      component="form"
+      component={motion.form}
+      whileTap={{ scale: 0.8 }}
       sx={{
         width: "90%",
         position: "fixed",

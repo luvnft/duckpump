@@ -25,7 +25,7 @@ export default function HottestMemeCoinDetails() {
   return (
     <Card
       sx={{
-        bgcolor: colorLibrary.text,
+        bgcolor: colorLibrary.boxBgLightest,
       }}
       onClick={handleNavigate}
     >
@@ -38,10 +38,10 @@ export default function HottestMemeCoinDetails() {
             alignItems={"center"}
             gap={2}
             borderRadius={"1rem"}
-            padding={"1rem 0"}
+            padding={0}
           >
             {/* //*title */}
-            <Typography textTransform={"uppercase"} fontWeight={600}>
+            <Typography textTransform={"uppercase"} fontWeight={400}>
               {tokenName} is skyrocketing 🚀
             </Typography>
 
@@ -59,6 +59,7 @@ export default function HottestMemeCoinDetails() {
                   holders={holders}
                   txns={txns}
                   showImg={true}
+                  fontWeight={500}
                 />
               </Box>
 

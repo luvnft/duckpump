@@ -2,6 +2,7 @@ import { Avatar, Box, Typography } from "@mui/material";
 import React from "react";
 import { colorLibrary } from "../../../color-library";
 import { getCustomRelativeTime } from "../../../utils/helpers";
+import { motion } from "motion/react";
 
 export default function CommentItem({
   img,
@@ -13,7 +14,9 @@ export default function CommentItem({
 }) {
   return (
     <Box
-      component={"li"}
+      component={motion.li}
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
       width={"95%"}
       display={"flex"}
       justifyContent={"space-between"}

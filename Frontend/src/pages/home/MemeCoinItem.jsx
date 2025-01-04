@@ -30,9 +30,15 @@ export default function MemeCoinItem({
   bondingCurveRatio,
 }) {
   return (
-    <Card sx={{ bgcolor: colorLibrary.boxBg, marginY: 2 }}>
+    <Card
+      sx={{
+        bgcolor: colorLibrary.boxBgLighter,
+        marginBottom: 2,
+        borderRadius: "1.4rem",
+      }}
+    >
       <CardActionArea>
-        <CardContent sx={{ padding: "0.1rem 0.5rem" }}>
+        <CardContent sx={{ padding: "0 0.4rem" }}>
           {/* //*Card Header */}
           <Box
             component={motion.div}

@@ -12,9 +12,10 @@ export default function MemeCoinsList() {
       sx={{
         listStyle: "none",
         margin: 0,
-        padding: 0,
         overflow: "auto",
-        height: "35vh",
+        minHeight: "40vh",
+        maxHeight: "75vh",
+        padding: "0 0.1rem 0.1rem 0.1rem",
       }}
     >
       {allMemeCoin.map((item) => (

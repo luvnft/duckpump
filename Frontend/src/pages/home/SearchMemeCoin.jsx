@@ -1,31 +1,37 @@
 import React, { useState } from "react";
 import { Box, TextField, InputAdornment } from "@mui/material";
-import { Search } from "@mui/icons-material";
+import { Height, Scale, Search } from "@mui/icons-material";
+import { motion } from "motion/react";
+
 import { colorLibrary } from "../../color-library";
 
 export default function SearchMemeCoin() {
   const [query, setQuery] = useState("");
 
   return (
-    <Box component="form" sx={{ width: "100%" }}>
+    <Box
+      component={motion.div}
+      whileTap={{ scale: 0.8 }}
+      sx={{ width: "100%" }}
+    >
       <TextField
         id="query"
-        placeholder="Search MemeCoins"
+        placeholder="🔍 Search"
         fullWidth
-        slotProps={{
-          input: {
-            startAdornment: (
-              <InputAdornment position="start">
-                <Search sx={{ color: colorLibrary.text }} />
-              </InputAdornment>
-            ),
-          },
-        }}
+        // slotProps={{
+        //   input: {
+        //     startAdornment: (
+        //       <InputAdornment position="start">
+        //         <Search sx={{ color: colorLibrary.title }} />
+        //       </InputAdornment>
+        //     ),
+        //   },
+        // }}
         sx={{
-          bgcolor: colorLibrary.boxBg,
-          borderRadius: "1rem",
+          bgcolor: colorLibrary.boxBgLighter,
+          borderRadius: "1.8rem",
           "& .MuiOutlinedInput-root": {
-            borderRadius: "1rem",
+            height: "2.2rem",
             "& fieldset": {
               border: "none",
             },
@@ -37,10 +43,14 @@ export default function SearchMemeCoin() {
             },
           },
           "& .MuiInputBase-input": {
-            color: colorLibrary.text, // Input text color
+            color: colorLibrary.title, // Input text color
           },
           "& .MuiInputLabel-root": {
-            color: colorLibrary.text, // Label color
+            color: colorLibrary.title, // Label color
+          },
+          "& .MuiInputBase-input::placeholder": {
+            textAlign: "center", // Center the placeholder text
+            opacity: 1,
           },
         }}
         value={query}

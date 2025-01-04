@@ -3,6 +3,7 @@ import React from "react";
 
 import { colorLibrary } from "../../../color-library";
 import MemeTableTVTProgress from "./MemeTableTVTProgress";
+import { motion } from "motion/react";
 
 const data = [
   { title: "TXNS", value: 20, buy: 15, sell: 5 },
@@ -36,6 +37,10 @@ export default function MemeTableTVTDetails() {
       {/* //*one row of meme table */}
       {data.map((item, index) => (
         <Box
+          component={motion.div}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 2, ease: "easeInOut" }}
           key={index}
           display={"flex"}
           justifyContent={"space-between"}

@@ -19,7 +19,7 @@ export default function FilterMemeCoinsBtns() {
     <Box
       sx={{
         overflow: "hidden",
-        padding: "1rem",
+        padding: "0.3rem 0rem",
         bgcolor: colorLibrary.bg,
       }}
     >
@@ -27,11 +27,8 @@ export default function FilterMemeCoinsBtns() {
         onSlideChange={() => handleHaptics()}
         modules={[A11y]}
         slidesPerView="auto"
-        spaceBetween={10}
-        loop={true}
-        style={{
-          padding: "0 10px",
-        }}
+        spaceBetween={5}
+        loop={false}
       >
         {["🐣 New", "🔥Hot", "✔️ Listed", "💹 Mcap", "🔊 Top volume"].map(
           (label, index) => (
@@ -54,8 +51,10 @@ export default function FilterMemeCoinsBtns() {
                   sx={{
                     borderRadius: "20px",
                     textTransform: "capitalize",
-                    padding: "0.5rem 1rem",
-                    bgcolor: colorLibrary.boxBg,
+                    padding: "0.2rem 0.4rem",
+                    bgcolor: colorLibrary.boxBgLighter,
+                    color: colorLibrary.text,
+                    fontWeight: 300,
                     textWrap: "nowrap",
                   }}
                 >

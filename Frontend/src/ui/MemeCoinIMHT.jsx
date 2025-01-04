@@ -20,12 +20,13 @@ export default function MemeCoinIMHT({
   value = colorLibrary.bg,
   showImg = false,
   showIcon = true,
+  fontWeight = 500,
 }) {
   const totalTxns = txns?.reduce((acc, curr) => acc + curr.amount, 0);
 
   return (
     <Box>
-      {/* //*MemeCoin icon */}
+      {/* //*MemeCoin icon (this one used in hottest memeCoin)*/}
       {showImg && (
         <Avatar
           alt={img}
@@ -35,15 +36,20 @@ export default function MemeCoinIMHT({
       )}
       <Box display={"flex"} mt={"1rem"} component="div" color={text}>
         {showIcon && <BarChartRounded />}
-        <Typography component="span" margin={"0 0.8rem 0 0.2rem"} color={text}>
+        <Typography
+          component="span"
+          margin={"0 0.8rem 0 0.2rem"}
+          color={text}
+          fontWeight={fontWeight}
+        >
           Mcap
         </Typography>
         <Typography
           component="span"
           marginLeft={"auto"}
-          color="success"
-          fontWeight={"bold"}
-          sx={{ textDecoration: "underline" }}
+          color={showIcon ? colorLibrary.bgBuy : colorLibrary.title}
+          fontWeight={fontWeight}
+          sx={{ textDecoration: showIcon ? "underline" : "none" }}
         >
           ${formatBigPrice(mcap)}
         </Typography>
@@ -57,14 +63,19 @@ export default function MemeCoinIMHT({
         }}
       >
         {showIcon && <Groups2Rounded />}
-        <Typography component="span" margin={"0 0.8rem 0 0.2rem"} color={text}>
+        <Typography
+          component="span"
+          margin={"0 0.8rem 0 0.2rem"}
+          color={text}
+          fontWeight={fontWeight}
+        >
           Holders
         </Typography>
         <Typography
           component="span"
           marginLeft={"auto"}
-          fontWeight={"bold"}
           color={value}
+          fontWeight={400}
         >
           {holders?.length}
         </Typography>
@@ -78,14 +89,19 @@ export default function MemeCoinIMHT({
         }}
       >
         {showIcon && <SwapVertRounded />}
-        <Typography component="span" margin={"0 0.8rem 0 0.2rem"} color={text}>
+        <Typography
+          component="span"
+          margin={"0 0.8rem 0 0.2rem"}
+          color={text}
+          fontWeight={fontWeight}
+        >
           Txns
         </Typography>
         <Typography
           component="span"
           marginLeft={"auto"}
-          fontWeight={"bold"}
           color={value}
+          fontWeight={400}
         >
           {formatBigPrice(totalTxns)}
         </Typography>
