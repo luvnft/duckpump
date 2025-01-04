@@ -1,8 +1,8 @@
 export const data = [
   {
     tokenId: 1,
-    tokenName: "DASHAKH",
-    symbol: "DASHAKH",
+    tokenName: "DuckPump",
+    symbol: "DuckPump",
     logo: "",
     tokenAddress: "EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS",
     mcap: 50000000,
@@ -22,11 +22,11 @@ export const data = [
         timeStamp: "2025-01-02T09:45:00.000Z",
       },
       {
-        amount: 1035,
+        amount: 5,
         timeStamp: "2025-01-02T09:47:30.000Z",
       },
       {
-        amount: 500,
+        amount: 5,
         timeStamp: "2025-01-02T09:50:15.000Z",
       },
       {
@@ -34,27 +34,27 @@ export const data = [
         timeStamp: "2025-01-02T09:52:45.000Z",
       },
       {
-        amount: 75,
+        amount: 7,
         timeStamp: "2025-01-02T09:55:10.000Z",
       },
       {
-        amount: 100,
+        amount: 10,
         timeStamp: "2025-01-02T09:57:35.000Z",
       },
       {
-        amount: 40,
+        amount: 4,
         timeStamp: "2025-01-02T10:00:05.000Z",
       },
       {
-        amount: 60,
+        amount: 3,
         timeStamp: "2025-01-02T10:02:25.000Z",
       },
       {
-        amount: 80,
+        amount: 8,
         timeStamp: "2025-01-02T10:04:50.000Z",
       },
       {
-        amount: 25,
+        amount: 2,
         timeStamp: "2025-01-02T10:07:15.000Z",
       },
     ],
@@ -84,7 +84,7 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQAI75sQMdQNFLVYI1b413lGsBv701-8qwCOIWPKR5mcHzDW",
-        amount: 2000,
+        amount: 20,
         tokenAmount: 20000000,
         tradType: "buy",
         telegramId: "ali123",
@@ -92,7 +92,7 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQCXKpag80kcf4zFucmH65pX2g02Q7AQw_oNZxTvoTjsXeWj",
-        amount: 5000,
+        amount: 5,
         tokenAmount: 10000,
         tradType: "sell",
         telegramId: "sara987",
@@ -100,7 +100,7 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQBgXY9R-ew3O9qhx2ZntRyKyHUqRkcr8j7wtl-rxmWUmgcG",
-        amount: 4500,
+        amount: 4,
         tokenAmount: 1200,
         tradType: "sell",
         telegramId: "javad22",
@@ -108,7 +108,7 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQBEfRmWqOqFufybHQ5qrnzgX-MuhM3pnPeOOmPMYG06VsBa",
-        amount: 6000,
+        amount: 6,
         tokenAmount: 52800000,
         tradType: "buy",
         telegramId: "fatima2020",
@@ -116,7 +116,7 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQA58oWnswtUGDNp6lG07zG1vZpH467EhzyUZaXAMvnjO0Cx",
-        amount: 3000,
+        amount: 3,
         tokenAmount: 855800000,
         tradType: "sell",
         telegramId: "reza2024",
@@ -124,7 +124,7 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQDL2z2klq7iRPk903mUzWaxGm4b1klxicQ90ivj9wOqkmva",
-        amount: 7000,
+        amount: 7,
         tokenAmount: 588200000,
         tradType: "buy",
         telegramId: "john_doe",
@@ -132,7 +132,7 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQCO7VrL-G89JfUxWOQFaruFI2uNI7JbhIs4vW2cIf2L_Ess",
-        amount: 8500,
+        amount: 85,
         tokenAmount: 100000000000,
         tradType: "buy",
         telegramId: "emily_07",
@@ -140,7 +140,7 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQC_UyLi6nA0cqkLg5By7HjwZVn8vXMkhAafUiH2bCET7PiY",
-        amount: 4000,
+        amount: 40,
         tokenAmount: 100000000000,
         tradType: "sell",
         telegramId: "mark2023",
@@ -148,7 +148,7 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQCyRrwwpX9_EUlzUBIuWX50gPDN1w3DuHsYgY0FIS1V6Bim",
-        amount: 3500,
+        amount: 3,
         tokenAmount: 100000000000,
         tradType: "sell",
         telegramId: "alex_wilson",

@@ -6,8 +6,15 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import { A11y } from "swiper/modules";
 import { colorLibrary } from "../../color-library";
+import { motion } from "motion/react";
+import { Haptics, ImpactStyle } from "@capacitor/haptics";
 
 export default function FilterMemeCoinsBtns() {
+  //* Haptics (vibrate on button click)
+  const handleHaptics = async () => {
+    await Haptics.impact({ style: ImpactStyle.Medium });
+  };
+
   return (
     <Box
       sx={{
@@ -17,6 +24,7 @@ export default function FilterMemeCoinsBtns() {
       }}
     >
       <Swiper
+        onSlideChange={() => handleHaptics()}
         modules={[A11y]}
         slidesPerView="auto"
         spaceBetween={10}
@@ -36,18 +44,24 @@ export default function FilterMemeCoinsBtns() {
                 width: "max-content",
               }}
             >
-              <Button
-                variant="contained"
-                sx={{
-                  borderRadius: "20px",
-                  textTransform: "capitalize",
-                  padding: "0.5rem 1rem",
-                  bgcolor: colorLibrary.boxBg,
-                  textWrap: "nowrap",
-                }}
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0, y: -10 }}
+                whileInView={{ scale: 1, opacity: 1, y: 0 }}
+                whileTap={{ scale: 0.9 }}
               >
-                {label}
-              </Button>
+                <Button
+                  variant="contained"
+                  sx={{
+                    borderRadius: "20px",
+                    textTransform: "capitalize",
+                    padding: "0.5rem 1rem",
+                    bgcolor: colorLibrary.boxBg,
+                    textWrap: "nowrap",
+                  }}
+                >
+                  {label}
+                </Button>
+              </motion.div>
             </SwiperSlide>
           )
         )}

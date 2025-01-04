@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import MemeCoinLinearProgress from "../../ui/MemeCoinLinearProgress";
 import { calcBondingCurve } from "../../utils/helpers";
+import { motion } from "motion/react";
 
 const memeCoinDetails = {
   mcap: "11,11",
@@ -34,6 +35,9 @@ export default function MemeCoinItem({
         <CardContent sx={{ padding: "0.1rem 0.5rem" }}>
           {/* //*Card Header */}
           <Box
+            component={motion.div}
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
             display="flex"
             justifyContent="space-between"
             alignItems="center"
