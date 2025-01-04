@@ -26,7 +26,7 @@ export default function MemeCoinDetails() {
       display={"flex"}
       flexDirection={"column"}
       gap={3}
-      paddingBottom={"7rem"}
+      paddingBottom={"3rem"}
     >
       <BackBtn />
 

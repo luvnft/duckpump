@@ -62,7 +62,7 @@ export default function ViewAllDrawer({ comments }) {
           ".MuiPaper-root": {
             bgcolor: colorLibrary.boxBg,
             borderRadius: "1rem 1rem 0 0",
-            maxHeight: "80%",
+            maxHeight: "60%",
             overflow: "hidden",
           },
         }}
@@ -78,7 +78,7 @@ export default function ViewAllDrawer({ comments }) {
           bgcolor={colorLibrary.boxBgLighter}
           borderRadius={"1rem"}
           padding={"0.8rem 0.6rem 1.4rem"}
-          my={10}
+          margin={"2rem 0 5rem"}
         >
           <Puller />
           {comments?.map((comment, index) => (

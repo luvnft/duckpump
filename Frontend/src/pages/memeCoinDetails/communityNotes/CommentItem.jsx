@@ -14,7 +14,7 @@ export default function CommentItem({
   return (
     <Box
       component={"li"}
-      width={"100%"}
+      width={"95%"}
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}
@@ -38,6 +38,7 @@ export default function CommentItem({
         justifySelf={"flex-end"}
         sx={{ opacity: 0.8, textWrap: "nowrap" }}
         width={"max-content"}
+        paddingRight={"0.5rem"}
       >
         {getCustomRelativeTime(timeStamp) || ""}
       </Typography>

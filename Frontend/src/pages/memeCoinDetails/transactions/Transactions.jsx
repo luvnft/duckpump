@@ -34,7 +34,7 @@ export default function Transactions() {
         bgcolor={colorLibrary.boxBgLighter}
         borderRadius={"1rem"}
         padding={"0.8rem 0.6rem 1.4rem"}
-        my={0}
+        marginBottom={"4rem"}
       >
         {buyers?.map((buyer, index) => (
           <React.Fragment key={buyer.telegramId}>
