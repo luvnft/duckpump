@@ -23,16 +23,21 @@ export default function MemeCoinWallet({ tokenAddress }) {
     <>
       <Button
         onClick={handleCopy}
-        style={{
+        sx={{
           backgroundColor: colorLibrary.boxBgLighter,
           color: colorLibrary.title,
-          padding: "0.2rem 0.4rem",
+          opacity: 0.9,
+          padding: "0.2rem 0.6rem",
           borderRadius: "1rem",
           display: "flex",
           alignItems: "center",
           gap: "0.5rem",
           letterSpacing: "1px",
           fontSize: "0.7rem",
+          "& .MuiSvgIcon-root": {
+            color: colorLibrary.text,
+            fontSize: "0.9rem",
+          },
         }}
       >
         <ContentCopyRounded />
