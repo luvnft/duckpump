@@ -14,6 +14,7 @@ import { useEffect, useRef, useState } from "react";
 import { colorLibrary } from "../../color-library";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SlippageModal from "./SlippageModal";
+import BackBtn from "../../ui/BackBtn";
 
 export default function SwapPage() {
   const { bg, boxBg, text, bgBuy, bgSell, bgLight3, boxBgLightest } =
@@ -71,7 +72,7 @@ export default function SwapPage() {
       display={"flex"}
       bgcolor={bg}
       width={"100%"}
-      height={"100vh"}
+      height={"100dvh"}
       flexDirection={"column"}
       gap={2}
     >
@@ -81,20 +82,7 @@ export default function SwapPage() {
         width={"100%"}
         justifyContent={"start"}
       >
-        <Button
-          variant="outlined"
-          size="small"
-          sx={{
-            backgroundColor: boxBg,
-            color: text,
-            padding: "2px",
-            borderColor: text,
-            borderRadius: "20px",
-            fontSize: ".7rem",
-          }}
-        >
-          Back
-        </Button>
+        <BackBtn />
       </Box>
       {/* //* TOP */}
       <Box display={"flex"} width={"100%"} justifyContent={"center"}>
@@ -189,14 +177,14 @@ export default function SwapPage() {
               <InputAdornment position="end">
                 <Typography color={text} fontSize={"2rem"} fontWeight={600}>
                   {" "}
-                  TON
+                  {activeTab === "buy" ? "TON" : "$maCoin"}
                 </Typography>
               </InputAdornment>
             }
           />
         </Box>
         <Typography color={text} fontSize={"1.5rem"}>
-          = 12k $maCoin
+          = 12 {activeTab === "sell" ? "TON" : "$maCoin"}
         </Typography>
       </Box>
 
