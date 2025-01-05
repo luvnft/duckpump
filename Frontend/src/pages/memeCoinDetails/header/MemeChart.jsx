@@ -28,11 +28,11 @@ export default function MemeChart() {
     <ResponsiveContainer width="100%" height={200}>
       <AreaChart
         data={data}
-        margin={{ top: 10, right: 20, left: 0, bottom: 20 }}
+        margin={{ top: 10, right: 0, left: 0, bottom: 10 }}
       >
         {/* //*Gradient Colors */}
         <defs>
-          <linearGradient id="colorPrice" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id="colorPrice" x1="1" y1="0" x2="0" y2="1.2">
             <stop
               offset="1%"
               stopColor={colorLibrary.bgBuy}

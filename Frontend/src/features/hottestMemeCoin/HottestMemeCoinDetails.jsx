@@ -26,6 +26,7 @@ export default function HottestMemeCoinDetails() {
     <Card
       sx={{
         bgcolor: colorLibrary.boxBgLightest,
+        borderRadius: "0.5rem",
       }}
       onClick={handleNavigate}
     >
@@ -37,8 +38,6 @@ export default function HottestMemeCoinDetails() {
             flexDirection={"column"}
             alignItems={"center"}
             gap={2}
-            borderRadius={"1rem"}
-            padding={0}
           >
             {/* //*title */}
             <Typography textTransform={"uppercase"} fontWeight={400}>

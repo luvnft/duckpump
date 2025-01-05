@@ -4,9 +4,10 @@ import { data, lastboughtCoin } from "../data";
 const HomePageContext = createContext();
 
 function HomePageProvider({ children }) {
-  const allMemeCoin = data;
-  const lastBoughtMemeCoin = lastboughtCoin;
-  const hottestMemeCoin = allMemeCoin.filter((coin) => coin.isHot === true);
+  const allMemeCoin = data || [];
+  const lastBoughtMemeCoin = lastboughtCoin || [];
+  const hottestMemeCoin =
+    allMemeCoin.filter((coin) => coin.isHot === true) || [];
   return (
     <HomePageContext.Provider
       value={{ allMemeCoin, lastBoughtMemeCoin, hottestMemeCoin }}
