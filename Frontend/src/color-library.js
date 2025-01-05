@@ -13,3 +13,4 @@ export const colorLibrary = {
   title: "#E2D171",
   text: "#D5CFAA",
 };
+

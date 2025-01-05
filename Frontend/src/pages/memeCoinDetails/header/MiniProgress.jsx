@@ -12,11 +12,11 @@ export default function MiniProgress({ bondingPercentage }) {
     borderRadius: 8,
     width: "100%",
     [`&.${linearProgressClasses.colorPrimary}`]: {
-      backgroundColor: theme.palette.grey[500],
+      backgroundColor: colorLibrary.bgProgress2,
     },
     [`& .${linearProgressClasses.bar}`]: {
       borderRadius: 5,
-      backgroundColor: colorLibrary.bgBuy,
+      backgroundColor: colorLibrary.bgProgress1,
     },
   }));
 

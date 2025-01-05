@@ -23,6 +23,8 @@ export default function SwitchBtn() {
         display: "inline-flex",
         borderRadius: "1.5rem",
         overflow: "hidden",
+        padding: "0.2rem 0.3rem",
+
         bgcolor: colorLibrary.boxBgLighter,
         "& .MuiToggleButtonGroup-grouped": {
           color: colorLibrary.text,
