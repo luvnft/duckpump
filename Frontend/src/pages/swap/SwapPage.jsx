@@ -10,20 +10,60 @@ import {
   ToggleButtonGroup,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { colorLibrary } from "../../color-library";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import SlippageModal from "./SlippageModal";
 
 export default function SwapPage() {
-  const { bg, boxBg, text, bgBuy, bgSell } = colorLibrary;
+  const { bg, boxBg, text, bgBuy, bgSell, bgLight3, boxBgLightest } =
+    colorLibrary;
   const [activeTab, setActiveTab] = useState("buy");
   const [inputValue, setInputValue] = useState(1);
   const [slippage, setSlippgae] = useState(5);
+  const inputRef = useRef(null);
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => {
+    if (!Number(slippage)) {
+      setSlippgae(5);
+    }
+    setOpen(false);
+  };
 
   const handleChange = (_, newAlignment) => {
     if (newAlignment !== null) {
       setActiveTab(newAlignment);
     }
+  };
+
+  const focusInput = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  };
+
+  // Initial focus when component mounts
+  useEffect(() => {
+    focusInput();
+  }, [inputRef, activeTab, inputValue]);
+
+  // Re-focus when input loses focus
+  const handleBlur = () => {
+    // Small timeout to prevent immediate re-focus interfering with other interactions
+    setTimeout(focusInput, 100);
+  };
+
+  const customButtonStyles = {
+    padding: "2px 2px",
+    bgcolor: bgLight3,
+    color: bg,
+    border: "none",
+    borderRadius: "15px",
+    fontWeight: 500,
+
+    fontSize: ".7rem",
   };
 
   return (
@@ -33,7 +73,7 @@ export default function SwapPage() {
       width={"100%"}
       height={"100vh"}
       flexDirection={"column"}
-      gap={1}
+      gap={2}
     >
       <Box
         display={"flex"}
@@ -50,6 +90,7 @@ export default function SwapPage() {
             padding: "2px",
             borderColor: text,
             borderRadius: "20px",
+            fontSize: ".7rem",
           }}
         >
           Back
@@ -63,18 +104,18 @@ export default function SwapPage() {
           value={activeTab}
           fullWidth
           sx={{
-            bgcolor: colorLibrary.boxBgLighter,
+            backgroundColor: bgLight3,
             borderRadius: "15px",
             "& .MuiToggleButtonGroup-grouped": {
               color: bg,
-              bgcolor: colorLibrary.boxBgLighter,
+              bgcolor: bgLight3,
               letterSpacing: 2,
               fontSize: "0.75rem",
               borderRadius: "15px",
               transition: "all 0.3s ease-in-out",
               "&.Mui-selected": {
                 bgcolor: `${activeTab.includes("buy") ? bgBuy : bgSell}`,
-                color: colorLibrary.bg,
+                color: bg,
               },
 
               "&:focus": {
@@ -105,6 +146,7 @@ export default function SwapPage() {
           endIcon={<KeyboardArrowDownIcon />}
           variant="outlined"
           size="small"
+          onClick={handleOpen}
           sx={{
             backgroundColor: boxBg,
             color: text,
@@ -117,7 +159,9 @@ export default function SwapPage() {
         </Button>
         <Box display={"flex"} justifyContent={"center"}>
           <Input
+            inputRef={inputRef}
             type="number"
+            // onBlur={handleBlur}
             sx={{
               fontSize: "2rem",
               fontWeight: 600,
@@ -157,9 +201,16 @@ export default function SwapPage() {
       </Box>
 
       {/* //* DOWN */}
-      <Box display={"flex"} flexDirection={"column"} gap={2} paddingY={3}>
+      <Box display={"flex"} flexDirection={"column"} gap={1} paddingY={3}>
         <Box display={"flex"} justifyContent={"space-between"} width={"100%"}>
-          <Typography bgcolor={boxBg} color={text} borderRadius={15} p={"5px"}>
+          <Typography
+            bgcolor={boxBg}
+            color={text}
+            borderRadius={15}
+            p={"5px"}
+            fontSize={".8rem"}
+            margin={"auto 0"}
+          >
             Balance : test1
           </Typography>
           <Typography
@@ -168,7 +219,8 @@ export default function SwapPage() {
             borderRadius={15}
             paddingX={"10px"}
             paddingY={"5px"}
-            // fontSize={"15px"}
+            fontSize={".8rem"}
+            margin={"auto 0"}
           >
             Fee : test2
           </Typography>
@@ -178,33 +230,52 @@ export default function SwapPage() {
           width={"100%"}
           justifyContent={"center"}
           bgcolor={boxBg}
+          borderRadius={"10px"}
         >
-          <ButtonGroup
-            sx={{
-              display: "flex",
-              gap: "1rem",
-              padding: ".5rem",
-            }}
-            justifyContent={"space-between"}
+          <Box
+            display={"flex"}
+            gap={".4rem"}
+            padding={".7rem"}
+            justifyContent={"space-evenly"}
           >
-            <Button>test</Button>
-            <Button>test</Button>
-            <Button>test</Button>
-            <Button>test</Button>
-          </ButtonGroup>
+            <Button onClick={() => setInputValue(0.5)} sx={customButtonStyles}>
+              0.5 TON
+            </Button>
+            <Button onClick={() => setInputValue(2)} sx={customButtonStyles}>
+              2 TON
+            </Button>
+            <Button onClick={() => setInputValue(5)} sx={customButtonStyles}>
+              5 TON
+            </Button>
+            <Button onClick={() => setInputValue(20)} sx={customButtonStyles}>
+              20 TON
+            </Button>
+            <Button onClick={() => setInputValue(0.5)} sx={customButtonStyles}>
+              MAX
+            </Button>
+          </Box>
         </Box>
         <Box display={"flex"} width={"100%"} justifyContent={"center"}>
           <Button
             sx={{
               width: "100%",
-              bgcolor: bgBuy,
+              bgcolor: activeTab === "buy" ? bgBuy : bgSell,
               color: bg,
+              paddingY: ".7rem",
+              fontSize: "1rem",
+              borderRadius: "10px",
             }}
           >
-            Submit
+            {activeTab === "buy" ? "BUY" : "SELL"}
           </Button>
         </Box>
       </Box>
+      <SlippageModal
+        open={open}
+        handleClose={handleClose}
+        setInputValue={setSlippgae}
+        inputValue={slippage}
+      />
     </Box>
   );
 }
