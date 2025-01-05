@@ -31,7 +31,7 @@ export default function Home() {
         border={`0.01rem solid ${colorLibrary.boxBg}`}
         bgcolor={colorLibrary.bg}
         padding={1}
-        borderRadius={"1rem"}
+        borderRadius={"0.5rem"}
       >
         <SearchMemeCoin />
         <FilterMemeCoinsBtns />

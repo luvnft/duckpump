@@ -29,7 +29,7 @@ export default function Transactions() {
         flexDirection={"column"}
         alignItems={"center"}
         gap={1}
-        height={"20rem"}
+        // height={"20rem"}
         overflow={"auto"}
         bgcolor={colorLibrary.boxBgLighter}
         borderRadius={"1rem"}

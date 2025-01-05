@@ -13,8 +13,6 @@ export default function MemeCoinsList() {
         listStyle: "none",
         margin: 0,
         overflow: "auto",
-        minHeight: "40vh",
-        maxHeight: "75vh",
         padding: "0 0.1rem 0.1rem 0.1rem",
       }}
     >

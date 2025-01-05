@@ -19,6 +19,7 @@ export default function TransactionItem({
       component={motion.li}
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
       display={"flex"}
       justifyContent={"space-between"}
       alignItems={"center"}
