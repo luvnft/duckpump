@@ -23,6 +23,9 @@ export default function SwapPage() {
   const [inputValue, setInputValue] = useState(1);
   const [slippage, setSlippgae] = useState(5);
   const inputRef = useRef(null);
+  const [viewportHeight, setViewportHeight] = useState(
+    window.visualViewport?.height || window.innerHeight
+  );
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
@@ -56,6 +59,27 @@ export default function SwapPage() {
     setTimeout(focusInput, 100);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.visualViewport) {
+        setViewportHeight(window.visualViewport.height);
+      }
+    };
+
+    // Add listeners for both visualViewport and window resize
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener("resize", handleResize);
+      window.visualViewport.addEventListener("scroll", handleResize);
+    }
+
+    return () => {
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener("resize", handleResize);
+        window.visualViewport.removeEventListener("scroll", handleResize);
+      }
+    };
+  }, []);
+
   const customButtonStyles = {
     padding: "2px 2px",
     bgcolor: bgLight3,
@@ -72,7 +96,7 @@ export default function SwapPage() {
       display={"flex"}
       bgcolor={bg}
       width={"100%"}
-      height={"100dvh"}
+      height={viewportHeight + "px"}
       flexDirection={"column"}
       gap={2}
     >
