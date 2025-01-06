@@ -1,11 +1,13 @@
 import { Box } from "@mui/material";
 import React, { useEffect } from "react";
+import { useParams} from "react-router-dom";
+
+
+import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
 import MemeCoinDetailsHeader from "./header/MemeCoinDetailsHeader";
 import MemeChart from "./header/MemeChart";
 import ChartControlBtns from "./header/ChartControlBtns";
 import MemeTable from "./body/MemeTable";
-import { useParams, useSearchParams } from "react-router-dom";
-import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
 import CommunityNotes from "./communityNotes/CommunityNotes";
 import BottomDetailsNavigation from "./BottomDetailsNavigation";
 import SwapBtns from "./SwapBtns";

@@ -4,10 +4,11 @@ import { lazy, Suspense } from "react";
 import CustomThemeProvider from "./context/CustomThemeProvider.jsx";
 import { HomePageProvider } from "./context/HomePageProvider.jsx";
 import { SelectedMemeCoinProvider } from "./context/SelectedMemeCoinProvider.jsx";
+import { UserDetailsProvider } from "./context/UserDetailsProvider.jsx";
 
 import Layout from "./pages/layout/Layout.jsx";
 import Home from "./pages/home/Home.jsx";
-import { UserDetailsProvider } from "./context/UserDetailsProvider.jsx";
+
 const MemeCoinDetails = lazy(() =>
   import("./pages/memeCoinDetails/MemeCoinDetails.jsx")
 );

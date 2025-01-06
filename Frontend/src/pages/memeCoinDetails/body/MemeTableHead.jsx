@@ -11,7 +11,6 @@ export default function MemeTableHead() {
   return (
     <Box
       display={"flex"}
-      justifyContent={"space-between"}
       bgcolor={colorLibrary.boxBg}
       padding={"0.5rem 0.6rem"}
     >
@@ -19,6 +18,7 @@ export default function MemeTableHead() {
         variant="body2"
         color={colorLibrary.title}
         textTransform={"uppercase"}
+        width={"8rem"}
       >
         Price <br />
         <Typography color={colorLibrary.text} variant="caption">
@@ -30,6 +30,7 @@ export default function MemeTableHead() {
         color={colorLibrary.title}
         textTransform={"uppercase"}
         textAlign={"center"}
+        flexGrow={1}
       >
         volume <br />
         <Typography color={colorLibrary.text} variant="caption">
@@ -41,6 +42,7 @@ export default function MemeTableHead() {
         color={colorLibrary.title}
         textTransform={"uppercase"}
         textAlign={"right"}
+        width={"8rem"}
       >
         Market Cap <br />
         <Typography color={colorLibrary.text} variant="caption">
