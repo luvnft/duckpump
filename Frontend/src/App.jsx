@@ -8,6 +8,7 @@ import { UserDetailsProvider } from "./context/UserDetailsProvider.jsx";
 
 import Layout from "./pages/layout/Layout.jsx";
 import Home from "./pages/home/Home.jsx";
+import { SwapPageDataProvider } from "./context/SwapPageDataProvider.jsx";
 
 const MemeCoinDetails = lazy(() =>
   import("./pages/memeCoinDetails/MemeCoinDetails.jsx")
@@ -21,21 +22,23 @@ function App() {
         <CustomThemeProvider>
           <HomePageProvider>
             <SelectedMemeCoinProvider>
-              <Router>
-                <Routes>
-                  <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route
-                      path="/meme-coin-details/:memeCoinID"
-                      element={<MemeCoinDetails />}
-                    />
-                    <Route
-                      path="/meme-coin-details/:memeCoinID/swap"
-                      element={<SwapPage />}
-                    />
-                  </Route>
-                </Routes>
-              </Router>
+              <SwapPageDataProvider>
+                <Router>
+                  <Routes>
+                    <Route path="/" element={<Layout />}>
+                      <Route index element={<Home />} />
+                      <Route
+                        path="/meme-coin-details/:memeCoinID"
+                        element={<MemeCoinDetails />}
+                      />
+                      <Route
+                        path="/meme-coin-details/:memeCoinID/swap"
+                        element={<SwapPage />}
+                      />
+                    </Route>
+                  </Routes>
+                </Router>
+              </SwapPageDataProvider>
             </SelectedMemeCoinProvider>
           </HomePageProvider>
         </CustomThemeProvider>
