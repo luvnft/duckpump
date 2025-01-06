@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export const data = [
   {
     tokenId: 1,
@@ -15,6 +17,207 @@ export const data = [
       "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+    ],
+    priceHistory: [
+      {
+        time: `${moment().subtract(1, "days").format("D MMM")} `,
+        price: 0.00000105,
+      },
+      {
+        time: `${moment().subtract(2, "days").format("D MMM")} `,
+        price: 0.0000055,
+      },
+      {
+        time: `${moment().subtract(3, "days").format("D MMM")} `,
+        price: 0.0000005,
+      },
+      {
+        time: `${moment().subtract(4, "days").format("D MMM")} `,
+        price: 0.00000035,
+      },
+      {
+        time: `${moment().subtract(5, "days").format("D MMM")} `,
+        price: 0.00000029,
+      },
+      {
+        time: `06:36 hour`,
+        price: 0.000000025,
+      },
+      {
+        time: `05:35 hour`,
+        price: 0.000000059,
+      },
+      {
+        time: `04:48 hour`,
+        price: 0.00000005,
+      },
+      {
+        time: `03:25 hour`,
+        price: 0.00000045,
+      },
+      {
+        time: `02:15 hour`,
+        price: 0.00000056,
+      },
+
+      {
+        time: `01:01 hour`,
+        price: 0.00000055,
+      },
+      {
+        time: `06:14 min`,
+        price: 0.00000105,
+      },
+      {
+        time: `5:14 min`,
+        price: 0.0000055,
+      },
+      {
+        time: `04:15 min`,
+        price: 0.0000005,
+      },
+      {
+        time: `03:19 min`,
+        price: 0.0000035,
+      },
+      {
+        time: `02:18 min`,
+        price: 0.0000029,
+      },
+      {
+        time: `01:15 min`,
+        price: 0.0000025,
+      },
+    ],
+    fiveMinuteHistory: [
+      {
+        time: `${moment().subtract(1, "days").format("D MMM")} `,
+        price: 0.00000105,
+      },
+      {
+        time: `${moment().subtract(2, "days").format("D MMM")} `,
+        price: 0.0000055,
+      },
+      {
+        time: `${moment().subtract(3, "days").format("D MMM")} `,
+        price: 0.0000005,
+      },
+      {
+        time: `${moment().subtract(4, "days").format("D MMM")} `,
+        price: 0.00000035,
+      },
+      {
+        time: `${moment().subtract(5, "days").format("D MMM")} `,
+        price: 0.00000029,
+      },
+      {
+        time: `06:26 hour`,
+        price: 0.000000025,
+      },
+      {
+        time: `05:26 hour`,
+        price: 0.0000059,
+      },
+      {
+        time: `04:26 hour`,
+        price: 0.0000005,
+      },
+      {
+        time: `03:26 hour`,
+        price: 0.00000445,
+      },
+      {
+        time: `02:26 hour`,
+        price: 0.00000056,
+      },
+
+      {
+        time: `01:26 hour`,
+        price: 0.00000055,
+      },
+      {
+        time: `26:12 min`,
+        price: 0.00000105,
+      },
+      {
+        time: `21:14 min`,
+        price: 0.0000055,
+      },
+      {
+        time: `16:11 min`,
+        price: 0.0000005,
+      },
+      {
+        time: `11:10 min`,
+        price: 0.0000035,
+      },
+      {
+        time: `06:20 min`,
+        price: 0.0000029,
+      },
+      {
+        time: `01:15 sec`,
+        price: 0.0000025,
+      },
+    ],
+    fifteenMinuteHistory: [
+      {
+        time: `${moment().subtract(1, "days").format("D MMM")} `,
+        price: 0.00000105,
+      },
+      {
+        time: `${moment().subtract(2, "days").format("D MMM")} `,
+        price: 0.0000055,
+      },
+      {
+        time: `${moment().subtract(3, "days").format("D MMM")} `,
+        price: 0.0000005,
+      },
+      {
+        time: `${moment().subtract(4, "days").format("D MMM")} `,
+        price: 0.00000035,
+      },
+      {
+        time: `${moment().subtract(5, "days").format("D MMM")} `,
+        price: 0.00000029,
+      },
+      {
+        time: `06:26 hour`,
+        price: 0.000000025,
+      },
+      {
+        time: `05:26 hour`,
+        price: 0.000000059,
+      },
+      {
+        time: `04:26 hour`,
+        price: 0.00000005,
+      },
+      {
+        time: `03:26 hour`,
+        price: 0.00000045,
+      },
+      {
+        time: `02:26 hour`,
+        price: 0.00000056,
+      },
+
+      {
+        time: `01:05 hour`,
+        price: 0.0000005,
+      },
+      {
+        time: `45:10 min`,
+        price: 0.0000035,
+      },
+      {
+        time: `30:14 min`,
+        price: 0.0000029,
+      },
+      {
+        time: `15:01 min`,
+        price: 0.0000025,
+      },
     ],
     txns: [
       {
