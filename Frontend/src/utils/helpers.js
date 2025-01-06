@@ -108,3 +108,21 @@ export function calcMcapHistory(priceHistory, mcap) {
   });
   return mcapResults;
 }
+
+// Function to clean and convert input values to numbers
+export function cleanNumbers({ value, buy, sell }) {
+  // Remove "$" or "k" and convert strings to numbers
+  const clean = (num) => {
+    if (typeof num === "string") {
+      num = num.replace(/[^\d.]/g, ""); // Remove non-numeric characters except "."
+      return parseFloat(num); // Convert to number
+    }
+    return num; // Return as is if already a number
+  };
+
+  return {
+    value: clean(value),
+    buy: clean(buy),
+    sell: clean(sell),
+  };
+}

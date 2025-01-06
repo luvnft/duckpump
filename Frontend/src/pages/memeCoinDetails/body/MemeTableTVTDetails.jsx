@@ -1,21 +1,26 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import { colorLibrary } from "../../../color-library";
 import MemeTableTVTProgress from "./MemeTableTVTProgress";
 import { motion } from "motion/react";
+import AnimatedValue from "../../../ui/AnimateValue";
+import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 
 const data = [
   { title: "TXNS", value: 20, buy: 15, sell: 5 },
-  { title: "VOLUME", value: "$120k", buy: "$15k", sell: "5k" },
-  { title: "TRADERS", value: 78, buy: 52, sell: 21 },
+  { title: "VOLUME", value: "$12k", buy: "$10k", sell: "2k" },
+  { title: "TRADERS", value: 8, buy: 12, sell: 4 },
+];
+const noChange = [
+  { title: "TXNS", value: 0, buy: 0, sell: 0 },
+  { title: "VOLUME", value: "0", buy: "0", sell: "0" },
+  { title: "TRADERS", value: 0, buy: 0, sell: 0 },
 ];
 
 export default function MemeTableTVTDetails() {
-  // const { selectedMemeCoinData } = useSelectedMemeCoinContext();
+  const { showLastDayOnTable } = useSelectedMemeCoinContext();
+  const [results, setResults] = useState(data);
 
-  // const { txns,volume } = selectedMemeCoinData || {};
-  // *convert title for display on top of progress bar
   function convertTitles(title) {
     switch (title) {
       case "TXNS":
@@ -27,6 +32,10 @@ export default function MemeTableTVTDetails() {
     }
   }
 
+  useEffect(() => {
+    setResults(showLastDayOnTable ? data : noChange);
+  }, [showLastDayOnTable, setResults]);
+
   return (
     <Box
       display={"flex"}
@@ -34,19 +43,13 @@ export default function MemeTableTVTDetails() {
       gap={"1rem"}
       padding={"1rem"}
     >
-      {/* //*one row of meme table */}
-      {data.map((item, index) => (
+      {results.map((item, index) => (
         <Box
-          component={motion.div}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 2, ease: "easeInOut" }}
           key={index}
           display={"flex"}
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          {/* //*left side  */}
           <Box
             display={"flex"}
             flexDirection={"column"}
@@ -54,35 +57,46 @@ export default function MemeTableTVTDetails() {
             gap={"0.2rem"}
             paddingRight={"2rem"}
           >
-            <Typography color={colorLibrary.title}>{item.title}</Typography>
-            <Typography color={colorLibrary.text}>{item.value}</Typography>
+            <Typography color={colorLibrary.title} sx={{ opacity: 0.8 }}>
+              {item.title}
+            </Typography>
+            <AnimatedValue
+              value={item.value}
+              color={colorLibrary.text}
+              fontWeight={600}
+              isCurrency={item.title === "VOLUME"}
+            />
           </Box>
 
-          {/* //!-------------------------------------------- */}
-
-          {/* //*right side */}
           <Box width={"70%"}>
-            {/* //*progress tittle */}
             <Box display={"flex"} justifyContent={"space-between"}>
               <Typography color={colorLibrary.title}>
                 {convertTitles(item.title).titleBuy}
                 <br />
-                <Typography color={colorLibrary.text}>{item.buy}</Typography>
+                <AnimatedValue
+                  value={item.buy}
+                  color={colorLibrary.text}
+                  isCurrency={item.title === "VOLUME"}
+                />
               </Typography>
               <Typography color={colorLibrary.title}>
                 {convertTitles(item.title).titleSell}
                 <br />
-                <Typography color={colorLibrary.text} textAlign={"right"}>
-                  {item.title === "VOLUME" && "$"}
-                  {item.sell}
-                </Typography>
+                <AnimatedValue
+                  value={item.sell}
+                  color={colorLibrary.text}
+                  isCurrency={item.title === "VOLUME"}
+                  prefix={item.title === "VOLUME" ? "$" : ""}
+                  justifySelf={"right"}
+                />
               </Typography>
             </Box>
 
-            {/* //!-------------------------------------------- */}
-
-            {/* //*progress bar*/}
-            <MemeTableTVTProgress />
+            <MemeTableTVTProgress
+              value={item.value}
+              buy={item.buy}
+              sell={item.sell}
+            />
           </Box>
         </Box>
       ))}
