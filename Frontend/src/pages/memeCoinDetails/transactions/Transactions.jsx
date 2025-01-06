@@ -50,7 +50,11 @@ export default function Transactions() {
             {index < buyers?.length - 1 && (
               <Divider
                 variant="middle"
-                sx={{ borderColor: colorLibrary.bgLight3, width: "80%" }}
+                sx={{
+                  borderColor: colorLibrary.bgLight3,
+                  width: "80%",
+                  marginLeft: "25%",
+                }}
               />
             )}
           </React.Fragment>

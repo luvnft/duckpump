@@ -6,9 +6,9 @@ import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinPro
 import CommentItem from "./CommentItem";
 
 export default function CommunityNotes() {
-  const { selectedMemeCoinData } = useSelectedMemeCoinContext();
-  const { comments } = selectedMemeCoinData || {};
-  const { userId, userName, comment, timeStamp } = comments?.[0] || {};
+  const { allComments } = useSelectedMemeCoinContext();
+  const { userId, userName, comment, timeStamp } = allComments?.[0] || {};
+
   return (
     <Box bgcolor={colorLibrary.boxBg} borderRadius={"1rem"} overflow={"hidden"}>
       {/* //*header */}
@@ -26,7 +26,7 @@ export default function CommunityNotes() {
           Community Notes
         </Typography>
 
-        <ViewAllDrawer comments={comments} />
+        <ViewAllDrawer comments={allComments} />
       </Box>
 
       {/* //*one comment preview */}

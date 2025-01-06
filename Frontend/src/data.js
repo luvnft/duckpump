@@ -360,21 +360,21 @@ export const data = [
     comments: [
       {
         id: 1,
-        telegramId: "omidfh",
-        userName: "mamad",
-        comment: "this is a comment",
+        telegramId: "Pavel Durov",
+        userName: "Pavel Durov",
+        comment: "DuckPump is Amazing 💘😀",
         timeStamp: new Date().toString(),
       },
       {
         id: 2,
-        telegramId: "ali123",
-        userName: "ali",
+        telegramId: "mary",
+        userName: "mary",
         comment: "I really like this token! It’s amazing.",
         timeStamp: new Date().toString(),
       },
       {
         id: 3,
-        telegramId: "sara987",
+        telegramId: "alex",
         userName: "sara",
         comment: "Can anyone explain how this works? I’m new to this.",
         timeStamp: new Date().toString(),
@@ -430,7 +430,7 @@ export const data = [
       {
         id: 10,
         telegramId: "javad22",
-        userName: "javad",
+        userName: "john",
         comment:
           "I’ve been using this for a while now and I’m seeing great results!",
         timeStamp: new Date().toString(),
@@ -438,7 +438,7 @@ export const data = [
       {
         id: 11,
         telegramId: "javad22",
-        userName: "javad",
+        userName: "james",
         comment:
           "I’ve been using this for a while now and I’m seeing great results!",
         timeStamp: new Date().toString(),

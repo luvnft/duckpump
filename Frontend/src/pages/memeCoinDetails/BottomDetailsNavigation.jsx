@@ -33,7 +33,8 @@ export default function BottomDetailsNavigation() {
           setValue(newValue);
         }}
         sx={{
-          backgroundColor: colorLibrary.bgLight3,
+          backgroundColor: colorLibrary.bgLightTransparency,
+          backdropFilter: "blur(10px)",
 
           "& button": {
             color: colorLibrary.bgLight2,

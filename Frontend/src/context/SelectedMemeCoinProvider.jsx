@@ -12,7 +12,6 @@ function SelectedMemeCoinProvider({ children }) {
     selectedMemeCoinData?.priceHistory,
     selectedMemeCoinData?.mcap
   );
-
   //*these are change the chart (price or Mcap) and filter time btns
   const [chartType, setChartType] = useState("price");
   const [chartTimeBtns, setChartTimeBtns] = useState("1min");
@@ -20,11 +19,34 @@ function SelectedMemeCoinProvider({ children }) {
   //*controlling the table below the chart
   const [showLastDayOnTable, setShowLastDayOnTable] = useState(true);
 
+  //*users comments control
+  const { comments } = selectedMemeCoinData || [];
+  const [allComments, setAllComments] = useState([]);
+  const [scrollToLastComment, setScrollToLastComment] = useState(false);
+
   useEffect(() => {
     setSelectedMemeCoinData(
       data.find((coin) => coin?.tokenId === Number(selectedMemeCoinId))
     );
   }, [selectedMemeCoinId]);
+
+  useEffect(() => {
+    setAllComments(comments);
+  }, [comments]);
+
+  //*handlers
+  function handleUserAddedComment(comment) {
+    setAllComments([
+      ...allComments,
+      {
+        id: crypto.randomUUID(),
+        telegramId: "Your Comment",
+        userName: "You",
+        comment,
+      },
+    ]);
+    setScrollToLastComment(true);
+  }
 
   return (
     <SelectedMemeCoinContext.Provider
@@ -42,6 +64,12 @@ function SelectedMemeCoinProvider({ children }) {
 
         showLastDayOnTable,
         setShowLastDayOnTable,
+
+        comments,
+        allComments,
+        handleUserAddedComment,
+        scrollToLastComment,
+        setScrollToLastComment,
       }}
     >
       {children}

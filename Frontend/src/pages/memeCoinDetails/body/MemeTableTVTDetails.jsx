@@ -17,6 +17,7 @@ const noChange = [
   { title: "TRADERS", value: 0, buy: 0, sell: 0 },
 ];
 
+//* its TXNS , VOLUME and TRADERS on the table
 export default function MemeTableTVTDetails() {
   const { showLastDayOnTable } = useSelectedMemeCoinContext();
   const [results, setResults] = useState(data);

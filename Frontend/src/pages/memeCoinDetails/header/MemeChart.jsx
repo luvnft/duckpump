@@ -15,12 +15,14 @@ import { calcMcapHistory, formatSmallNumber } from "../../../utils/helpers";
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 
 export default function MemeChart() {
+  //*cahrt type is price or Mcap
+  //*chartTimebtns is filter btns bellow the chart
   const { selectedMemeCoinData, chartType, chartTimeBtns } =
     useSelectedMemeCoinContext();
   const { priceHistory, fiveMinuteHistory, fifteenMinuteHistory, mcap } =
     selectedMemeCoinData || {};
-  console.log("1", priceHistory);
 
+  //*its change by change the filter btns bellow the chart
   const [dataFilter, setDataFilter] = useState(priceHistory);
 
   useEffect(() => {
@@ -29,10 +31,10 @@ export default function MemeChart() {
       "5min": fiveMinuteHistory,
       "15min": fifteenMinuteHistory,
     };
-
     setDataFilter(dataMap[chartTimeBtns] || priceHistory);
   }, [chartTimeBtns, priceHistory, fiveMinuteHistory, fifteenMinuteHistory]);
 
+  //*price * mcap from data
   const mcapResults = calcMcapHistory(dataFilter, mcap);
 
   return (

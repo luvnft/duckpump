@@ -1,7 +1,6 @@
 import { Box } from "@mui/material";
 import React, { useEffect } from "react";
-import { useParams} from "react-router-dom";
-
+import { useParams } from "react-router-dom";
 
 import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
 import MemeCoinDetailsHeader from "./header/MemeCoinDetailsHeader";

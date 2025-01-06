@@ -8,9 +8,9 @@ export const colorLibrary = {
   bgLight1: "#A3C1A7",
   bgLight2: "#716A5A",
   bgLight3: "#99907F",
+  bgLightTransparency: "#99907Fcc",
   bgBuy: "#72CF88",
   bgSell: "#E46465",
   title: "#E2D171",
   text: "#D5CFAA",
 };
-
