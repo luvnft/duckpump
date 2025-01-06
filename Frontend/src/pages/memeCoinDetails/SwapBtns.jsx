@@ -3,12 +3,15 @@ import React from "react";
 import { colorLibrary } from "../../color-library";
 import { useNavigate } from "react-router-dom";
 import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
+import { useSwapPageDataProvider } from "../../context/SwapPageDataProvider";
 
 export default function SwapBtns() {
   const navigate = useNavigate();
   const { selectedMemeCoinId } = useSelectedMemeCoinContext();
+  const { setSelectedSwapType } = useSwapPageDataProvider();
 
-  function handleNavigate() {
+  function handleNavigate(type) {
+    setSelectedSwapType(type);
     navigate(`/meme-coin-details/${selectedMemeCoinId}/swap`);
   }
 
@@ -33,7 +36,7 @@ export default function SwapBtns() {
           flexGrow: 1,
           padding: "0.5rem 0",
         }}
-        onClick={handleNavigate}
+        onClick={() => handleNavigate("buy")}
       >
         BUY
       </Button>
@@ -47,7 +50,7 @@ export default function SwapBtns() {
 
           flexGrow: 1,
         }}
-        onClick={handleNavigate}
+        onClick={() => handleNavigate("sell")}
       >
         SELL
       </Button>
