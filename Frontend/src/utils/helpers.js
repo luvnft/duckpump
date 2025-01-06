@@ -70,3 +70,41 @@ export function calcBondingCurve(value, ratio) {
   //or calculate the bonding curve
   return ((value / ratio) * 100)?.toFixed(1);
 }
+
+//*one of use case are in the chart price
+export const formatSmallNumber = (num) => {
+  if (num === 0) return "$0";
+
+  // Convert to string and remove leading "0."
+  const str = num.toString();
+  if (!str.includes("e")) {
+    const match = str.match(/^0\.([0]*)([1-9]\d*)$/);
+    if (match) {
+      const zeroCount = match[1].length;
+      const significantDigits = match[2];
+      return `$0.(${zeroCount})${significantDigits}`;
+    }
+  }
+
+  // Handle scientific notation
+  const [coefficient, exponent] = str.split("e");
+  if (exponent) {
+    const zeroCount = Math.abs(parseInt(exponent)) - 1;
+    const significantDigits = coefficient.replace("0.", "");
+    return `$0.(${zeroCount})${significantDigits}`;
+  }
+
+  // Fallback to regular formatting
+  return `$${num}`;
+};
+
+//its return the Mcap object include time from price history
+export function calcMcapHistory(priceHistory, mcap) {
+  if (!priceHistory || !mcap) return;
+  const mcapResults = priceHistory?.map((data) => {
+    const calcMcap = (data.price * mcap).toFixed(2);
+
+    return { time: data.time, price: +formatBigPrice(calcMcap) };
+  });
+  return mcapResults;
+}

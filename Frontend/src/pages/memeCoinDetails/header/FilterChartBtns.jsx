@@ -1,17 +1,21 @@
-import * as React from "react";
 import { Button, Box } from "@mui/material";
 import { colorLibrary } from "../../../color-library";
+import { useState } from "react";
+import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
+import moment from "moment";
 
 export default function FilterChartBtns() {
-  const [active, setActive] = React.useState("1min");
+  const { selectedMemeCoinData, chartTimeBtns, setChartTimeBtns } =
+    useSelectedMemeCoinContext();
+  const { priceHistory, mcap } = selectedMemeCoinData || {};
 
   const handleClick = (value) => {
-    setActive(value);
+    setChartTimeBtns(value);
   };
 
   return (
     <Box display="flex" gap={2} alignItems="center">
-      {["1min", "2min", "5min"].map((label) => (
+      {["1min", "5min", "15min"].map((label) => (
         <Button
           key={label}
           onClick={() => handleClick(label)}
@@ -20,9 +24,12 @@ export default function FilterChartBtns() {
             fontSize: "0.7rem",
             borderRadius: "1.5rem",
             bgcolor:
-              active === label ? colorLibrary.title : colorLibrary.boxBgLighter,
-            color: active === label ? colorLibrary.bg : colorLibrary.text,
-            boxShadow: active === label ? 2 : 1,
+              chartTimeBtns === label
+                ? colorLibrary.title
+                : colorLibrary.boxBgLighter,
+            color:
+              chartTimeBtns === label ? colorLibrary.bg : colorLibrary.text,
+            boxShadow: chartTimeBtns === label ? 2 : 1,
           }}
         >
           {label}

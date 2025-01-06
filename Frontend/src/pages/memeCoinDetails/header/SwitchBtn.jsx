@@ -3,19 +3,20 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 import { colorLibrary } from "../../../color-library";
+import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 
 export default function SwitchBtn() {
-  const [alignment, setAlignment] = useState("price");
+  const { chartType, setChartType } = useSelectedMemeCoinContext();
 
   const handleChange = (_, newAlignment) => {
     if (newAlignment !== null) {
-      setAlignment(newAlignment);
+      setChartType(newAlignment);
     }
   };
 
   return (
     <ToggleButtonGroup
-      value={alignment}
+      value={chartType}
       exclusive
       onChange={handleChange}
       aria-label="Platform"
