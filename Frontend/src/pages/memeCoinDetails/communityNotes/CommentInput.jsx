@@ -6,8 +6,17 @@ import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinPro
 import { motion } from "motion/react";
 
 export default function CommentInput() {
-  const { selectedMemeCoinData } = useSelectedMemeCoinContext();
+  const { selectedMemeCoinData, handleUserAddedComment } =
+    useSelectedMemeCoinContext();
   const [comment, setComment] = useState("");
+
+  function handleClick(e) {
+    e.preventDefault();
+    console.log(comment);
+    handleUserAddedComment(comment);
+    setComment("");
+  }
+
   return (
     <Box
       component={motion.form}
@@ -22,10 +31,7 @@ export default function CommentInput() {
         alignItems: "center",
         gap: "1rem",
       }}
-      onSubmit={(e) => {
-        e.preventDefault();
-        setComment("");
-      }}
+      onSubmit={handleClick}
     >
       <TextField
         id="comment"

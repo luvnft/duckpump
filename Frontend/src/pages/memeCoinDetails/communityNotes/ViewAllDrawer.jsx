@@ -1,17 +1,11 @@
-import React, { useState } from "react";
-import {
-  Button,
-  Box,
-  SwipeableDrawer,
-  Fab,
-  styled,
-  Divider,
-} from "@mui/material";
-import { Close, KeyboardArrowDown } from "@mui/icons-material";
+import React, { useEffect, useRef, useState } from "react";
+import { Button, Box, SwipeableDrawer, styled, Divider } from "@mui/material";
+import { KeyboardArrowDown } from "@mui/icons-material";
+
 import { colorLibrary } from "../../../color-library";
-import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 import CommentItem from "./CommentItem";
 import CommentInput from "./CommentInput";
+import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 
 const drawerBleeding = 56;
 
@@ -28,6 +22,7 @@ const Puller = styled("div")(({ theme }) => ({
 
 export default function ViewAllDrawer({ comments }) {
   const [open, setOpen] = useState(false);
+
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
@@ -78,6 +73,7 @@ export default function ViewAllDrawer({ comments }) {
           borderRadius={"1rem"}
           padding={"0.8rem 0.6rem 1.4rem"}
           margin={"2rem 0 5rem"}
+          id="comments-box"
         >
           <Puller />
           {comments?.map((comment, index) => (
@@ -93,7 +89,11 @@ export default function ViewAllDrawer({ comments }) {
               {index < comments?.length - 1 && (
                 <Divider
                   variant="middle"
-                  sx={{ borderColor: colorLibrary.bgLight3, width: "80%" }}
+                  sx={{
+                    borderColor: colorLibrary.bgLight3,
+                    width: "80%",
+                    marginLeft: "20%",
+                  }}
                 />
               )}
             </React.Fragment>

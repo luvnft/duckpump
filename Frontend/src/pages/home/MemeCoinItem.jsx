@@ -31,6 +31,10 @@ export default function MemeCoinItem({
 }) {
   return (
     <Card
+      component={motion.div}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       sx={{
         bgcolor: colorLibrary.boxBgLighter,
         marginBottom: 2,
@@ -41,10 +45,6 @@ export default function MemeCoinItem({
         <CardContent sx={{ padding: "0 0.4rem" }}>
           {/* //*Card Header */}
           <Box
-            component={motion.div}
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
             display="flex"
             justifyContent="space-between"
             alignItems="center"

@@ -19,6 +19,8 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     backgroundColor: colorLibrary.bgBuy,
   },
 }));
+
+//* its TXNS , VOLUME and TRADERS progresses on the table
 export default function MemeTableTVTProgress({ value, buy, sell }) {
   // Clean the input numbers from strings
   const cleanedNumbers = cleanNumbers({ value, buy, sell });

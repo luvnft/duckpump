@@ -32,6 +32,7 @@ export default function TraderINWTT({
           variant="caption"
           color={colorLibrary.title}
           fontWeight={"bold"}
+          sx={{ textWrap: "nowrap" }}
         >
           @{traderName} / {convertWalletAddress(traderWallet)}
         </Typography>
@@ -48,7 +49,11 @@ export default function TraderINWTT({
             <Typography color={color} fontWeight={"bold"}>
               {tradType}
             </Typography>
-            <Typography variant="caption" color={colorLibrary.text}>
+            <Typography
+              variant="caption"
+              alignSelf={"end"}
+              color={colorLibrary.text}
+            >
               {getCustomRelativeTime(timeStamp)}
             </Typography>
           </Box>
