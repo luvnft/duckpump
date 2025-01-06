@@ -6,6 +6,7 @@ import BackBtn from "../../ui/BackBtn";
 import SwapMiddlePart from "./SwapMiddlePart";
 import SwapBottomPart from "./SwapBottomPart";
 import SwapUpperPart from "./SwapUpperPart";
+import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
 
 export default function SwapPage() {
   const { bg, bgBuy, bgSell, bgLight3 } = colorLibrary;
@@ -20,6 +21,9 @@ export default function SwapPage() {
     ton: 50,
     meme: 200,
   });
+
+  const { selectedMemeCoinData } = useSelectedMemeCoinContext();
+  console.log(selectedMemeCoinData);
 
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);

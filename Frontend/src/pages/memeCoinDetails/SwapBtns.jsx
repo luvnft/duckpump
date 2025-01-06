@@ -2,12 +2,14 @@ import { Box, Button, Fab } from "@mui/material";
 import React from "react";
 import { colorLibrary } from "../../color-library";
 import { useNavigate } from "react-router-dom";
+import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
 
 export default function SwapBtns() {
   const navigate = useNavigate();
+  const { selectedMemeCoinId } = useSelectedMemeCoinContext();
 
   function handleNavigate() {
-    navigate("/meme-coin-details/:memeCoinID/swap");
+    navigate(`/meme-coin-details/${selectedMemeCoinId}/swap`);
   }
 
   return (
