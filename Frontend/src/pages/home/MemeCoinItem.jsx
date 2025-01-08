@@ -12,6 +12,7 @@ import {
 import MemeCoinLinearProgress from "../../ui/MemeCoinLinearProgress";
 import { calcBondingCurve } from "../../utils/helpers";
 import { motion } from "motion/react";
+import { useNavigate } from "react-router-dom";
 
 const memeCoinDetails = {
   mcap: "11,11",
@@ -20,6 +21,7 @@ const memeCoinDetails = {
 };
 
 export default function MemeCoinItem({
+  tokenId,
   tokenName,
   creator,
   createdAt,
@@ -29,6 +31,11 @@ export default function MemeCoinItem({
   bondingCurve,
   bondingCurveRatio,
 }) {
+  const navigate = useNavigate();
+  function handleNavigate(tokenId) {
+    navigate(`/meme-coin-details/${tokenId}`);
+  }
+
   return (
     <Card
       component={motion.div}
@@ -40,6 +47,7 @@ export default function MemeCoinItem({
         marginBottom: 2,
         borderRadius: "1.4rem",
       }}
+      onClick={() => handleNavigate(tokenId)}
     >
       <CardActionArea>
         <CardContent sx={{ padding: "0 0.4rem" }}>

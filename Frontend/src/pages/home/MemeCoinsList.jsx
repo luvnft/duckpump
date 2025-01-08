@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import MemeCoinItem from "./MemeCoinItem";
 import { useHomeContext } from "../../context/HomePageProvider";
+import { useNavigate } from "react-router-dom";
 
 export default function MemeCoinsList() {
   const { allMemeCoin } = useHomeContext();
@@ -18,7 +19,8 @@ export default function MemeCoinsList() {
     >
       {allMemeCoin.map((item) => (
         <MemeCoinItem
-          key={item?.tokenName}
+          key={item?.tokenId}
+          tokenId={item?.tokenId}
           tokenName={item?.tokenName}
           creator={item?.creator?.name}
           createdAt={item?.created_At}

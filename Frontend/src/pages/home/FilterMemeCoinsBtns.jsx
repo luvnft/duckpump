@@ -30,40 +30,46 @@ export default function FilterMemeCoinsBtns() {
         spaceBetween={5}
         loop={false}
       >
-        {["🐣 New", "🔥Hot", "✔️ Listed", "💹 Mcap", "🔊 Top volume"].map(
-          (label, index) => (
-            <SwiperSlide
-              key={index}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: "max-content",
-              }}
+        {[
+          "🐣 New",
+          "🔥Hot",
+          "✔️ Listed",
+          "💹 Mcap",
+          "🔊 Top volume",
+          "🎮 Game",
+          "🍿 Movie",
+        ].map((label, index) => (
+          <SwiperSlide
+            key={index}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "max-content",
+            }}
+          >
+            <motion.div
+              initial={{ scale: 0.5, opacity: 0, y: -10 }}
+              whileInView={{ scale: 1, opacity: 1, y: 0 }}
+              whileTap={{ scale: 0.9 }}
             >
-              <motion.div
-                initial={{ scale: 0.5, opacity: 0, y: -10 }}
-                whileInView={{ scale: 1, opacity: 1, y: 0 }}
-                whileTap={{ scale: 0.9 }}
+              <Button
+                variant="contained"
+                sx={{
+                  borderRadius: "20px",
+                  textTransform: "capitalize",
+                  padding: "0.2rem 0.4rem",
+                  bgcolor: colorLibrary.boxBgLighter,
+                  color: colorLibrary.text,
+                  fontWeight: 300,
+                  textWrap: "nowrap",
+                }}
               >
-                <Button
-                  variant="contained"
-                  sx={{
-                    borderRadius: "20px",
-                    textTransform: "capitalize",
-                    padding: "0.2rem 0.4rem",
-                    bgcolor: colorLibrary.boxBgLighter,
-                    color: colorLibrary.text,
-                    fontWeight: 300,
-                    textWrap: "nowrap",
-                  }}
-                >
-                  {label}
-                </Button>
-              </motion.div>
-            </SwiperSlide>
-          )
-        )}
+                {label}
+              </Button>
+            </motion.div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Box>
   );

@@ -26,7 +26,7 @@ function SelectedMemeCoinProvider({ children }) {
 
   useEffect(() => {
     setSelectedMemeCoinData(
-      data.find((coin) => coin?.tokenId === Number(selectedMemeCoinId))
+      data.find((coin) => coin?.tokenId === selectedMemeCoinId)
     );
   }, [selectedMemeCoinId]);
 

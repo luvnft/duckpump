@@ -8,7 +8,7 @@ function HomePageProvider({ children }) {
   const lastBoughtMemeCoin = lastboughtCoin || [];
   const hottestMemeCoin =
     allMemeCoin.filter((coin) => coin.isHot === true) || [];
-    
+
   return (
     <HomePageContext.Provider
       value={{ allMemeCoin, lastBoughtMemeCoin, hottestMemeCoin }}

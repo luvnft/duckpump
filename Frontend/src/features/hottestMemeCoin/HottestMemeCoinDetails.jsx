@@ -13,13 +13,13 @@ import MemeCoinIMHT from "../../ui/MemeCoinIMHT";
 import { useNavigate } from "react-router-dom";
 
 export default function HottestMemeCoinDetails() {
-  const { hottestMemeCoin } = useHomeContext();
+  const { allMemeCoin } = useHomeContext();
 
-  const { tokenName, mcap, holders, txns } = hottestMemeCoin?.[0];
+  const { tokenId, tokenName, mcap, holders, txns } = allMemeCoin?.at(0);
+
   const navigate = useNavigate();
-
   function handleNavigate() {
-    navigate(`/meme-coin-details/${1}`);
+    navigate(`/meme-coin-details/${tokenId}`);
   }
 
   return (
@@ -63,7 +63,12 @@ export default function HottestMemeCoinDetails() {
               </Box>
 
               {/* //*duck gif */}
-              <Box component="img" src="duck.jpg" width={80} height={130} />
+              <Box
+                component="img"
+                src="/hottestDuck.webp"
+                width={80}
+                height={130}
+              />
             </Box>
           </Box>
         </CardContent>
