@@ -10,7 +10,6 @@ import { calcBondingCurve, formatBigPrice } from "../../../utils/helpers";
 
 export default function MemeCoinDetailsHeader() {
   const { selectedMemeCoinData } = useSelectedMemeCoinContext();
-
   const {
     tokenName,
     symbol,

@@ -11,22 +11,15 @@ export default function SearchMemeCoin() {
   return (
     <Box
       component={motion.div}
-      whileTap={{ scale: 0.8 }}
+      initial={{ scale: 1 }} // Start with scale 1
+      animate={{ scale: 1 }}
+      whileTap={{ scale: 0.9 }}
       sx={{ width: "100%" }}
     >
       <TextField
         id="query"
         placeholder="🔍 Search"
         fullWidth
-        // slotProps={{
-        //   input: {
-        //     startAdornment: (
-        //       <InputAdornment position="start">
-        //         <Search sx={{ color: colorLibrary.title }} />
-        //       </InputAdornment>
-        //     ),
-        //   },
-        // }}
         sx={{
           bgcolor: colorLibrary.boxBgLighter,
           borderRadius: "1.8rem",
