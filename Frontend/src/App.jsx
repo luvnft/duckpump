@@ -9,6 +9,7 @@ import { UserDetailsProvider } from "./context/UserDetailsProvider.jsx";
 import Layout from "./pages/layout/Layout.jsx";
 import Home from "./pages/home/Home.jsx";
 import { SwapPageDataProvider } from "./context/SwapPageDataProvider.jsx";
+import MemeCoinInfo from "./pages/memeCoinInfo/MemeCoinInfo.jsx";
 
 const MemeCoinDetails = lazy(() =>
   import("./pages/memeCoinDetails/MemeCoinDetails.jsx")
@@ -31,9 +32,14 @@ function App() {
                         path="/meme-coin-details/:memeCoinID"
                         element={<MemeCoinDetails />}
                       />
+
                       <Route
                         path="/meme-coin-details/:memeCoinID/swap"
                         element={<SwapPage />}
+                      />
+                      <Route
+                        path="/meme-coin-details/:memeCoinID/info"
+                        element={<MemeCoinInfo />}
                       />
                     </Route>
                   </Routes>

@@ -11,10 +11,8 @@ import { useSwapPageDataProvider } from "../../context/SwapPageDataProvider";
 import { useParams } from "react-router-dom";
 
 export default function SwapPage() {
-  const { bg, bgBuy, bgSell, bgLight3 } = colorLibrary;
-  // const [activeTab, setActiveTab] = useState("buy");
-  // const [inputValue, setInputValue] = useState(1);
-  // const [slippage, setSlippage] = useState(5);
+  const { bg } = colorLibrary;
+
   const inputRef = useRef(null);
   const [viewportHeight, setViewportHeight] = useState(
     window.visualViewport?.height || window.innerHeight

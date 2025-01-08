@@ -5,7 +5,6 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React from "react";
 import { colorLibrary } from "../../color-library";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";

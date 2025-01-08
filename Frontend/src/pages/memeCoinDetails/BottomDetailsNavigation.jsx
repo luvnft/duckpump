@@ -11,9 +11,13 @@ import {
   TextsmsRounded,
 } from "@mui/icons-material";
 import { colorLibrary } from "../../color-library";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function BottomDetailsNavigation() {
   const [value, setValue] = React.useState(0);
+  const { memeCoinID } = useParams();
+
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -52,7 +56,11 @@ export default function BottomDetailsNavigation() {
         }}
       >
         <BottomNavigationAction label="Trade" icon={<SwapHorizRounded />} />
-        <BottomNavigationAction label="Info" icon={<InfoRounded />} />
+        <BottomNavigationAction
+          onClick={() => navigate(`info`)}
+          label="Info"
+          icon={<InfoRounded />}
+        />
         <BottomNavigationAction label="Chat" icon={<TextsmsRounded />} />
       </BottomNavigation>
     </Box>

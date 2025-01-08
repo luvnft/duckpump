@@ -40,7 +40,7 @@ export default function SwapBottomPart({ balance, activeTab, setInputValue }) {
           fontSize={".8rem"}
           margin={"auto 0"}
         >
-          Fee : test2
+          Fee : 0.3 TON
         </Typography>
       </Box>
       <Box
