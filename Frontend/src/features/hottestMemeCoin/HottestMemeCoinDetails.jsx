@@ -68,6 +68,7 @@ export default function HottestMemeCoinDetails() {
                 src="/hottestDuck.webp"
                 width={80}
                 height={130}
+                loading="lazy"
               />
             </Box>
           </Box>
