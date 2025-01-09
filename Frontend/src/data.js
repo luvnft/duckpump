@@ -3,8 +3,8 @@ import moment from "moment";
 export const data = [
   {
     tokenId: crypto.randomUUID(),
-    tokenName: "DuckPump",
-    symbol: "DuckPump",
+    tokenName: "DuckCoin",
+    symbol: "DuckCoin",
     logo: "",
     tokenAddress: "EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS",
     mcap: 27050000,

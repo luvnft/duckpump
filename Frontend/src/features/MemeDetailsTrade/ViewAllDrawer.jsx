@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { Button, Box, SwipeableDrawer, styled, Divider } from "@mui/material";
 import { KeyboardArrowDown } from "@mui/icons-material";
 
-import { colorLibrary } from "../../../color-library";
-import CommentItem from "./CommentItem";
-import CommentInput from "./CommentInput";
-import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
+import { colorLibrary } from "../../color-library";
+import CommentItem from "./communityNotes/CommentItem";
+import CommentInput from "./communityNotes/CommentInput";
+import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
+import AiConversation from "./askAI/AiConversation";
 
 const drawerBleeding = 56;
 
@@ -20,7 +21,13 @@ const Puller = styled("div")(({ theme }) => ({
   left: "calc(50% - 15px)",
 }));
 
-export default function ViewAllDrawer({ comments }) {
+export default function ViewAllDrawer({
+  btnStyles,
+  btnContent,
+  btnIcon,
+  content,
+  type,
+}) {
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -32,18 +39,17 @@ export default function ViewAllDrawer({ comments }) {
       <Button
         onClick={toggleDrawer(true)}
         sx={{
+          ...btnStyles,
           display: "flex",
+
           alignItems: "center",
-          color: colorLibrary.text,
-          fontSize: "0.5rem",
-          padding: 0,
           margin: 0,
-          opacity: 0.8,
           boxShadow:
             "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
         }}
       >
-        View all <KeyboardArrowDown />
+        {btnContent}
+        {btnIcon}
       </Button>
       <SwipeableDrawer
         anchor="bottom"
@@ -78,28 +84,30 @@ export default function ViewAllDrawer({ comments }) {
           id="comments-box"
         >
           <Puller />
-          {comments?.map((comment, index) => (
-            <React.Fragment key={comment?.id}>
-              <CommentItem
-                userId={comment?.telegramId}
-                userName={comment?.userName}
-                comment={comment?.comment}
-                timeStamp={comment?.timeStamp}
-                viewAllComment={true}
-              />
-
-              {index < comments?.length - 1 && (
-                <Divider
-                  variant="middle"
-                  sx={{
-                    borderColor: colorLibrary.bgLight3,
-                    width: "80%",
-                    marginLeft: "20%",
-                  }}
+          {type === "comment" &&
+            content?.map((comment, index) => (
+              <React.Fragment key={comment?.id}>
+                <CommentItem
+                  userId={comment?.telegramId}
+                  userName={comment?.userName}
+                  comment={comment?.comment}
+                  timeStamp={comment?.timeStamp}
+                  viewAllComment={true}
                 />
-              )}
-            </React.Fragment>
-          ))}
+
+                {index < content?.length - 1 && (
+                  <Divider
+                    variant="middle"
+                    sx={{
+                      borderColor: colorLibrary.bgLight3,
+                      width: "80%",
+                      marginLeft: "20%",
+                    }}
+                  />
+                )}
+              </React.Fragment>
+            ))}
+          {type === "ai" && <AiConversation content={content} />}
         </Box>
 
         <CommentInput />

@@ -6,6 +6,7 @@ import MemeTable from "./body/MemeTable";
 import CommunityNotes from "./communityNotes/CommunityNotes";
 import Transactions from "./transactions/Transactions";
 import SwapBtns from "./SwapBtns";
+import AskAiAbout from "./askAI/AskAiAbout";
 
 export default function MemeCoinTrade() {
   return (
@@ -20,6 +21,9 @@ export default function MemeCoinTrade() {
       {/* //!----------------------------------------------------------------------- */}
       {/* //*body (Meme table)*/}
       <MemeTable />
+
+      {/* //*ask ai  */}
+      <AskAiAbout />
 
       {/* //!----------------------------------------------------------------------- */}
       {/* //*community notes */}
