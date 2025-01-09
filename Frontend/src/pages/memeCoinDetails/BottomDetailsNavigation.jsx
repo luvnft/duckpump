@@ -14,10 +14,13 @@ import { colorLibrary } from "../../color-library";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function BottomDetailsNavigation() {
-  const [value, setValue] = React.useState(0);
-  const { memeCoinID } = useParams();
+  const [value, setValue] = React.useState("trade");
 
   const navigate = useNavigate();
+
+  function handleNavigate(label) {
+    navigate(label);
+  }
 
   return (
     <Box
@@ -33,15 +36,16 @@ export default function BottomDetailsNavigation() {
       <BottomNavigation
         showLabels
         value={value}
-        onChange={(event, newValue) => {
+        onChange={(_, newValue) => {
           setValue(newValue);
+          navigate(newValue);
         }}
         sx={{
           backgroundColor: colorLibrary.bgLightTransparency,
           backdropFilter: "blur(10px)",
 
           "& button": {
-            color: colorLibrary.bgLight2,
+            // color: colorLibrary.bgLight2,
           },
           "& button.Mui-selected": {
             color: colorLibrary.boxBgLighter,
@@ -51,17 +55,27 @@ export default function BottomDetailsNavigation() {
               borderRadius: "2rem",
               bgcolor: colorLibrary.boxBg,
               color: colorLibrary.text,
+              boxShadow:
+                "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
             },
           },
         }}
       >
-        <BottomNavigationAction label="Trade" icon={<SwapHorizRounded />} />
         <BottomNavigationAction
-          onClick={() => navigate(`info`)}
+          label="Trade"
+          value={"trade"}
+          icon={<SwapHorizRounded />}
+        />
+        <BottomNavigationAction
           label="Info"
+          value={"info"}
           icon={<InfoRounded />}
         />
-        <BottomNavigationAction label="Chat" icon={<TextsmsRounded />} />
+        <BottomNavigationAction
+          label="Chat"
+          value={"chat"}
+          icon={<TextsmsRounded />}
+        />
       </BottomNavigation>
     </Box>
   );

@@ -1,17 +1,12 @@
 import { Box } from "@mui/material";
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 
 import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
-import MemeCoinDetailsHeader from "./header/MemeCoinDetailsHeader";
-import MemeChart from "./header/MemeChart";
-import ChartControlBtns from "./header/ChartControlBtns";
-import MemeTable from "./body/MemeTable";
-import CommunityNotes from "./communityNotes/CommunityNotes";
 import BottomDetailsNavigation from "./BottomDetailsNavigation";
-import SwapBtns from "./SwapBtns";
-import Transactions from "./transactions/Transactions";
 import BackBtn from "../../ui/BackBtn";
+import BackHomeBtn from "../../ui/BackHomeBtn";
+import { colorLibrary } from "../../color-library";
 
 export default function MemeCoinDetails() {
   const { memeCoinID } = useParams();
@@ -23,36 +18,17 @@ export default function MemeCoinDetails() {
   }, [memeCoinID]);
 
   return (
-    <Box
-      display={"flex"}
-      flexDirection={"column"}
-      gap={3}
-      paddingBottom={"3rem"}
-    >
-      <BackBtn />
+    <Box display={"flex"} flexDirection={"column"} paddingBottom={"3rem"}>
+      {/* //*back btn */}
+      <Box display={"flex"} gap={"0.5rem"} marginBottom={2}>
+        <BackBtn />
+        <BackHomeBtn customColor={colorLibrary.title} />
+      </Box>
 
-      {/* //*header (current meme coin card) */}
-      <MemeCoinDetailsHeader />
-      {/* //* (Meme coin chart) */}
-      <MemeChart />
-      {/* //*chart control btns */}
-      <ChartControlBtns />
-
-      {/* //!----------------------------------------------------------------------- */}
-      {/* //*body (Meme table)*/}
-      <MemeTable />
-
-      {/* //!----------------------------------------------------------------------- */}
-      {/* //*community notes */}
-      <CommunityNotes />
-
-      {/* //!----------------------------------------------------------------------- */}
-      {/* //*transactions */}
-      <Transactions />
-
-      {/* //!----------------------------------------------------------------------- */}
-      {/* //*swap btns */}
-      <SwapBtns />
+      {/* //*children */}
+      <Box display={"flex"} flexDirection={"column"} gap={2}>
+        <Outlet />
+      </Box>
 
       {/* //!----------------------------------------------------------------------- */}
       {/* //*bottom nav */}

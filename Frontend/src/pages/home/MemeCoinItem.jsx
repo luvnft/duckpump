@@ -33,7 +33,7 @@ export default function MemeCoinItem({
 }) {
   const navigate = useNavigate();
   function handleNavigate(tokenId) {
-    navigate(`/meme-coin-details/${tokenId}`);
+    navigate(`/meme-coin-details/${tokenId}/trade`);
   }
 
   return (

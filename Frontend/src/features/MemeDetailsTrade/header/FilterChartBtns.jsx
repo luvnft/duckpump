@@ -29,7 +29,10 @@ export default function FilterChartBtns() {
                 : colorLibrary.boxBgLighter,
             color:
               chartTimeBtns === label ? colorLibrary.bg : colorLibrary.text,
-            boxShadow: chartTimeBtns === label ? 2 : 1,
+            boxShadow:
+              chartTimeBtns === label
+                ? "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset"
+                : 1,
           }}
         >
           {label}
