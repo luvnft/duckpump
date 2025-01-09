@@ -1,9 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { colorLibrary } from "../../../color-library";
-import ViewAllDrawer from "./ViewAllDrawer";
+import ViewAllDrawer from "../ViewAllDrawer";
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 import CommentItem from "./CommentItem";
+import { KeyboardArrowDown } from "@mui/icons-material";
 
 export default function CommunityNotes() {
   const { allComments } = useSelectedMemeCoinContext();
@@ -26,7 +27,18 @@ export default function CommunityNotes() {
           Community Notes
         </Typography>
 
-        <ViewAllDrawer comments={allComments} />
+        <ViewAllDrawer
+          btnStyles={{
+            color: colorLibrary.text,
+            fontSize: "0.5rem",
+            padding: 0,
+            opacity: 0.8,
+          }}
+          btnContent={"View all "}
+          btnIcon={<KeyboardArrowDown />}
+          content={allComments}
+          type="comment"
+        />
       </Box>
 
       {/* //*one comment preview */}
