@@ -2532,11 +2532,6 @@ export const data = [
   },
 ];
 
-// topVolume: 1200,
-
-//EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS
-//EQBZ_cafPyDr5KUTs0aNxh0ZTDhkpEZONmLJA2SNGlLm4Cko
-
 export const lastboughtCoin = {
   walletAddress: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
   boughtAmount: 2,

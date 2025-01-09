@@ -35,6 +35,8 @@ export default function SwapBtns() {
           borderRadius: "0.5rem",
           flexGrow: 1,
           padding: "0.5rem 0",
+          boxShadow:
+            "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
         }}
         onClick={() => handleNavigate("buy")}
       >
@@ -47,7 +49,8 @@ export default function SwapBtns() {
           color: colorLibrary.boxBg,
           borderRadius: "0.5rem",
           padding: "0.5rem 0",
-
+          boxShadow:
+            "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
           flexGrow: 1,
         }}
         onClick={() => handleNavigate("sell")}

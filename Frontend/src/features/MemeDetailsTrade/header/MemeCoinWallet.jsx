@@ -34,6 +34,8 @@ export default function MemeCoinWallet({ tokenAddress }) {
           gap: "0.5rem",
           letterSpacing: "1px",
           fontSize: "0.7rem",
+          boxShadow:
+            "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
           "& .MuiSvgIcon-root": {
             color: colorLibrary.text,
             fontSize: "0.9rem",

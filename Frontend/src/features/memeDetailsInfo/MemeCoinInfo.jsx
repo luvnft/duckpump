@@ -29,15 +29,7 @@ export default function MemeCoinInfo() {
   const progressValue = calcBondingCurve(bondingCurve, bondingCurveRatio);
 
   return (
-    <Box
-      display={"flex"}
-      flexDirection={"column"}
-      width={"100%"}
-      alignItems={"center"}
-      justifyContent={"start"}
-      height={"100dvh"}
-      gap={2}
-    >
+    <>
       {/* //* TOP PART */}
       <MemeCoinInfoTop
         tokenName={tokenName}
@@ -173,6 +165,6 @@ export default function MemeCoinInfo() {
           </Box>
         </Box>
       </Box>
-    </Box>
+    </>
   );
 }

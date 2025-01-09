@@ -29,7 +29,7 @@ export default function MemeCoinInfoTop({ tokenName, symbol, progressValue }) {
       borderRadius={"15px"}
       flexDirection={"column"}
       gap={1}
-      pt={5}
+      pt={4}
       bgcolor={colorLibrary.boxBg}
     >
       <Box

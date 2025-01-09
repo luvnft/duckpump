@@ -24,7 +24,7 @@ export default function MemeCoinDetailsHeader() {
     <Card
       sx={{
         bgcolor: colorLibrary.boxBg,
-        marginY: 2,
+        marginBottom: 2,
         borderRadius: "1rem",
         padding: "0.5rem 0.2rem",
       }}

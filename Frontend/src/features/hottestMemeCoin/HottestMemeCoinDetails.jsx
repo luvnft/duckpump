@@ -19,7 +19,7 @@ export default function HottestMemeCoinDetails() {
 
   const navigate = useNavigate();
   function handleNavigate() {
-    navigate(`/meme-coin-details/${tokenId}`);
+    navigate(`/meme-coin-details/${tokenId}/trade`);
   }
 
   return (
