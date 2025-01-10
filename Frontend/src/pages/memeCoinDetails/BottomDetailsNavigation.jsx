@@ -71,11 +71,7 @@ export default function BottomDetailsNavigation() {
           value={"info"}
           icon={<InfoRounded />}
         />
-        <BottomNavigationAction
-          label="Chat"
-          value={"chat"}
-          icon={<TextsmsRounded />}
-        />
+        <BottomNavigationAction label="Chat" icon={<TextsmsRounded />} />
       </BottomNavigation>
     </Box>
   );

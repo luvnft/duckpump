@@ -14,6 +14,7 @@ export default function CommunityNotes() {
     <Box bgcolor={colorLibrary.boxBg} borderRadius={"1rem"} overflow={"hidden"}>
       {/* //*header */}
       <Box
+      
         display={"flex"}
         justifyContent={"space-between"}
         bgcolor={colorLibrary.boxBg}
