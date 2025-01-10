@@ -25,6 +25,7 @@ export default function CommentItem({
       gap={1}
       bgcolor={colorLibrary.boxBgLighter}
       padding={"0.8rem 0.6rem"}
+      borderRadius={"1rem 1rem 0 0"}
     >
       {/* //*left side (img ,id , comment)*/}
       <Avatar alt="duck" src="/duck.jpg" sx={{ width: 50, height: 50 }} />

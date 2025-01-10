@@ -11,11 +11,15 @@ export default function Transactions() {
   return (
     <Box bgcolor={colorLibrary.boxBg} borderRadius={"1rem"} overflow={"hidden"}>
       {/* //*header */}
-      <Box bgcolor={colorLibrary.boxBg} padding={"0.5rem 0.6rem"}>
+      <Box
+        display={"flex"}
+        bgcolor={colorLibrary.boxBg}
+        padding={"0rem 0.6rem "}
+      >
         <Typography
           variant={"caption"}
           color={colorLibrary.title}
-          sx={{ opacity: 0.8 }}
+          sx={{ opacity: 0.8, paddingTop: 1.1 }}
         >
           Transaction
         </Typography>

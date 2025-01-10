@@ -13,10 +13,10 @@ const MemeCoinTrade = lazy(() =>
 const MemeCoinInfo = lazy(() =>
   import("./features/memeDetailsInfo/MemeCoinInfo")
 );
-const MemeCoinChat = lazy(() =>
-  import("./features/memeDetailsChat/MemeCoinChat")
-);
+
 const SwapPage = lazy(() => import("./pages/swap/SwapPage"));
+
+const LunchMemeCoin = lazy(() => import("./pages/lunchMemeCoin/LunchMemeCoin"));
 
 export default function DuckRoutes() {
   return (
@@ -31,13 +31,13 @@ export default function DuckRoutes() {
           >
             <Route path="trade" element={<MemeCoinTrade />} />
             <Route path="info" element={<MemeCoinInfo />} />
-            <Route path="chat" element={<MemeCoinChat />} />
           </Route>
 
           <Route
             path="meme-coin-details/:memeCoinID/swap"
             element={<SwapPage />}
           />
+          <Route path="/lunchMemeCoin" element={<LunchMemeCoin />} />
         </Route>
       </Routes>
     </Router>

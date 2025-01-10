@@ -1,4 +1,4 @@
-import DuckRoutes from "./Routes.jsx";
+import DuckRoutes from "./DuckRoutes.jsx";
 
 import CustomThemeProvider from "./context/CustomThemeProvider.jsx";
 import { HomePageProvider } from "./context/HomePageProvider.jsx";

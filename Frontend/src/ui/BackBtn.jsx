@@ -7,12 +7,13 @@ export default function BackBtn({ customBg, customColor }) {
   const navigate = useNavigate();
   return (
     <Button
-      onClick={() => navigate(-1)}
+      onClick={() => navigate("/")}
       sx={{
         color: customColor ? customColor : colorLibrary.bgLight3,
         bgcolor: customBg ? customBg : colorLibrary.boxBg,
         width: "max-content",
         padding: "0 0.2rem",
+        marginBottom: "0.5rem",
         borderRadius: "1rem",
         textTransform: "lowercase",
         boxShadow:

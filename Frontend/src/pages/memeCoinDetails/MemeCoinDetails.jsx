@@ -5,8 +5,6 @@ import { Outlet, useParams } from "react-router-dom";
 import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
 import BottomDetailsNavigation from "./BottomDetailsNavigation";
 import BackBtn from "../../ui/BackBtn";
-import BackHomeBtn from "../../ui/BackHomeBtn";
-import { colorLibrary } from "../../color-library";
 
 export default function MemeCoinDetails() {
   const { memeCoinID } = useParams();
@@ -20,10 +18,8 @@ export default function MemeCoinDetails() {
   return (
     <Box display={"flex"} flexDirection={"column"} paddingBottom={"3rem"}>
       {/* //*back btn */}
-      <Box display={"flex"} gap={"0.5rem"} marginBottom={2}>
-        <BackBtn />
-        <BackHomeBtn customColor={colorLibrary.title} />
-      </Box>
+
+      <BackBtn />
 
       {/* //*children */}
       <Box display={"flex"} flexDirection={"column"} gap={2}>
