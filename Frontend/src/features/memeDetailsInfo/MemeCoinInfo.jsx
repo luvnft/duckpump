@@ -14,7 +14,7 @@ import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LanguageIcon from "@mui/icons-material/Language";
 
-import { calcBondingCurve } from "../../utils/helpers";
+import { calcBondingCurve, convertWalletAddress } from "../../utils/helpers";
 import { colorLibrary } from "../../color-library";
 import MemeCoinInfoTop from "./MemeCoinInfoTop";
 import SocialIcons from "../../ui/SocialIcons";
@@ -22,6 +22,8 @@ import { ContentCopyRounded } from "@mui/icons-material";
 
 export default function MemeCoinInfo() {
   const { selectedMemeCoinData } = useSelectedMemeCoinContext();
+
+  console.log(selectedMemeCoinData);
 
   const { tokenName, symbol, bondingCurve, bondingCurveRatio } =
     selectedMemeCoinData || {};
@@ -115,21 +117,33 @@ export default function MemeCoinInfo() {
               borderColor: colorLibrary.text,
             }}
           />
-          <Box
-            bgcolor={colorLibrary.boxBg}
-            borderRadius={"1rem"}
-            overflow={"hidden"}
-            // width={"100%"}
-          >
-            <Box display={"flex"} justifyContent={"space-between"}>
+          <Box display={"flex"} justifyContent={"space-between"} width={"100%"}>
+            {/* //*Items */}
+
+            {/* //*ITEM 1 */}
+            <Box
+              bgcolor={colorLibrary.boxBg}
+              borderRadius={"1rem"}
+              overflow={"hidden"}
+              width={"40%"}
+            >
               <Box
                 display={"flex"}
-                bgcolor={colorLibrary.bgLight3}
+                bgcolor={colorLibrary.boxBg}
                 padding={"0.5rem 0.6rem"}
-              />
+                justifyContent={"center"}
+              >
+                <Typography
+                  color={colorLibrary.text}
+                  variant="caption"
+                  letterSpacing={".1rem"}
+                >
+                  Contract Address
+                </Typography>
+              </Box>
+
               <Box
                 borderRadius={"1rem 1rem 0 0"}
-                // width={"100%"}
                 overflow={"hidden"}
                 bgcolor={colorLibrary.bgLight2}
                 display={"flex"}
@@ -140,10 +154,10 @@ export default function MemeCoinInfo() {
                 <Button
                   //   onClick={handleCopy}
                   sx={{
-                    backgroundColor: colorLibrary.boxBgLighter,
+                    // backgroundColor: colorLibrary.boxBgLighter,
                     color: colorLibrary.title,
                     opacity: 0.9,
-                    padding: "0.2rem 0.6rem",
+                    padding: "0.2rem 0",
                     borderRadius: "1rem",
                     display: "flex",
                     alignItems: "center",
@@ -156,9 +170,94 @@ export default function MemeCoinInfo() {
                     },
                   }}
                 >
-                  <ContentCopyRounded />
-                  test
+                  <Box
+                    display={"flex"}
+                    justifyContent={"space-between"}
+                    width={"100%"}
+                  >
+                    <Typography variant="caption" textTransform={"lowercase"}>
+                      {convertWalletAddress(
+                        selectedMemeCoinData?.tokenAddress
+                      ) || ""}
+                    </Typography>
+                    <ContentCopyRounded />
+                  </Box>
                   {/* {convertWalletAddress(tokenAddress)} */}
+                </Button>
+              </Box>
+            </Box>
+
+            {/* //*ITEM 2 */}
+            <Box
+              bgcolor={colorLibrary.boxBg}
+              borderRadius={"1rem"}
+              overflow={"hidden"}
+              width={"40%"}
+            >
+              <Box
+                display={"flex"}
+                bgcolor={colorLibrary.boxBg}
+                padding={"0.5rem 0.6rem"}
+                justifyContent={"center"}
+              >
+                <Typography
+                  color={colorLibrary.text}
+                  variant="caption"
+                  letterSpacing={".1rem"}
+                >
+                  Token Link
+                </Typography>
+              </Box>
+
+              <Box
+                borderRadius={"1rem 1rem 0 0"}
+                overflow={"hidden"}
+                bgcolor={colorLibrary.bgLight2}
+                display={"flex"}
+                flexDirection={"column"}
+                gap={"1rem"}
+                padding={"0.5rem 0.6rem"}
+              >
+                <Button
+                  //   onClick={handleCopy}
+                  sx={{
+                    // backgroundColor: colorLibrary.boxBgLighter,
+                    color: colorLibrary.title,
+
+                    opacity: 0.9,
+                    padding: "0.2rem 0",
+                    borderRadius: "1rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    letterSpacing: "1px",
+                    fontSize: "0.7rem",
+                    "& .MuiSvgIcon-root": {
+                      color: colorLibrary.text,
+                      fontSize: "0.9rem",
+                    },
+                  }}
+                >
+                  <Box
+                    display={"flex"}
+                    justifyContent={"space-between"}
+                    width={"100%"}
+                    gap={"1rem"}
+                  >
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        textTransform: "lowercase",
+                        overflow: "hidden", // Hide the overflow
+                        whiteSpace: "nowrap", // Prevent wrapping
+                        textOverflow: "ellipsis", // Add ellipsis when text overflows
+                        width: "80%", // Ensure the link text has limited space
+                      }}
+                    >
+                      {"https://t.me/DuckChainAnn"}
+                    </Typography>
+                    <ContentCopyRounded />
+                  </Box>
                 </Button>
               </Box>
             </Box>
