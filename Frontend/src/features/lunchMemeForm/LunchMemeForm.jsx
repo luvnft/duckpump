@@ -4,6 +4,7 @@ import React from "react";
 import { colorLibrary } from "../../color-library";
 import SelectCategory from "./SelectCategory";
 import FormSocialMedia from "./FormSocialMedia";
+import FormImgInput from "./FormImgInput";
 
 const socialFields = ["Telegram Group", "X / Twitter", "Website"];
 
@@ -37,6 +38,7 @@ export default function LunchMemeForm() {
 
         {/* //*form */}
         <Box
+          id="lunchForm"
           component={"form"}
           bgcolor={colorLibrary.boxBgLighter}
           display={"flex"}
@@ -57,44 +59,10 @@ export default function LunchMemeForm() {
               marginLeft={"1rem"}
               letterSpacing={"0.1rem"}
             >
-              Icon
+              MemeCoin Icon *
             </Typography>
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                backgroundColor: colorLibrary.boxBgLighter2, // Background color
-                borderRadius: "1rem",
-                padding: "0.5rem 1rem",
-                cursor: "pointer", // Make the whole box clickable
-              }}
-              component="label" // Makes the whole container a label for the input
-            >
-              <IconButton
-                sx={{
-                  backgroundColor: colorLibrary.boxBg, // Icon button background
-                  color: colorLibrary.boxBgLighter2, // Icon color
-                  padding: "0.6rem",
-                  marginRight: "0.5rem",
-                }}
-              >
-                <AddBox />
-              </IconButton>
-              <Typography
-                sx={{
-                  flexGrow: 1, // Makes the text fill the remaining space
-                  color: colorLibrary.text, // Placeholder-like color
-                  opacity: 0.5,
-                }}
-              >
-                Upload any image
-              </Typography>
-              <input
-                type="file"
-                accept="image/*"
-                hidden // Hide the actual file input
-              />
-            </Box>
+
+            <FormImgInput />
           </Box>
 
           {/* //*name and ticker */}
@@ -112,7 +80,7 @@ export default function LunchMemeForm() {
                 letterSpacing={"0.1rem"}
               >
                 <Typography variant="caption" color={colorLibrary.title}>
-                  Name
+                  Name *
                 </Typography>
                 <Typography color={colorLibrary.text}>20</Typography>
               </Box>
@@ -143,7 +111,7 @@ export default function LunchMemeForm() {
                 letterSpacing={"0.1rem"}
               >
                 <Typography variant="caption" color={colorLibrary.title}>
-                  Ticker
+                  Ticker *
                 </Typography>
                 <Typography color={colorLibrary.text}>10</Typography>
               </Box>
@@ -176,11 +144,11 @@ export default function LunchMemeForm() {
                 variant="caption"
                 color={colorLibrary.title}
               >
-                Description
+                Description *
               </Typography>
               <TextField
                 fullWidth
-                placeholder="Your MemeCoin Name"
+                placeholder="A Description about your MemeCoin"
                 sx={{
                   "& .MuiInputBase-root": {
                     color: colorLibrary.text,
@@ -206,7 +174,7 @@ export default function LunchMemeForm() {
                 variant="caption"
                 color={colorLibrary.title}
               >
-                Category
+                Category *
               </Typography>
               <SelectCategory />
             </Box>
@@ -219,6 +187,7 @@ export default function LunchMemeForm() {
         </Box>
       </Box>
       <Button
+        form="lunchForm"
         type="submit"
         variant="contained"
         sx={{

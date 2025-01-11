@@ -20,8 +20,8 @@ export default function LunchMemeHeader() {
   return (
     <Box bgcolor={colorLibrary.boxBg} borderRadius={"1rem"}>
       <Box>
-        <BackBtn />
-        <Box width={"100%"} textAlign={"center"}>
+        <BackBtn margin={"0.5rem"} />
+        <Box width={"100%"} textAlign={"center"} marginTop={"2rem"}>
           <Box component="img" src="/duck.jpg" alt="duck-img" height={"5rem"} />
         </Box>
       </Box>
@@ -38,7 +38,7 @@ export default function LunchMemeHeader() {
             <React.Fragment key={i}>
               <Box>
                 <Typography color={colorLibrary.title} variant="body2">
-                  Step{i + 1}
+                  Step {i + 1}
                 </Typography>
 
                 <Typography color={colorLibrary.text} variant="caption">
