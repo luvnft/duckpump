@@ -10,29 +10,108 @@ export const data = [
     mcap: 27050000,
     isHot: true,
     holders: [
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      {
+        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 10,
+        name: "alice_j",
+      },
+      {
+        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
+        amount: 5,
+        name: "bob_smith92",
+      },
+      {
+        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
+        amount: 8,
+        name: "charlie_dav03",
+      },
+      {
+        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
+        amount: 12,
+        name: "david_lee88",
+      },
+      {
+        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
+        amount: 7,
+        name: "eva_martz",
+      },
+      {
+        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
+        amount: 15,
+        name: "frank_w95",
+      },
+      {
+        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
+        amount: 20,
+        name: "grace_taylor21",
+      },
+      {
+        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
+        amount: 9,
+        name: "henry_wilson_72",
+      },
+      {
+        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
+        amount: 11,
+        name: "isabelle_clark",
+      },
+      {
+        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
+        amount: 6,
+        name: "jack_turner01",
+      },
+      {
+        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
+        amount: 14,
+        name: "kat_walker89",
+      },
+      {
+        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
+        amount: 10,
+        name: "liam_harris",
+      },
+      {
+        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
+        amount: 13,
+        name: "mia_robinson",
+      },
+      {
+        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
+        amount: 18,
+        name: "nathan_scott",
+      },
+      {
+        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
+        amount: 16,
+        name: "olivia_harris23",
+      },
+      {
+        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
+        amount: 17,
+        name: "paul_evans91",
+      },
+      {
+        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
+        amount: 19,
+        name: "quincy_moore",
+      },
+      {
+        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
+        amount: 5,
+        name: "rachel_king",
+      },
+      {
+        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
+        amount: 22,
+        name: "sam_young",
+      },
+      {
+        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
+        amount: 3,
+        name: "tina_adams27",
+      },
     ],
+
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -280,6 +359,7 @@ export const data = [
     creator: {
       name: "Love",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      amount: 300,
     },
     bondingCurve: 500,
     bondingCurveRatio: 1500,
@@ -469,17 +549,108 @@ export const data = [
     tokenAddress: "EQBZ_cafPyDr5KUTs0aNxh0ZTDhkpEZONmLJA2SNGlLm4Cko",
     mcap: 10000,
     holders: [
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      {
+        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 10,
+        name: "alice_j",
+      },
+      {
+        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
+        amount: 5,
+        name: "bob_smith92",
+      },
+      {
+        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
+        amount: 8,
+        name: "charlie_dav03",
+      },
+      {
+        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
+        amount: 12,
+        name: "david_lee88",
+      },
+      {
+        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
+        amount: 7,
+        name: "eva_martz",
+      },
+      {
+        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
+        amount: 15,
+        name: "frank_w95",
+      },
+      {
+        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
+        amount: 20,
+        name: "grace_taylor21",
+      },
+      {
+        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
+        amount: 9,
+        name: "henry_wilson_72",
+      },
+      {
+        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
+        amount: 11,
+        name: "isabelle_clark",
+      },
+      {
+        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
+        amount: 6,
+        name: "jack_turner01",
+      },
+      {
+        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
+        amount: 14,
+        name: "kat_walker89",
+      },
+      {
+        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
+        amount: 10,
+        name: "liam_harris",
+      },
+      {
+        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
+        amount: 13,
+        name: "mia_robinson",
+      },
+      {
+        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
+        amount: 18,
+        name: "nathan_scott",
+      },
+      {
+        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
+        amount: 16,
+        name: "olivia_harris23",
+      },
+      {
+        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
+        amount: 17,
+        name: "paul_evans91",
+      },
+      {
+        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
+        amount: 19,
+        name: "quincy_moore",
+      },
+      {
+        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
+        amount: 5,
+        name: "rachel_king",
+      },
+      {
+        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
+        amount: 22,
+        name: "sam_young",
+      },
+      {
+        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
+        amount: 3,
+        name: "tina_adams27",
+      },
     ],
+
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -727,6 +898,7 @@ export const data = [
     creator: {
       name: "alex",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      amount: 200,
     },
     bondingCurve: 1200,
     bondingCurveRatio: 1500,
@@ -900,22 +1072,108 @@ export const data = [
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
     mcap: 410000,
     holders: [
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      {
+        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 10,
+        name: "alice_j",
+      },
+      {
+        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
+        amount: 5,
+        name: "bob_smith92",
+      },
+      {
+        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
+        amount: 8,
+        name: "charlie_dav03",
+      },
+      {
+        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
+        amount: 12,
+        name: "david_lee88",
+      },
+      {
+        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
+        amount: 7,
+        name: "eva_martz",
+      },
+      {
+        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
+        amount: 15,
+        name: "frank_w95",
+      },
+      {
+        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
+        amount: 20,
+        name: "grace_taylor21",
+      },
+      {
+        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
+        amount: 9,
+        name: "henry_wilson_72",
+      },
+      {
+        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
+        amount: 11,
+        name: "isabelle_clark",
+      },
+      {
+        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
+        amount: 6,
+        name: "jack_turner01",
+      },
+      {
+        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
+        amount: 14,
+        name: "kat_walker89",
+      },
+      {
+        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
+        amount: 10,
+        name: "liam_harris",
+      },
+      {
+        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
+        amount: 13,
+        name: "mia_robinson",
+      },
+      {
+        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
+        amount: 18,
+        name: "nathan_scott",
+      },
+      {
+        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
+        amount: 16,
+        name: "olivia_harris23",
+      },
+      {
+        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
+        amount: 17,
+        name: "paul_evans91",
+      },
+      {
+        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
+        amount: 19,
+        name: "quincy_moore",
+      },
+      {
+        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
+        amount: 5,
+        name: "rachel_king",
+      },
+      {
+        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
+        amount: 22,
+        name: "sam_young",
+      },
+      {
+        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
+        amount: 3,
+        name: "tina_adams27",
+      },
     ],
+
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -1163,6 +1421,7 @@ export const data = [
     creator: {
       name: "alex",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      amount: 450,
     },
     bondingCurve: 800,
     bondingCurveRatio: 1500,
@@ -1336,25 +1595,108 @@ export const data = [
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
     mcap: 70200000,
     holders: [
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      {
+        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 10,
+        name: "alice_j",
+      },
+      {
+        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
+        amount: 5,
+        name: "bob_smith92",
+      },
+      {
+        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
+        amount: 8,
+        name: "charlie_dav03",
+      },
+      {
+        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
+        amount: 12,
+        name: "david_lee88",
+      },
+      {
+        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
+        amount: 7,
+        name: "eva_martz",
+      },
+      {
+        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
+        amount: 15,
+        name: "frank_w95",
+      },
+      {
+        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
+        amount: 20,
+        name: "grace_taylor21",
+      },
+      {
+        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
+        amount: 9,
+        name: "henry_wilson_72",
+      },
+      {
+        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
+        amount: 11,
+        name: "isabelle_clark",
+      },
+      {
+        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
+        amount: 6,
+        name: "jack_turner01",
+      },
+      {
+        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
+        amount: 14,
+        name: "kat_walker89",
+      },
+      {
+        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
+        amount: 10,
+        name: "liam_harris",
+      },
+      {
+        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
+        amount: 13,
+        name: "mia_robinson",
+      },
+      {
+        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
+        amount: 18,
+        name: "nathan_scott",
+      },
+      {
+        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
+        amount: 16,
+        name: "olivia_harris23",
+      },
+      {
+        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
+        amount: 17,
+        name: "paul_evans91",
+      },
+      {
+        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
+        amount: 19,
+        name: "quincy_moore",
+      },
+      {
+        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
+        amount: 5,
+        name: "rachel_king",
+      },
+      {
+        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
+        amount: 22,
+        name: "sam_young",
+      },
+      {
+        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
+        amount: 3,
+        name: "tina_adams27",
+      },
     ],
+
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -1602,6 +1944,7 @@ export const data = [
     creator: {
       name: "Google",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      amount: 600,
     },
     bondingCurve: 1499,
     bondingCurveRatio: 1500,
@@ -1733,26 +2076,108 @@ export const data = [
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
     mcap: 180000000,
     holders: [
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      {
+        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 10,
+        name: "alice_j",
+      },
+      {
+        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
+        amount: 5,
+        name: "bob_smith92",
+      },
+      {
+        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
+        amount: 8,
+        name: "charlie_dav03",
+      },
+      {
+        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
+        amount: 12,
+        name: "david_lee88",
+      },
+      {
+        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
+        amount: 7,
+        name: "eva_martz",
+      },
+      {
+        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
+        amount: 15,
+        name: "frank_w95",
+      },
+      {
+        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
+        amount: 20,
+        name: "grace_taylor21",
+      },
+      {
+        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
+        amount: 9,
+        name: "henry_wilson_72",
+      },
+      {
+        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
+        amount: 11,
+        name: "isabelle_clark",
+      },
+      {
+        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
+        amount: 6,
+        name: "jack_turner01",
+      },
+      {
+        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
+        amount: 14,
+        name: "kat_walker89",
+      },
+      {
+        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
+        amount: 10,
+        name: "liam_harris",
+      },
+      {
+        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
+        amount: 13,
+        name: "mia_robinson",
+      },
+      {
+        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
+        amount: 18,
+        name: "nathan_scott",
+      },
+      {
+        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
+        amount: 16,
+        name: "olivia_harris23",
+      },
+      {
+        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
+        amount: 17,
+        name: "paul_evans91",
+      },
+      {
+        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
+        amount: 19,
+        name: "quincy_moore",
+      },
+      {
+        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
+        amount: 5,
+        name: "rachel_king",
+      },
+      {
+        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
+        amount: 22,
+        name: "sam_young",
+      },
+      {
+        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
+        amount: 3,
+        name: "tina_adams27",
+      },
     ],
+
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -2000,6 +2425,7 @@ export const data = [
     creator: {
       name: "NOone",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      amount: 280,
     },
     bondingCurve: 1500,
     bondingCurveRatio: 1500,
@@ -2131,35 +2557,108 @@ export const data = [
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
     mcap: 13000,
     holders: [
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      {
+        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 10,
+        name: "alice_j",
+      },
+      {
+        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
+        amount: 5,
+        name: "bob_smith92",
+      },
+      {
+        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
+        amount: 8,
+        name: "charlie_dav03",
+      },
+      {
+        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
+        amount: 12,
+        name: "david_lee88",
+      },
+      {
+        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
+        amount: 7,
+        name: "eva_martz",
+      },
+      {
+        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
+        amount: 15,
+        name: "frank_w95",
+      },
+      {
+        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
+        amount: 20,
+        name: "grace_taylor21",
+      },
+      {
+        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
+        amount: 9,
+        name: "henry_wilson_72",
+      },
+      {
+        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
+        amount: 11,
+        name: "isabelle_clark",
+      },
+      {
+        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
+        amount: 6,
+        name: "jack_turner01",
+      },
+      {
+        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
+        amount: 14,
+        name: "kat_walker89",
+      },
+      {
+        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
+        amount: 10,
+        name: "liam_harris",
+      },
+      {
+        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
+        amount: 13,
+        name: "mia_robinson",
+      },
+      {
+        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
+        amount: 18,
+        name: "nathan_scott",
+      },
+      {
+        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
+        amount: 16,
+        name: "olivia_harris23",
+      },
+      {
+        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
+        amount: 17,
+        name: "paul_evans91",
+      },
+      {
+        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
+        amount: 19,
+        name: "quincy_moore",
+      },
+      {
+        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
+        amount: 5,
+        name: "rachel_king",
+      },
+      {
+        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
+        amount: 22,
+        name: "sam_young",
+      },
+      {
+        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
+        amount: 3,
+        name: "tina_adams27",
+      },
     ],
+
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -2407,6 +2906,7 @@ export const data = [
     creator: {
       name: "Peter Parker",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      amount: 199,
     },
     bondingCurve: 100,
     bondingCurveRatio: 1500,

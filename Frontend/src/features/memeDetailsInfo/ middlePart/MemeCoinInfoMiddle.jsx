@@ -1,28 +1,16 @@
 import { colorLibrary } from "../../../color-library";
 
-import { Avatar, Box, Button, Divider, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 
-import { convertWalletAddress } from "../../../utils/helpers";
-import { ContentCopyRounded } from "@mui/icons-material";
 import InfoDescription from "./InfoDescription";
 import InfoSocialButtons from "./InfoSocialButtons";
 import InfoCopyTextItems from "./InfoCopyTextItems";
-import { motion } from "motion/react";
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 import InfoCreator from "./InfoCreator";
 
 export default function MemeCoinInfoMiddle() {
   const { selectedMemeCoinData } = useSelectedMemeCoinContext();
   console.log(selectedMemeCoinData);
-
-  // creator
-  // :
-  // address
-  // :
-  // "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai"
-  // name
-  // :
-  // "Love"
 
   return (
     <Box
