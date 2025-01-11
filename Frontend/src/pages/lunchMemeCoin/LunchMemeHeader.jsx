@@ -22,7 +22,12 @@ export default function LunchMemeHeader() {
       <Box>
         <BackBtn margin={"0.5rem"} />
         <Box width={"100%"} textAlign={"center"} marginTop={"2rem"}>
-          <Box component="img" src="/duck.jpg" alt="duck-img" height={"5rem"} />
+          <Box
+            component="img"
+            src="/pepeGif.webp"
+            alt="duck-img"
+            height={"7rem"}
+          />
         </Box>
       </Box>
       <Box bgcolor={colorLibrary.boxBgLighter} borderRadius={"1rem"}>

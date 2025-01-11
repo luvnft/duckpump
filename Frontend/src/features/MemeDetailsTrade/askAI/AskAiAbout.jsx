@@ -31,7 +31,7 @@ export default function AskAiAbout() {
 
   return (
     <ViewAllDrawer
-      btnContent={`✨Ask DuckAI About ${selectedMemeCoinData?.tokenName}`}
+      btnContent={` Ask DuckAI About ${selectedMemeCoinData?.tokenName}`}
       btnStyles={{
         width: "100%",
         color: colorLibrary.title,

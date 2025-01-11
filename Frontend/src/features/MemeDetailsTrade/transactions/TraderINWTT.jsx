@@ -9,6 +9,7 @@ import {
 
 // *trader img ,name , wallet , trade type , trade time
 export default function TraderINWTT({
+  traderImg,
   traderName,
   traderWallet,
   tradType,
@@ -19,8 +20,8 @@ export default function TraderINWTT({
   return (
     <Box display={"flex"} gap={1}>
       <Avatar
-        alt="duck"
-        src="/duck.jpg"
+        alt={traderImg}
+        src={traderImg}
         sx={{ width: "4rem", height: "4rem" }}
       />
       <Box

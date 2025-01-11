@@ -6,6 +6,7 @@ import TradedAmount from "./TradedAmount";
 import { motion } from "motion/react";
 
 export default function TransactionItem({
+  traderImg,
   traderName,
   traderWallet,
   tradType,
@@ -29,6 +30,7 @@ export default function TransactionItem({
     >
       {/* // * left side : trader img ,name , wallet , trade type , trade time */}
       <TraderINWTT
+        traderImg={traderImg}
         traderName={traderName}
         traderWallet={traderWallet}
         tradType={tradType}

@@ -23,6 +23,7 @@ const memeCoinDetails = {
 export default function MemeCoinItem({
   tokenId,
   tokenName,
+  logo,
   creator,
   createdAt,
   mcap,
@@ -61,6 +62,7 @@ export default function MemeCoinItem({
             <MemeCoinINCT
               tokenName={tokenName}
               creator={creator}
+              logo={logo}
               createdAt={createdAt}
             />
 

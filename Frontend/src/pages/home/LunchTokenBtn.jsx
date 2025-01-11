@@ -21,7 +21,7 @@ export default function LunchTokenBtn() {
       onClick={() => navigate("lunchMemeCoin")}
     >
       Lunch Your Token
-      <Avatar alt="duck" src="/duck.jpg" />
+      <Avatar sx={{ mx: "0.5rem" }} alt="duck" src="/lunchBtn.webp" />
     </Button>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Box, Typography, styled, IconButton } from "@mui/material";
-import CloudUploadIcon from "@mui/icons-material/CloudUpload";
+import AccountCircle from "@mui/icons-material/AccountCircle";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { colorLibrary } from "../../color-library";
 
@@ -72,14 +72,14 @@ export default function FormImgInput() {
         onDragOver={handleDragOver}
         onDrop={handleDrop}
       >
-        <CloudUploadIcon sx={{ fontSize: 28, color: colorLibrary.title }} />
+        <AccountCircle sx={{ fontSize: 28, color: colorLibrary.title }} />
+
+        <Typography variant="body2" color={colorLibrary.title}>
+          Click to select a File or
+        </Typography>
 
         <Typography variant="body2" color={colorLibrary.text} gutterBottom>
           {selectedFile ? selectedFile.name : "Drop an image here"}
-        </Typography>
-
-        <Typography variant="body2" color="text.secondary">
-          or click to select
         </Typography>
 
         {selectedFile && (

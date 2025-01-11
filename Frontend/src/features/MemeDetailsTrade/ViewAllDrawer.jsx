@@ -1,5 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Button, Box, SwipeableDrawer, styled, Divider } from "@mui/material";
+import {
+  Button,
+  Box,
+  SwipeableDrawer,
+  styled,
+  Divider,
+  Typography,
+} from "@mui/material";
 import { KeyboardArrowDown } from "@mui/icons-material";
 
 import { colorLibrary } from "../../color-library";
@@ -41,15 +48,17 @@ export default function ViewAllDrawer({
         sx={{
           ...btnStyles,
           display: "flex",
-
           alignItems: "center",
           margin: 0,
           boxShadow:
             "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
         }}
       >
+        {type === "ai" && (
+          <Box component={"img"} alt="ai-Icon" src="/ai.webp" height={"2rem"} />
+        )}
         {btnContent}
-        {btnIcon}
+        {type !== "ai" && btnIcon}
       </Button>
       <SwipeableDrawer
         anchor="bottom"
@@ -88,6 +97,7 @@ export default function ViewAllDrawer({
             content?.map((comment, index) => (
               <React.Fragment key={comment?.id}>
                 <CommentItem
+                  img={comment?.img}
                   userId={comment?.telegramId}
                   userName={comment?.userName}
                   comment={comment?.comment}

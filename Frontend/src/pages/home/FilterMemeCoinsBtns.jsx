@@ -31,14 +31,16 @@ export default function FilterMemeCoinsBtns() {
         loop={false}
       >
         {[
-          "🐣 New",
-          "🔥Hot",
-          "✔️ Listed",
-          "💹 Mcap",
-          "🔊 Top volume",
-          "🎮 Game",
-          "🍿 Movie",
-        ].map((label, index) => (
+          { icon: "/hatchg.webp", label: "New" },
+          { icon: "/hotGif.webp", label: "Hot" },
+          { icon: "/list.webp", label: "Listed" },
+          { icon: "/topGif.webp", label: "Top Volume" },
+          { icon: "/game.webp", label: "Game" },
+          { icon: "/movie.webp", label: "Movie" },
+          { icon: "/music.webp", label: "Music" },
+          { icon: "/car.webp", label: "Car" },
+          { icon: "/topGif.webp", label: "Mcap" },
+        ].map((item, index) => (
           <SwiperSlide
             key={index}
             style={{
@@ -67,7 +69,13 @@ export default function FilterMemeCoinsBtns() {
                     "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
                 }}
               >
-                {label}
+                <Box
+                  component={"img"}
+                  src={item.icon}
+                  alt={item.icon}
+                  height={"1rem"}
+                />
+                {item.label}
               </Button>
             </motion.div>
           </SwiperSlide>

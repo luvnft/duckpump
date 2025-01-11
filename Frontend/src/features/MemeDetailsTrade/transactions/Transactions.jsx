@@ -43,6 +43,7 @@ export default function Transactions() {
         {buyers?.map((buyer, index) => (
           <React.Fragment key={buyer.telegramId}>
             <TransactionItem
+              traderImg={buyer.img}
               traderName={buyer.telegramId}
               traderWallet={buyer.walletAddress}
               tradType={buyer.tradType}
