@@ -1,8 +1,9 @@
-import { Avatar, Box, Typography } from "@mui/material";
+import { Avatar, Box, Button, Typography } from "@mui/material";
 import { motion } from "motion/react";
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 import { convertWalletAddress } from "../../../utils/helpers";
 import { colorLibrary } from "../../../color-library";
+import { ContentCopyRounded } from "@mui/icons-material";
 
 export default function InfoCreator() {
   const { selectedMemeCoinData } = useSelectedMemeCoinContext();
@@ -21,7 +22,7 @@ export default function InfoCreator() {
       width={"100%"}
     >
       {/* //*LEFT */}
-      <Box display={"flex"} gap={1}>
+      <Box display={"flex"} gap={1} maxWidth={"60%"}>
         <Avatar
           alt="duck"
           src="/duck.jpg"
@@ -32,15 +33,36 @@ export default function InfoCreator() {
           flexDirection={"column"}
           justifyContent={"space-evenly"}
         >
-          <Typography
-            variant="body2"
-            color={colorLibrary.title}
-            fontWeight={"bold"}
-            sx={{ textWrap: "nowrap" }}
-          >
-            @{selectedMemeCoinData.creator.name} /{" "}
-            {convertWalletAddress(selectedMemeCoinData.creator.address)}
-          </Typography>
+          <Box display={"flex"}>
+            <Typography
+              variant="body2"
+              color={colorLibrary.title}
+              fontWeight={"bold"}
+              sx={{
+                textWrap: "nowrap",
+                overflow: "hidden",
+                whiteSpace: "nowrap",
+                textOverflow: "ellipsis",
+                maxWidth: "30%",
+              }}
+            >
+              @{selectedMemeCoinData.creator.name}fhfhhfhfhfhfhdhddddddhdhd
+            </Typography>{" "}
+            <Typography
+              variant="body2"
+              color={colorLibrary.title}
+              fontWeight={"bold"}
+            >
+              {" "}
+              / {convertWalletAddress(selectedMemeCoinData.creator.address)}
+            </Typography>
+            <Button size="small" sx={{ padding: 0 }}>
+              <ContentCopyRounded
+                fontSize="small"
+                sx={{ color: colorLibrary.text }}
+              />
+            </Button>
+          </Box>
           <Typography
             variant="caption"
             color={colorLibrary.text}
