@@ -2,6 +2,8 @@ export const colorLibrary = {
   bg: "#16130C",
   boxBg: "#2B2821",
   boxBgLighter: "#39362F",
+  boxBgLighter1: "#49463F",
+  boxBgLighter2: "#64635E",
   boxBgLightest: "#F3E2CE",
   bgProgress1: "#ACCE5C",
   bgProgress2: "#414C44",
