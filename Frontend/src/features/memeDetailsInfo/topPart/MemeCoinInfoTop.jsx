@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Avatar,
   Box,
@@ -7,7 +6,7 @@ import {
   styled,
   Typography,
 } from "@mui/material";
-import { colorLibrary } from "../../color-library";
+import { colorLibrary } from "../../../color-library";
 
 export default function MemeCoinInfoTop({ tokenName, symbol, progressValue }) {
   const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
