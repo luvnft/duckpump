@@ -14,6 +14,7 @@ export default function CommentItem({
 }) {
   return (
     <Box
+    
       component={motion.li}
       initial={{ opacity: 0, x: 50 }}
       whileInView={{ opacity: 1, x: 0 }}
