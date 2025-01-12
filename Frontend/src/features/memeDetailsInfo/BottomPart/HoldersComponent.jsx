@@ -3,9 +3,9 @@ import { colorLibrary } from "../../../color-library";
 import { Avatar, Box, Typography } from "@mui/material";
 
 import { motion } from "motion/react";
-import { convertWalletAddress } from "../../../utils/helpers";
+import { convertWalletAddress, formatBigPrice } from "../../../utils/helpers";
 
-export default function HoldersComponent({ holder, symbol }) {
+export default function HoldersComponent({ holder }) {
   return (
     <Box
       component={motion.li}
@@ -22,8 +22,8 @@ export default function HoldersComponent({ holder, symbol }) {
       {/* //*LEFT */}
       <Box display={"flex"} gap={1} maxWidth={"60%"}>
         <Avatar
-          alt="duck"
-          src="/duck.jpg"
+          alt="duck img"
+          src={holder.img}
           sx={{ width: "4rem", height: "4rem" }}
         />
         <Box
@@ -52,7 +52,7 @@ export default function HoldersComponent({ holder, symbol }) {
               fontWeight={"bold"}
             >
               {" "}
-              / {convertWalletAddress(holder.address)}
+              / {convertWalletAddress(holder.wallet)}
             </Typography>
           </Box>
           <Typography
@@ -69,7 +69,7 @@ export default function HoldersComponent({ holder, symbol }) {
                 // color={color}
                 fontWeight={"bold"}
               >
-                600k {symbol}
+                {formatBigPrice(holder.amount)} $Quack
                 {/* {tradType} */}
               </Typography>
               <Typography
@@ -97,7 +97,7 @@ export default function HoldersComponent({ holder, symbol }) {
           textAlign={"right"}
           fontWeight={"bold"}
         >
-          Owns 20%{/* {formatBigPrice(amount)} TON */}
+          Owns {holder.percentage}
         </Typography>
       </Box>
     </Box>
