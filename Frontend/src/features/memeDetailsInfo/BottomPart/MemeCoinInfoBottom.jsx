@@ -45,11 +45,11 @@ export default function MemeCoinInfoBottom() {
           flexGrow: 1,
         }}
       >
-        {selectedMemeCoinData.holders.map((holder, i) => (
+        {selectedMemeCoinData?.holdersDetails?.map((holder, i) => (
           <HoldersComponent
             key={i}
             holder={holder}
-            symbol={selectedMemeCoinData.symbol}
+            // symbol={selectedMemeCoinData.symbol}
           />
         ))}
       </Box>

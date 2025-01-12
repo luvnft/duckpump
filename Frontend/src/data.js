@@ -11,6 +11,56 @@ export const data = [
     isHot: true,
 
     holders: 250,
+    holdersDetails: [
+      {
+        id: 1,
+        name: "duck",
+        img: "/duck8.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 600000,
+        percentage: 0.6,
+      },
+      {
+        id: 2,
+        name: "DuckMaster",
+        img: "/duck7.webp",
+        wallet: "UQC9wxWwKJSJBSJDhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 500000,
+        percentage: 0.5,
+      },
+      {
+        id: 3,
+        name: "MarketWatcher",
+        img: "/duck5.webp",
+        wallet: "UQADxWwLbAAJNi1fhe2xPSaxKesLKJSJDSC1UXPk3HMCai",
+        amount: 400000,
+        percentage: 0.4,
+      },
+      {
+        id: 4,
+        name: "Marketer",
+        img: "/duck9.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HSBS",
+        amount: 250000,
+        percentage: 0.25,
+      },
+      {
+        id: 5,
+        name: "Duckieeeed",
+        img: "/duck10.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 240000,
+        percentage: 0.24,
+      },
+      {
+        id: 6,
+        name: "DuckiDucki",
+        img: "/duck7.webp",
+        wallet: "UQCSkfS5wLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 700000,
+        percentage: 0.7,
+      },
+    ],
 
     priceHistory: [
       {
@@ -374,6 +424,56 @@ export const data = [
     mcap: 10000,
 
     holders: 157,
+    holdersDetails: [
+      {
+        id: 1,
+        name: "duck",
+        img: "/duck8.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 600000,
+        percentage: 0.6,
+      },
+      {
+        id: 2,
+        name: "DuckMaster",
+        img: "/duck7.webp",
+        wallet: "UQC9wxWwKJSJBSJDhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 500000,
+        percentage: 0.5,
+      },
+      {
+        id: 3,
+        name: "MarketWatcher",
+        img: "/duck5.webp",
+        wallet: "UQADxWwLbAAJNi1fhe2xPSaxKesLKJSJDSC1UXPk3HMCai",
+        amount: 400000,
+        percentage: 0.4,
+      },
+      {
+        id: 4,
+        name: "Marketer",
+        img: "/duck9.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HSBS",
+        amount: 250000,
+        percentage: 0.25,
+      },
+      {
+        id: 5,
+        name: "Duckieeeed",
+        img: "/duck10.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 240000,
+        percentage: 0.24,
+      },
+      {
+        id: 6,
+        name: "DuckiDucki",
+        img: "/duck7.webp",
+        wallet: "UQCSkfS5wLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 700000,
+        percentage: 0.7,
+      },
+    ],
 
     priceHistory: [
       {
@@ -737,6 +837,56 @@ export const data = [
 
     mcap: 41000,
     holders: 227,
+    holdersDetails: [
+      {
+        id: 1,
+        name: "duck",
+        img: "/duck8.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 600000,
+        percentage: 0.6,
+      },
+      {
+        id: 2,
+        name: "DuckMaster",
+        img: "/duck7.webp",
+        wallet: "UQC9wxWwKJSJBSJDhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 500000,
+        percentage: 0.5,
+      },
+      {
+        id: 3,
+        name: "MarketWatcher",
+        img: "/duck5.webp",
+        wallet: "UQADxWwLbAAJNi1fhe2xPSaxKesLKJSJDSC1UXPk3HMCai",
+        amount: 400000,
+        percentage: 0.4,
+      },
+      {
+        id: 4,
+        name: "Marketer",
+        img: "/duck9.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HSBS",
+        amount: 250000,
+        percentage: 0.25,
+      },
+      {
+        id: 5,
+        name: "Duckieeeed",
+        img: "/duck10.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 240000,
+        percentage: 0.24,
+      },
+      {
+        id: 6,
+        name: "DuckiDucki",
+        img: "/duck7.webp",
+        wallet: "UQCSkfS5wLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 700000,
+        percentage: 0.7,
+      },
+    ],
 
     priceHistory: [
       {
@@ -1099,6 +1249,56 @@ export const data = [
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
     mcap: 70200,
     holders: 156,
+    holdersDetails: [
+      {
+        id: 1,
+        name: "duck",
+        img: "/duck8.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 600000,
+        percentage: 0.6,
+      },
+      {
+        id: 2,
+        name: "DuckMaster",
+        img: "/duck7.webp",
+        wallet: "UQC9wxWwKJSJBSJDhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 500000,
+        percentage: 0.5,
+      },
+      {
+        id: 3,
+        name: "MarketWatcher",
+        img: "/duck5.webp",
+        wallet: "UQADxWwLbAAJNi1fhe2xPSaxKesLKJSJDSC1UXPk3HMCai",
+        amount: 400000,
+        percentage: 0.4,
+      },
+      {
+        id: 4,
+        name: "Marketer",
+        img: "/duck9.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HSBS",
+        amount: 250000,
+        percentage: 0.25,
+      },
+      {
+        id: 5,
+        name: "Duckieeeed",
+        img: "/duck10.webp",
+        wallet: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 240000,
+        percentage: 0.24,
+      },
+      {
+        id: 6,
+        name: "DuckiDucki",
+        img: "/duck7.webp",
+        wallet: "UQCSkfS5wLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+        amount: 700000,
+        percentage: 0.7,
+      },
+    ],
 
     priceHistory: [
       {

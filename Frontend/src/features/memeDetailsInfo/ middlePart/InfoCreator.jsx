@@ -46,7 +46,7 @@ export default function InfoCreator() {
                 maxWidth: "30%",
               }}
             >
-              @{selectedMemeCoinData.creator.name}
+              @{selectedMemeCoinData?.creator?.name}
             </Typography>{" "}
             <Typography
               variant="body2"
@@ -54,7 +54,7 @@ export default function InfoCreator() {
               fontWeight={"bold"}
             >
               {" "}
-              / {convertWalletAddress(selectedMemeCoinData.creator.address)}
+              / {convertWalletAddress(selectedMemeCoinData?.creator?.address)}
             </Typography>
             <Button size="small" sx={{ padding: 0 }}>
               <ContentCopyRounded
