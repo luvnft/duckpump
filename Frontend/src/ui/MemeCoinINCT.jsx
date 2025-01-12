@@ -16,6 +16,7 @@ export default function MemeCoinINCT({
   showSymbol,
   tokenName,
   symbol,
+  logo = "/duck.jpg",
   creator,
   mcap,
   createdAt,
@@ -23,8 +24,8 @@ export default function MemeCoinINCT({
   return (
     <Box display={"flex"} alignItems={"center"} gap={1}>
       <Avatar
-        alt="duck"
-        src="/duck.jpg"
+        alt={logo}
+        src={logo}
         sx={{ width: "3.2rem", height: "3.2rem" }}
       />
       <Box>

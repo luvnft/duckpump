@@ -3,114 +3,14 @@ import moment from "moment";
 export const data = [
   {
     tokenId: crypto.randomUUID(),
-    tokenName: "DuckCoin",
-    symbol: "DuckCoin",
-    logo: "",
+    tokenName: "FoxCoin",
+    symbol: "Fox",
+    logo: "/quackyCoin.webp",
     tokenAddress: "EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS",
-    mcap: 27050000,
+    mcap: 27050,
     isHot: true,
-    holders: [
-      {
-        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-        amount: 10,
-        name: "alice_j",
-      },
-      {
-        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
-        amount: 5,
-        name: "bob_smith92",
-      },
-      {
-        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
-        amount: 8,
-        name: "charlie_dav03",
-      },
-      {
-        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
-        amount: 12,
-        name: "david_lee88",
-      },
-      {
-        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
-        amount: 7,
-        name: "eva_martz",
-      },
-      {
-        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
-        amount: 15,
-        name: "frank_w95",
-      },
-      {
-        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
-        amount: 20,
-        name: "grace_taylor21",
-      },
-      {
-        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
-        amount: 9,
-        name: "henry_wilson_72",
-      },
-      {
-        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
-        amount: 11,
-        name: "isabelle_clark",
-      },
-      {
-        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
-        amount: 6,
-        name: "jack_turner01",
-      },
-      {
-        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
-        amount: 14,
-        name: "kat_walker89",
-      },
-      {
-        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
-        amount: 10,
-        name: "liam_harris",
-      },
-      {
-        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
-        amount: 13,
-        name: "mia_robinson",
-      },
-      {
-        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
-        amount: 18,
-        name: "nathan_scott",
-      },
-      {
-        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
-        amount: 16,
-        name: "olivia_harris23",
-      },
-      {
-        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
-        amount: 17,
-        name: "paul_evans91",
-      },
-      {
-        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
-        amount: 19,
-        name: "quincy_moore",
-      },
-      {
-        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
-        amount: 5,
-        name: "rachel_king",
-      },
-      {
-        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
-        amount: 22,
-        name: "sam_young",
-      },
-      {
-        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
-        amount: 3,
-        name: "tina_adams27",
-      },
-    ],
+
+    holders: 250,
 
     priceHistory: [
       {
@@ -357,12 +257,12 @@ export const data = [
     ],
     created_At: new Date().toString(),
     creator: {
-      name: "Love",
+      name: "DuckMaster",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       amount: 300,
     },
     bondingCurve: 500,
-    bondingCurveRatio: 1500,
+    bondingCurveRatio: 1000,
     boughtAmount: 400,
 
     isListed: false,
@@ -373,43 +273,47 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",
-        amount: 10,
-
+        amount: 2,
         tokenAmount: 5000000,
         tradType: "buy",
-        telegramId: "omidfh",
+        telegramId: "QuakHolder",
+        img: "/duck1.webp",
       },
       {
         ts: new Date().toString(),
         walletAddress: "UQAI75sQMdQNFLVYI1b413lGsBv701-8qwCOIWPKR5mcHzDW",
-        amount: 20,
+        amount: 1,
         tokenAmount: 20000000,
         tradType: "buy",
-        telegramId: "ali123",
+        telegramId: "SmartInvestor",
+        img: "/duck5.webp",
       },
       {
         ts: new Date().toString(),
         walletAddress: "UQCXKpag80kcf4zFucmH65pX2g02Q7AQw_oNZxTvoTjsXeWj",
-        amount: 5,
+        amount: 3,
         tokenAmount: 10000,
         tradType: "sell",
-        telegramId: "sara987",
+        telegramId: "DuckLover4Life",
+        img: "/duck2.webp",
       },
       {
         ts: new Date().toString(),
         walletAddress: "UQBgXY9R-ew3O9qhx2ZntRyKyHUqRkcr8j7wtl-rxmWUmgcG",
-        amount: 4,
+        amount: 1.5,
         tokenAmount: 1200,
         tradType: "sell",
-        telegramId: "javad22",
+        telegramId: "CryptoQuacker",
+        img: "/duck6.webp",
       },
       {
         ts: new Date().toString(),
         walletAddress: "UQBEfRmWqOqFufybHQ5qrnzgX-MuhM3pnPeOOmPMYG06VsBa",
-        amount: 6,
+        amount: 0.1,
         tokenAmount: 52800000,
         tradType: "buy",
-        telegramId: "fatima2020",
+        telegramId: "MarketWathcer",
+        img: "/duck7.webp",
       },
       {
         ts: new Date().toString(),
@@ -417,7 +321,8 @@ export const data = [
         amount: 3,
         tokenAmount: 855800000,
         tradType: "sell",
-        telegramId: "reza2024",
+        telegramId: "GoodDuck",
+        img: "/duck3.webp",
       },
       {
         ts: new Date().toString(),
@@ -425,231 +330,50 @@ export const data = [
         amount: 7,
         tokenAmount: 588200000,
         tradType: "buy",
-        telegramId: "john_doe",
-      },
-      {
-        ts: new Date().toString(),
-        walletAddress: "UQCO7VrL-G89JfUxWOQFaruFI2uNI7JbhIs4vW2cIf2L_Ess",
-        amount: 85,
-        tokenAmount: 100000000000,
-        tradType: "buy",
-        telegramId: "emily_07",
-      },
-      {
-        ts: new Date().toString(),
-        walletAddress: "UQC_UyLi6nA0cqkLg5By7HjwZVn8vXMkhAafUiH2bCET7PiY",
-        amount: 40,
-        tokenAmount: 100000000000,
-        tradType: "sell",
-        telegramId: "mark2023",
-      },
-      {
-        ts: new Date().toString(),
-        walletAddress: "UQCyRrwwpX9_EUlzUBIuWX50gPDN1w3DuHsYgY0FIS1V6Bim",
-        amount: 3,
-        tokenAmount: 100000000000,
-        tradType: "sell",
-        telegramId: "alex_wilson",
+        telegramId: "SnowDuck",
+        img: "/duck4.webp",
       },
     ],
     comments: [
       {
         id: 1,
-        telegramId: "Pavel Durov",
-        userName: "Pavel Durov",
-        comment: "DuckPump is Amazing 💘😀",
+        telegramId: "QuakHolder",
+        userName: "QuakHolder",
+        comment:
+          "This is the most quacktastic coin ever! So glad i found this gem. LFG!",
         timeStamp: new Date().toString(),
+        img: "/duck1.webp",
       },
       {
         id: 2,
-        telegramId: "mary",
-        userName: "mary",
-        comment: "I really like this token! It’s amazing.",
+        telegramId: "DuckLoverFor",
+        userName: "DuckLoverFor",
+        comment:
+          "Love the community around $QUACK! Everyone's so supportive and the vibes are great. This is going to be huge!",
         timeStamp: new Date().toString(),
+        img: "/duck2.webp",
       },
       {
         id: 3,
-        telegramId: "alex",
-        userName: "sara",
-        comment: "Can anyone explain how this works? I’m new to this.",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 4,
-        telegramId: "javad22",
-        userName: "javad",
+        telegramId: "CryptoQuacker",
+        userName: "CryptoQuacker",
         comment:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Just bought some $QUACK. Looking forward to seeing how this project develop.",
         timeStamp: new Date().toString(),
-      },
-      {
-        id: 5,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 6,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 7,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 8,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 9,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 10,
-        telegramId: "javad22",
-        userName: "john",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 11,
-        telegramId: "javad22",
-        userName: "james",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
+        img: "/duck3.webp",
       },
     ],
   },
   {
     tokenId: crypto.randomUUID(),
 
-    tokenName: "DOGS",
-    symbol: "DOGS",
-    logo: "",
+    tokenName: "LootBox Larry",
+    symbol: "LootBL",
+    logo: "/lootbox.webp",
     tokenAddress: "EQBZ_cafPyDr5KUTs0aNxh0ZTDhkpEZONmLJA2SNGlLm4Cko",
     mcap: 10000,
-    holders: [
-      {
-        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-        amount: 10,
-        name: "alice_j",
-      },
-      {
-        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
-        amount: 5,
-        name: "bob_smith92",
-      },
-      {
-        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
-        amount: 8,
-        name: "charlie_dav03",
-      },
-      {
-        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
-        amount: 12,
-        name: "david_lee88",
-      },
-      {
-        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
-        amount: 7,
-        name: "eva_martz",
-      },
-      {
-        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
-        amount: 15,
-        name: "frank_w95",
-      },
-      {
-        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
-        amount: 20,
-        name: "grace_taylor21",
-      },
-      {
-        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
-        amount: 9,
-        name: "henry_wilson_72",
-      },
-      {
-        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
-        amount: 11,
-        name: "isabelle_clark",
-      },
-      {
-        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
-        amount: 6,
-        name: "jack_turner01",
-      },
-      {
-        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
-        amount: 14,
-        name: "kat_walker89",
-      },
-      {
-        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
-        amount: 10,
-        name: "liam_harris",
-      },
-      {
-        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
-        amount: 13,
-        name: "mia_robinson",
-      },
-      {
-        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
-        amount: 18,
-        name: "nathan_scott",
-      },
-      {
-        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
-        amount: 16,
-        name: "olivia_harris23",
-      },
-      {
-        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
-        amount: 17,
-        name: "paul_evans91",
-      },
-      {
-        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
-        amount: 19,
-        name: "quincy_moore",
-      },
-      {
-        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
-        amount: 5,
-        name: "rachel_king",
-      },
-      {
-        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
-        amount: 22,
-        name: "sam_young",
-      },
-      {
-        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
-        amount: 3,
-        name: "tina_adams27",
-      },
-    ],
+
+    holders: 157,
 
     priceHistory: [
       {
@@ -896,12 +620,12 @@ export const data = [
     ],
     created_At: new Date().toString(),
     creator: {
-      name: "alex",
+      name: "LootLord",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       amount: 200,
     },
-    bondingCurve: 1200,
-    bondingCurveRatio: 1500,
+    bondingCurve: 900,
+    bondingCurveRatio: 1000,
     boughtAmount: 300,
 
     isListed: false,
@@ -912,267 +636,107 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",
-        amount: 10,
-        tokenAmount: 50000,
+        amount: 2,
+
+        tokenAmount: 5000000,
         tradType: "buy",
-        telegramId: "alexDuck",
+        telegramId: "QuakHolder",
+        img: "/duck1.webp",
       },
       {
         ts: new Date().toString(),
         walletAddress: "UQAI75sQMdQNFLVYI1b413lGsBv701-8qwCOIWPKR5mcHzDW",
-        amount: 20,
-        tokenAmount: 2000000000,
+        amount: 1,
+        tokenAmount: 20000000,
         tradType: "buy",
-        telegramId: "james",
+        telegramId: "SmartInvestor",
+        img: "/duck5.webp",
       },
       {
         ts: new Date().toString(),
         walletAddress: "UQCXKpag80kcf4zFucmH65pX2g02Q7AQw_oNZxTvoTjsXeWj",
-        amount: 5,
+        amount: 3,
         tokenAmount: 10000,
         tradType: "sell",
-        telegramId: "sara987",
+        telegramId: "DuckLover4Life",
+        img: "/duck2.webp",
       },
       {
         ts: new Date().toString(),
         walletAddress: "UQBgXY9R-ew3O9qhx2ZntRyKyHUqRkcr8j7wtl-rxmWUmgcG",
-        amount: 4,
+        amount: 1.5,
         tokenAmount: 1200,
         tradType: "sell",
-        telegramId: "hope",
+        telegramId: "CryptoQuacker",
+        img: "/duck6.webp",
       },
-
+      {
+        ts: new Date().toString(),
+        walletAddress: "UQBEfRmWqOqFufybHQ5qrnzgX-MuhM3pnPeOOmPMYG06VsBa",
+        amount: 0.1,
+        tokenAmount: 52800000,
+        tradType: "buy",
+        telegramId: "MarketWathcer",
+        img: "/duck7.webp",
+      },
       {
         ts: new Date().toString(),
         walletAddress: "UQA58oWnswtUGDNp6lG07zG1vZpH467EhzyUZaXAMvnjO0Cx",
         amount: 3,
         tokenAmount: 855800000,
         tradType: "sell",
-        telegramId: "reza2024",
+        telegramId: "GoodDuck",
+        img: "/duck3.webp",
       },
-
       {
         ts: new Date().toString(),
-        walletAddress: "UQCO7VrL-G89JfUxWOQFaruFI2uNI7JbhIs4vW2cIf2L_Ess",
-        amount: 85,
-        tokenAmount: 100000000000,
+        walletAddress: "UQDL2z2klq7iRPk903mUzWaxGm4b1klxicQ90ivj9wOqkmva",
+        amount: 7,
+        tokenAmount: 588200000,
         tradType: "buy",
-        telegramId: "emily_07",
-      },
-      {
-        ts: new Date().toString(),
-        walletAddress: "UQC_UyLi6nA0cqkLg5By7HjwZVn8vXMkhAafUiH2bCET7PiY",
-        amount: 40,
-        tokenAmount: 100000000000,
-        tradType: "sell",
-        telegramId: "mark2023",
-      },
-      {
-        ts: new Date().toString(),
-        walletAddress: "UQCyRrwwpX9_EUlzUBIuWX50gPDN1w3DuHsYgY0FIS1V6Bim",
-        amount: 3,
-        tokenAmount: 100000000000,
-        tradType: "sell",
-        telegramId: "alex_wilson",
+        telegramId: "SnowDuck",
+        img: "/duck4.webp",
       },
     ],
     comments: [
       {
         id: 1,
-        telegramId: "Stiffen",
-        userName: "Stiffen Durov",
-        comment: "unbelievable Super Fun Modern App 🔥🙂🎉",
+        telegramId: "QuakHolder",
+        userName: "QuakHolder",
+        comment:
+          "This is the most quacktastic coin ever! So glad i found this gem. LFG!",
         timeStamp: new Date().toString(),
+        img: "/duck1.webp",
       },
       {
         id: 2,
-        telegramId: "mary",
-        userName: "mary",
-        comment: "I really like this token! It’s amazing.",
+        telegramId: "DuckLoverFor",
+        userName: "DuckLoverFor",
+        comment:
+          "Love the community around $QUACK! Everyone's so supportive and the vibes are great. This is going to be huge!",
         timeStamp: new Date().toString(),
+        img: "/duck2.webp",
       },
       {
         id: 3,
-        telegramId: "alex",
-        userName: "sara",
-        comment: "Can anyone explain how this works? I’m new to this.",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 4,
-        telegramId: "javad22",
-        userName: "javad",
+        telegramId: "CryptoQuacker",
+        userName: "CryptoQuacker",
         comment:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Just bought some $QUACK. Looking forward to seeing how this project develop.",
         timeStamp: new Date().toString(),
-      },
-      {
-        id: 5,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 6,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 7,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 8,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 9,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 10,
-        telegramId: "javad22",
-        userName: "john",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 11,
-        telegramId: "javad22",
-        userName: "james",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
+        img: "/duck3.webp",
       },
     ],
   },
   {
     tokenId: crypto.randomUUID(),
-    tokenName: "Not",
-    symbol: "$",
-    logo: "",
+    tokenName: "Popcorn Planet",
+    symbol: "PopcornPT",
+    logo: "/popcorn.webp",
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
-    mcap: 410000,
-    holders: [
-      {
-        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-        amount: 10,
-        name: "alice_j",
-      },
-      {
-        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
-        amount: 5,
-        name: "bob_smith92",
-      },
-      {
-        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
-        amount: 8,
-        name: "charlie_dav03",
-      },
-      {
-        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
-        amount: 12,
-        name: "david_lee88",
-      },
-      {
-        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
-        amount: 7,
-        name: "eva_martz",
-      },
-      {
-        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
-        amount: 15,
-        name: "frank_w95",
-      },
-      {
-        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
-        amount: 20,
-        name: "grace_taylor21",
-      },
-      {
-        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
-        amount: 9,
-        name: "henry_wilson_72",
-      },
-      {
-        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
-        amount: 11,
-        name: "isabelle_clark",
-      },
-      {
-        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
-        amount: 6,
-        name: "jack_turner01",
-      },
-      {
-        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
-        amount: 14,
-        name: "kat_walker89",
-      },
-      {
-        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
-        amount: 10,
-        name: "liam_harris",
-      },
-      {
-        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
-        amount: 13,
-        name: "mia_robinson",
-      },
-      {
-        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
-        amount: 18,
-        name: "nathan_scott",
-      },
-      {
-        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
-        amount: 16,
-        name: "olivia_harris23",
-      },
-      {
-        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
-        amount: 17,
-        name: "paul_evans91",
-      },
-      {
-        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
-        amount: 19,
-        name: "quincy_moore",
-      },
-      {
-        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
-        amount: 5,
-        name: "rachel_king",
-      },
-      {
-        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
-        amount: 22,
-        name: "sam_young",
-      },
-      {
-        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
-        amount: 3,
-        name: "tina_adams27",
-      },
-    ],
+
+    mcap: 41000,
+    holders: 227,
 
     priceHistory: [
       {
@@ -1419,7 +983,7 @@ export const data = [
     ],
     created_At: new Date().toString(),
     creator: {
-      name: "alex",
+      name: "MovieBuff",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       amount: 450,
     },
@@ -1435,267 +999,106 @@ export const data = [
       {
         ts: new Date().toString(),
         walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",
-        amount: 10,
-        tokenAmount: 50000,
+        amount: 2,
+
+        tokenAmount: 5000000,
         tradType: "buy",
-        telegramId: "alexDuck",
+        telegramId: "QuakHolder",
+        img: "/duck1.webp",
       },
       {
         ts: new Date().toString(),
         walletAddress: "UQAI75sQMdQNFLVYI1b413lGsBv701-8qwCOIWPKR5mcHzDW",
-        amount: 20,
-        tokenAmount: 2000000000,
+        amount: 1,
+        tokenAmount: 20000000,
         tradType: "buy",
-        telegramId: "james",
+        telegramId: "SmartInvestor",
+        img: "/duck5.webp",
       },
       {
         ts: new Date().toString(),
         walletAddress: "UQCXKpag80kcf4zFucmH65pX2g02Q7AQw_oNZxTvoTjsXeWj",
-        amount: 5,
+        amount: 3,
         tokenAmount: 10000,
         tradType: "sell",
-        telegramId: "sara987",
+        telegramId: "DuckLover4Life",
+        img: "/duck2.webp",
       },
       {
         ts: new Date().toString(),
         walletAddress: "UQBgXY9R-ew3O9qhx2ZntRyKyHUqRkcr8j7wtl-rxmWUmgcG",
-        amount: 4,
+        amount: 1.5,
         tokenAmount: 1200,
         tradType: "sell",
-        telegramId: "hope",
+        telegramId: "CryptoQuacker",
+        img: "/duck6.webp",
       },
-
+      {
+        ts: new Date().toString(),
+        walletAddress: "UQBEfRmWqOqFufybHQ5qrnzgX-MuhM3pnPeOOmPMYG06VsBa",
+        amount: 0.1,
+        tokenAmount: 52800000,
+        tradType: "buy",
+        telegramId: "MarketWathcer",
+        img: "/duck7.webp",
+      },
       {
         ts: new Date().toString(),
         walletAddress: "UQA58oWnswtUGDNp6lG07zG1vZpH467EhzyUZaXAMvnjO0Cx",
         amount: 3,
         tokenAmount: 855800000,
         tradType: "sell",
-        telegramId: "reza2024",
+        telegramId: "GoodDuck",
+        img: "/duck3.webp",
       },
-
       {
         ts: new Date().toString(),
-        walletAddress: "UQCO7VrL-G89JfUxWOQFaruFI2uNI7JbhIs4vW2cIf2L_Ess",
-        amount: 85,
-        tokenAmount: 100000000000,
+        walletAddress: "UQDL2z2klq7iRPk903mUzWaxGm4b1klxicQ90ivj9wOqkmva",
+        amount: 7,
+        tokenAmount: 588200000,
         tradType: "buy",
-        telegramId: "emily_07",
-      },
-      {
-        ts: new Date().toString(),
-        walletAddress: "UQC_UyLi6nA0cqkLg5By7HjwZVn8vXMkhAafUiH2bCET7PiY",
-        amount: 40,
-        tokenAmount: 100000000000,
-        tradType: "sell",
-        telegramId: "mark2023",
-      },
-      {
-        ts: new Date().toString(),
-        walletAddress: "UQCyRrwwpX9_EUlzUBIuWX50gPDN1w3DuHsYgY0FIS1V6Bim",
-        amount: 3,
-        tokenAmount: 100000000000,
-        tradType: "sell",
-        telegramId: "alex_wilson",
+        telegramId: "SnowDuck",
+        img: "/duck4.webp",
       },
     ],
     comments: [
       {
         id: 1,
-        telegramId: "Stiffen",
-        userName: "Stiffen Durov",
-        comment: "Tears Rolled in My Eyes for this beautiful MiniApp",
+        telegramId: "QuakHolder",
+        userName: "QuakHolder",
+        comment:
+          "This is the most quacktastic coin ever! So glad i found this gem. LFG!",
         timeStamp: new Date().toString(),
+        img: "/duck1.webp",
       },
       {
         id: 2,
-        telegramId: "mary",
-        userName: "mary",
-        comment: "I really like this token! It’s amazing.",
+        telegramId: "DuckLoverFor",
+        userName: "DuckLoverFor",
+        comment:
+          "Love the community around $QUACK! Everyone's so supportive and the vibes are great. This is going to be huge!",
         timeStamp: new Date().toString(),
+        img: "/duck2.webp",
       },
       {
         id: 3,
-        telegramId: "alex",
-        userName: "sara",
-        comment: "Can anyone explain how this works? I’m new to this.",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 4,
-        telegramId: "javad22",
-        userName: "javad",
+        telegramId: "CryptoQuacker",
+        userName: "CryptoQuacker",
         comment:
-          "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Just bought some $QUACK. Looking forward to seeing how this project develop.",
         timeStamp: new Date().toString(),
-      },
-      {
-        id: 5,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 6,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 7,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 8,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 9,
-        telegramId: "javad22",
-        userName: "javad",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 10,
-        telegramId: "javad22",
-        userName: "john",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
-      },
-      {
-        id: 11,
-        telegramId: "javad22",
-        userName: "james",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: new Date().toString(),
+        img: "/duck3.webp",
       },
     ],
   },
   {
     tokenId: crypto.randomUUID(),
-    tokenName: "Pixel",
-    symbol: "$Pixel",
-    logo: "",
+    tokenName: "Blockbuster Bunny",
+    symbol: "BBB",
+    logo: "/blockbuster.webp",
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
-    mcap: 70200000,
-    holders: [
-      {
-        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-        amount: 10,
-        name: "alice_j",
-      },
-      {
-        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
-        amount: 5,
-        name: "bob_smith92",
-      },
-      {
-        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
-        amount: 8,
-        name: "charlie_dav03",
-      },
-      {
-        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
-        amount: 12,
-        name: "david_lee88",
-      },
-      {
-        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
-        amount: 7,
-        name: "eva_martz",
-      },
-      {
-        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
-        amount: 15,
-        name: "frank_w95",
-      },
-      {
-        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
-        amount: 20,
-        name: "grace_taylor21",
-      },
-      {
-        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
-        amount: 9,
-        name: "henry_wilson_72",
-      },
-      {
-        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
-        amount: 11,
-        name: "isabelle_clark",
-      },
-      {
-        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
-        amount: 6,
-        name: "jack_turner01",
-      },
-      {
-        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
-        amount: 14,
-        name: "kat_walker89",
-      },
-      {
-        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
-        amount: 10,
-        name: "liam_harris",
-      },
-      {
-        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
-        amount: 13,
-        name: "mia_robinson",
-      },
-      {
-        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
-        amount: 18,
-        name: "nathan_scott",
-      },
-      {
-        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
-        amount: 16,
-        name: "olivia_harris23",
-      },
-      {
-        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
-        amount: 17,
-        name: "paul_evans91",
-      },
-      {
-        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
-        amount: 19,
-        name: "quincy_moore",
-      },
-      {
-        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
-        amount: 5,
-        name: "rachel_king",
-      },
-      {
-        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
-        amount: 22,
-        name: "sam_young",
-      },
-      {
-        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
-        amount: 3,
-        name: "tina_adams27",
-      },
-    ],
+    mcap: 70200,
+    holders: 156,
 
     priceHistory: [
       {
@@ -1942,12 +1345,12 @@ export const data = [
     ],
     created_At: new Date().toString(),
     creator: {
-      name: "Google",
+      name: "FilmFanatic",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
       amount: 600,
     },
-    bondingCurve: 1499,
-    bondingCurveRatio: 1500,
+    bondingCurve: 499,
+    bondingCurveRatio: 1000,
 
     boughtAmount: 900,
 
@@ -1957,1075 +1360,97 @@ export const data = [
     price: 0.00000125,
     buyers: [
       {
-        ts: "2025-01-01T02:40:44.000Z",
+        ts: new Date().toString(),
         walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",
-        amount: "10",
-        tradType: "buy",
-        telegramId: "Targrien",
-      },
-      {
-        ts: "2025-01-01T02:40:57.000Z",
-        walletAddress: "UQAI75sQMdQNFLVYI1b413lGsBv701-8qwCOIWPKR5mcHzDW",
-        amount: "2000",
-        tradType: "buy",
-        telegramId: "Snow",
-      },
-      {
-        ts: "2025-01-01T19:46:57.000Z",
-        walletAddress: "UQCXKpag80kcf4zFucmH65pX2g02Q7AQw_oNZxTvoTjsXeWj",
-        amount: "5000",
-        tradType: "sell",
-        telegramId: "kalici",
-      },
-      {
-        ts: "2025-01-01T19:33:36.000Z",
-        walletAddress: "UQBgXY9R-ew3O9qhx2ZntRyKyHUqRkcr8j7wtl-rxmWUmgcG",
-        amount: "4500",
-        tradType: "sell",
-        telegramId: "javad22",
-      },
-      {
-        ts: "2025-01-01T19:23:04.000Z",
-        walletAddress: "UQBEfRmWqOqFufybHQ5qrnzgX-MuhM3pnPeOOmPMYG06VsBa",
-        amount: "6000",
-        tradType: "buy",
-        telegramId: "fatima2020",
-      },
-      {
-        ts: "2025-01-01T01:37:56.000Z",
-        walletAddress: "UQA58oWnswtUGDNp6lG07zG1vZpH467EhzyUZaXAMvnjO0Cx",
-        amount: "3000",
-        tradType: "sell",
-        telegramId: "reza2024",
-      },
-      {
-        ts: "2025-01-02T09:40:45.000Z",
-        walletAddress: "UQDL2z2klq7iRPk903mUzWaxGm4b1klxicQ90ivj9wOqkmva",
-        amount: "7000",
-        tradType: "buy",
-        telegramId: "john_doe",
-      },
-      {
-        ts: "2025-01-01T10:50:19.000Z",
-        walletAddress: "UQCO7VrL-G89JfUxWOQFaruFI2uNI7JbhIs4vW2cIf2L_Ess",
-        amount: "8500",
-        tradType: "buy",
-        telegramId: "emily_07",
-      },
-      {
-        ts: "2025-01-01T07:38:46.000Z",
-        walletAddress: "UQC_UyLi6nA0cqkLg5By7HjwZVn8vXMkhAafUiH2bCET7PiY",
-        amount: "4000",
-        tradType: "sell",
-        telegramId: "mark2023",
-      },
-      {
-        ts: "2025-01-01T05:19:19.000Z",
-        walletAddress: "UQCyRrwwpX9_EUlzUBIuWX50gPDN1w3DuHsYgY0FIS1V6Bim",
-        amount: "3500",
-        tradType: "sell",
-        telegramId: "alex_wilson",
-      },
-    ],
-    comments: [
-      {
-        id: 1,
-        telegramId: "JJ-Martin",
-        userName: "JJ-Martin",
-        comment: "I'm Not Going To Burn Next City ,Because Of You 🙂🙂💘",
-        timeStamp: "2025-01-02T09:45:00.000Z",
-      },
-      {
-        id: 2,
-        telegramId: "Trump",
-        userName: "Trump",
-        comment: "I really like this token! It’s amazing.",
-        timeStamp: "2025-01-02T09:47:30.000Z",
-      },
+        amount: 2,
 
-      {
-        id: 4,
-        telegramId: "Elizabeth",
-        userName: "Elizabeth",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: "2025-01-02T09:52:45.000Z",
+        tokenAmount: 5000000,
+        tradType: "buy",
+        telegramId: "QuakHolder",
+        img: "/duck1.webp",
       },
       {
-        id: 5,
-        telegramId: "fatima2020",
-        userName: "fatima",
-        comment: "Does anyone know if there are any upcoming updates for this?",
-        timeStamp: "2025-01-02T09:55:10.000Z",
+        ts: new Date().toString(),
+        walletAddress: "UQAI75sQMdQNFLVYI1b413lGsBv701-8qwCOIWPKR5mcHzDW",
+        amount: 1,
+        tokenAmount: 20000000,
+        tradType: "buy",
+        telegramId: "SmartInvestor",
+        img: "/duck5.webp",
       },
       {
-        id: 6,
-        telegramId: "reza2024",
-        userName: "reza",
-        comment:
-          "This is a fantastic initiative! Can’t wait to see the progress.",
-        timeStamp: "2025-01-02T09:57:35.000Z",
-      },
-    ],
-  },
-  {
-    tokenId: crypto.randomUUID(),
-    tokenName: "Ton",
-    symbol: "$Ton",
-    logo: "",
-    tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
-    mcap: 180000000,
-    holders: [
-      {
-        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-        amount: 10,
-        name: "alice_j",
-      },
-      {
-        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
-        amount: 5,
-        name: "bob_smith92",
-      },
-      {
-        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
-        amount: 8,
-        name: "charlie_dav03",
-      },
-      {
-        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
-        amount: 12,
-        name: "david_lee88",
-      },
-      {
-        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
-        amount: 7,
-        name: "eva_martz",
-      },
-      {
-        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
-        amount: 15,
-        name: "frank_w95",
-      },
-      {
-        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
-        amount: 20,
-        name: "grace_taylor21",
-      },
-      {
-        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
-        amount: 9,
-        name: "henry_wilson_72",
-      },
-      {
-        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
-        amount: 11,
-        name: "isabelle_clark",
-      },
-      {
-        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
-        amount: 6,
-        name: "jack_turner01",
-      },
-      {
-        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
-        amount: 14,
-        name: "kat_walker89",
-      },
-      {
-        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
-        amount: 10,
-        name: "liam_harris",
-      },
-      {
-        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
-        amount: 13,
-        name: "mia_robinson",
-      },
-      {
-        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
-        amount: 18,
-        name: "nathan_scott",
-      },
-      {
-        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
-        amount: 16,
-        name: "olivia_harris23",
-      },
-      {
-        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
-        amount: 17,
-        name: "paul_evans91",
-      },
-      {
-        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
-        amount: 19,
-        name: "quincy_moore",
-      },
-      {
-        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
-        amount: 5,
-        name: "rachel_king",
-      },
-      {
-        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
-        amount: 22,
-        name: "sam_young",
-      },
-      {
-        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
+        ts: new Date().toString(),
+        walletAddress: "UQCXKpag80kcf4zFucmH65pX2g02Q7AQw_oNZxTvoTjsXeWj",
         amount: 3,
-        name: "tina_adams27",
-      },
-    ],
-
-    priceHistory: [
-      {
-        time: `${moment().subtract(1, "days").format("D MMM")} `,
-        price: 0.00000105,
-      },
-      {
-        time: `${moment().subtract(2, "days").format("D MMM")} `,
-        price: 0.0000055,
-      },
-      {
-        time: `${moment().subtract(3, "days").format("D MMM")} `,
-        price: 0.0000005,
-      },
-      {
-        time: `${moment().subtract(4, "days").format("D MMM")} `,
-        price: 0.00000035,
-      },
-      {
-        time: `${moment().subtract(5, "days").format("D MMM")} `,
-        price: 0.00000029,
-      },
-      {
-        time: `06:36 hour`,
-        price: 0.000000025,
-      },
-      {
-        time: `05:35 hour`,
-        price: 0.000000059,
-      },
-      {
-        time: `04:48 hour`,
-        price: 0.00000005,
-      },
-      {
-        time: `03:25 hour`,
-        price: 0.00000045,
-      },
-      {
-        time: `02:15 hour`,
-        price: 0.00000056,
-      },
-
-      {
-        time: `01:01 hour`,
-        price: 0.00000055,
-      },
-      {
-        time: `06:14 min`,
-        price: 0.00000105,
-      },
-      {
-        time: `5:14 min`,
-        price: 0.0000055,
-      },
-      {
-        time: `04:15 min`,
-        price: 0.0000005,
-      },
-      {
-        time: `03:19 min`,
-        price: 0.0000035,
-      },
-      {
-        time: `02:18 min`,
-        price: 0.0000029,
-      },
-      {
-        time: `01:15 min`,
-        price: 0.0000025,
-      },
-    ],
-    fiveMinuteHistory: [
-      {
-        time: `${moment().subtract(1, "days").format("D MMM")} `,
-        price: 0.00000105,
-      },
-      {
-        time: `${moment().subtract(2, "days").format("D MMM")} `,
-        price: 0.0000055,
-      },
-      {
-        time: `${moment().subtract(3, "days").format("D MMM")} `,
-        price: 0.0000005,
-      },
-      {
-        time: `${moment().subtract(4, "days").format("D MMM")} `,
-        price: 0.00000035,
-      },
-      {
-        time: `${moment().subtract(5, "days").format("D MMM")} `,
-        price: 0.00000029,
-      },
-      {
-        time: `06:26 hour`,
-        price: 0.000000025,
-      },
-      {
-        time: `05:26 hour`,
-        price: 0.0000059,
-      },
-      {
-        time: `04:26 hour`,
-        price: 0.0000005,
-      },
-      {
-        time: `03:26 hour`,
-        price: 0.00000445,
-      },
-      {
-        time: `02:26 hour`,
-        price: 0.00000056,
-      },
-
-      {
-        time: `01:26 hour`,
-        price: 0.00000055,
-      },
-      {
-        time: `26:12 min`,
-        price: 0.00000105,
-      },
-      {
-        time: `21:14 min`,
-        price: 0.0000055,
-      },
-      {
-        time: `16:11 min`,
-        price: 0.0000005,
-      },
-      {
-        time: `11:10 min`,
-        price: 0.0000035,
-      },
-      {
-        time: `06:20 min`,
-        price: 0.0000029,
-      },
-      {
-        time: `01:15 sec`,
-        price: 0.0000025,
-      },
-    ],
-    fifteenMinuteHistory: [
-      {
-        time: `${moment().subtract(1, "days").format("D MMM")} `,
-        price: 0.00000105,
-      },
-      {
-        time: `${moment().subtract(2, "days").format("D MMM")} `,
-        price: 0.0000055,
-      },
-      {
-        time: `${moment().subtract(3, "days").format("D MMM")} `,
-        price: 0.0000005,
-      },
-      {
-        time: `${moment().subtract(4, "days").format("D MMM")} `,
-        price: 0.00000035,
-      },
-      {
-        time: `${moment().subtract(5, "days").format("D MMM")} `,
-        price: 0.00000029,
-      },
-      {
-        time: `06:26 hour`,
-        price: 0.000000025,
-      },
-      {
-        time: `05:26 hour`,
-        price: 0.000000059,
-      },
-      {
-        time: `04:26 hour`,
-        price: 0.00000005,
-      },
-      {
-        time: `03:26 hour`,
-        price: 0.00000045,
-      },
-      {
-        time: `02:26 hour`,
-        price: 0.00000056,
-      },
-
-      {
-        time: `01:05 hour`,
-        price: 0.0000005,
-      },
-      {
-        time: `45:10 min`,
-        price: 0.0000035,
-      },
-      {
-        time: `30:14 min`,
-        price: 0.0000029,
-      },
-      {
-        time: `15:01 min`,
-        price: 0.0000025,
-      },
-    ],
-    txns: [
-      {
-        amount: 1005,
-        timeStamp: "2025-01-02T09:45:00.000Z",
-      },
-      {
-        amount: 35,
-        timeStamp: "2025-01-02T09:47:30.000Z",
-      },
-      {
-        amount: 90,
-        timeStamp: "2025-01-02T09:50:15.000Z",
-      },
-      {
-        amount: 500,
-        timeStamp: "2025-01-02T09:52:45.000Z",
-      },
-      {
-        amount: 705,
-        timeStamp: "2025-01-02T09:55:10.000Z",
-      },
-      {
-        amount: 100,
-        timeStamp: "2025-01-02T09:57:35.000Z",
-      },
-      {
-        amount: 50,
-        timeStamp: "2025-01-02T10:00:05.000Z",
-      },
-      {
-        amount: 90,
-        timeStamp: "2025-01-02T10:02:25.000Z",
-      },
-      {
-        amount: 250,
-        timeStamp: "2025-01-02T10:04:50.000Z",
-      },
-      {
-        amount: 2005,
-        timeStamp: "2025-01-02T10:07:15.000Z",
-      },
-    ],
-    created_At: new Date().toString(),
-    creator: {
-      name: "NOone",
-      address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      amount: 280,
-    },
-    bondingCurve: 1500,
-    bondingCurveRatio: 1500,
-
-    boughtAmount: 900,
-
-    isListed: true,
-    volume: 800,
-
-    price: 0.00125,
-    buyers: [
-      {
-        ts: "2025-01-01T02:40:44.000Z",
-        walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",
-        amount: "10",
-        tradType: "buy",
-        telegramId: "criss",
-      },
-      {
-        ts: "2025-01-01T02:40:57.000Z",
-        walletAddress: "UQAI75sQMdQNFLVYI1b413lGsBv701-8qwCOIWPKR5mcHzDW",
-        amount: "200",
-        tradType: "buy",
-        telegramId: "deamen",
-      },
-      {
-        ts: "2025-01-01T19:46:57.000Z",
-        walletAddress: "UQCXKpag80kcf4zFucmH65pX2g02Q7AQw_oNZxTvoTjsXeWj",
-        amount: "50",
+        tokenAmount: 10000,
         tradType: "sell",
-        telegramId: "kalici",
+        telegramId: "DuckLover4Life",
+        img: "/duck2.webp",
       },
       {
-        ts: "2025-01-01T19:33:36.000Z",
+        ts: new Date().toString(),
         walletAddress: "UQBgXY9R-ew3O9qhx2ZntRyKyHUqRkcr8j7wtl-rxmWUmgcG",
-        amount: "45",
+        amount: 1.5,
+        tokenAmount: 1200,
         tradType: "sell",
-        telegramId: "javad22",
+        telegramId: "CryptoQuacker",
+        img: "/duck6.webp",
       },
       {
-        ts: "2025-01-01T19:23:04.000Z",
+        ts: new Date().toString(),
         walletAddress: "UQBEfRmWqOqFufybHQ5qrnzgX-MuhM3pnPeOOmPMYG06VsBa",
-        amount: "6000",
+        amount: 0.1,
+        tokenAmount: 52800000,
         tradType: "buy",
-        telegramId: "fatima2020",
+        telegramId: "MarketWathcer",
+        img: "/duck7.webp",
       },
       {
-        ts: "2025-01-01T01:37:56.000Z",
+        ts: new Date().toString(),
         walletAddress: "UQA58oWnswtUGDNp6lG07zG1vZpH467EhzyUZaXAMvnjO0Cx",
-        amount: "3000",
-        tradType: "sell",
-        telegramId: "reza2024",
-      },
-      {
-        ts: "2025-01-02T09:40:45.000Z",
-        walletAddress: "UQDL2z2klq7iRPk903mUzWaxGm4b1klxicQ90ivj9wOqkmva",
-        amount: "7000",
-        tradType: "buy",
-        telegramId: "john_doe",
-      },
-      {
-        ts: "2025-01-01T10:50:19.000Z",
-        walletAddress: "UQCO7VrL-G89JfUxWOQFaruFI2uNI7JbhIs4vW2cIf2L_Ess",
-        amount: "8500",
-        tradType: "buy",
-        telegramId: "emily_07",
-      },
-      {
-        ts: "2025-01-01T07:38:46.000Z",
-        walletAddress: "UQC_UyLi6nA0cqkLg5By7HjwZVn8vXMkhAafUiH2bCET7PiY",
-        amount: "4000",
-        tradType: "sell",
-        telegramId: "mark2023",
-      },
-      {
-        ts: "2025-01-01T05:19:19.000Z",
-        walletAddress: "UQCyRrwwpX9_EUlzUBIuWX50gPDN1w3DuHsYgY0FIS1V6Bim",
-        amount: "3500",
-        tradType: "sell",
-        telegramId: "alex_wilson",
-      },
-    ],
-    comments: [
-      {
-        id: 1,
-        telegramId: "Stark",
-        userName: "Stark",
-        comment: "I Think Winter Is NOT Comming 😶‍🌫️😶‍🌫️",
-        timeStamp: "2025-01-02T09:45:00.000Z",
-      },
-      {
-        id: 2,
-        telegramId: "Patter",
-        userName: "Patter",
-        comment: "I really like this token! It’s amazing.",
-        timeStamp: "2025-01-02T09:47:30.000Z",
-      },
-
-      {
-        id: 4,
-        telegramId: "Elizabeth",
-        userName: "Elizabeth",
-        comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: "2025-01-02T09:52:45.000Z",
-      },
-      {
-        id: 5,
-        telegramId: "fatima2020",
-        userName: "fatima",
-        comment: "Does anyone know if there are any upcoming updates for this?",
-        timeStamp: "2025-01-02T09:55:10.000Z",
-      },
-      {
-        id: 6,
-        telegramId: "reza2024",
-        userName: "reza",
-        comment:
-          "This is a fantastic initiative! Can’t wait to see the progress.",
-        timeStamp: "2025-01-02T09:57:35.000Z",
-      },
-    ],
-  },
-  {
-    tokenId: crypto.randomUUID(),
-    tokenName: "YES",
-    symbol: "$YES",
-    logo: "",
-    tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
-    mcap: 13000,
-    holders: [
-      {
-        address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-        amount: 10,
-        name: "alice_j",
-      },
-      {
-        address: "UBQ1hxWwXbAAJNi1fhe2xPSaxKesLbEbiC4ml2UXPk3HMCb",
-        amount: 5,
-        name: "bob_smith92",
-      },
-      {
-        address: "UQC9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml3UXPk3HMCd",
-        amount: 8,
-        name: "charlie_dav03",
-      },
-      {
-        address: "UQD9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml4UXPk3HMCe",
-        amount: 12,
-        name: "david_lee88",
-      },
-      {
-        address: "UQE9hxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml5UXPk3HMCf",
-        amount: 7,
-        name: "eva_martz",
-      },
-      {
-        address: "UQF9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml6UXPk3HMCg",
-        amount: 15,
-        name: "frank_w95",
-      },
-      {
-        address: "UGQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml7UXPk3HMCi",
-        amount: 20,
-        name: "grace_taylor21",
-      },
-      {
-        address: "UHQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml8UXPk3HMCj",
-        amount: 9,
-        name: "henry_wilson_72",
-      },
-      {
-        address: "UIP9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml9UXPk3HMCk",
-        amount: 11,
-        name: "isabelle_clark",
-      },
-      {
-        address: "UJQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml0UXPk3HMCl",
-        amount: 6,
-        name: "jack_turner01",
-      },
-      {
-        address: "UKQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlAUXPk3HMCm",
-        amount: 14,
-        name: "kat_walker89",
-      },
-      {
-        address: "ULQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlBUXPk3HMCn",
-        amount: 10,
-        name: "liam_harris",
-      },
-      {
-        address: "UMQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlCUXPk3HMCp",
-        amount: 13,
-        name: "mia_robinson",
-      },
-      {
-        address: "UNQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlDUXPk3HMCq",
-        amount: 18,
-        name: "nathan_scott",
-      },
-      {
-        address: "UOQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlEUXPk3HMCr",
-        amount: 16,
-        name: "olivia_harris23",
-      },
-      {
-        address: "UPQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlFUXPk3HMCT",
-        amount: 17,
-        name: "paul_evans91",
-      },
-      {
-        address: "UQQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlGUXPk3HMCu",
-        amount: 19,
-        name: "quincy_moore",
-      },
-      {
-        address: "URQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlHUXPk3HMCv",
-        amount: 5,
-        name: "rachel_king",
-      },
-      {
-        address: "USQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlIUXPk3HMCw",
-        amount: 22,
-        name: "sam_young",
-      },
-      {
-        address: "UTQ9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4mlJUXPk3HMCx",
         amount: 3,
-        name: "tina_adams27",
-      },
-    ],
-
-    priceHistory: [
-      {
-        time: `${moment().subtract(1, "days").format("D MMM")} `,
-        price: 0.00000105,
-      },
-      {
-        time: `${moment().subtract(2, "days").format("D MMM")} `,
-        price: 0.0000055,
-      },
-      {
-        time: `${moment().subtract(3, "days").format("D MMM")} `,
-        price: 0.0000005,
-      },
-      {
-        time: `${moment().subtract(4, "days").format("D MMM")} `,
-        price: 0.00000035,
-      },
-      {
-        time: `${moment().subtract(5, "days").format("D MMM")} `,
-        price: 0.00000029,
-      },
-      {
-        time: `06:36 hour`,
-        price: 0.000000025,
-      },
-      {
-        time: `05:35 hour`,
-        price: 0.000000059,
-      },
-      {
-        time: `04:48 hour`,
-        price: 0.00000005,
-      },
-      {
-        time: `03:25 hour`,
-        price: 0.00000045,
-      },
-      {
-        time: `02:15 hour`,
-        price: 0.00000056,
-      },
-
-      {
-        time: `01:01 hour`,
-        price: 0.00000055,
-      },
-      {
-        time: `06:14 min`,
-        price: 0.00000105,
-      },
-      {
-        time: `5:14 min`,
-        price: 0.0000055,
-      },
-      {
-        time: `04:15 min`,
-        price: 0.0000005,
-      },
-      {
-        time: `03:19 min`,
-        price: 0.0000035,
-      },
-      {
-        time: `02:18 min`,
-        price: 0.0000029,
-      },
-      {
-        time: `01:15 min`,
-        price: 0.0000025,
-      },
-    ],
-    fiveMinuteHistory: [
-      {
-        time: `${moment().subtract(1, "days").format("D MMM")} `,
-        price: 0.00000105,
-      },
-      {
-        time: `${moment().subtract(2, "days").format("D MMM")} `,
-        price: 0.0000055,
-      },
-      {
-        time: `${moment().subtract(3, "days").format("D MMM")} `,
-        price: 0.0000005,
-      },
-      {
-        time: `${moment().subtract(4, "days").format("D MMM")} `,
-        price: 0.00000035,
-      },
-      {
-        time: `${moment().subtract(5, "days").format("D MMM")} `,
-        price: 0.00000029,
-      },
-      {
-        time: `06:26 hour`,
-        price: 0.000000025,
-      },
-      {
-        time: `05:26 hour`,
-        price: 0.0000059,
-      },
-      {
-        time: `04:26 hour`,
-        price: 0.0000005,
-      },
-      {
-        time: `03:26 hour`,
-        price: 0.00000445,
-      },
-      {
-        time: `02:26 hour`,
-        price: 0.00000056,
-      },
-
-      {
-        time: `01:26 hour`,
-        price: 0.00000055,
-      },
-      {
-        time: `26:12 min`,
-        price: 0.00000105,
-      },
-      {
-        time: `21:14 min`,
-        price: 0.0000055,
-      },
-      {
-        time: `16:11 min`,
-        price: 0.0000005,
-      },
-      {
-        time: `11:10 min`,
-        price: 0.0000035,
-      },
-      {
-        time: `06:20 min`,
-        price: 0.0000029,
-      },
-      {
-        time: `01:15 sec`,
-        price: 0.0000025,
-      },
-    ],
-    fifteenMinuteHistory: [
-      {
-        time: `${moment().subtract(1, "days").format("D MMM")} `,
-        price: 0.00000105,
-      },
-      {
-        time: `${moment().subtract(2, "days").format("D MMM")} `,
-        price: 0.0000055,
-      },
-      {
-        time: `${moment().subtract(3, "days").format("D MMM")} `,
-        price: 0.0000005,
-      },
-      {
-        time: `${moment().subtract(4, "days").format("D MMM")} `,
-        price: 0.00000035,
-      },
-      {
-        time: `${moment().subtract(5, "days").format("D MMM")} `,
-        price: 0.00000029,
-      },
-      {
-        time: `06:26 hour`,
-        price: 0.000000025,
-      },
-      {
-        time: `05:26 hour`,
-        price: 0.000000059,
-      },
-      {
-        time: `04:26 hour`,
-        price: 0.00000005,
-      },
-      {
-        time: `03:26 hour`,
-        price: 0.00000045,
-      },
-      {
-        time: `02:26 hour`,
-        price: 0.00000056,
-      },
-
-      {
-        time: `01:05 hour`,
-        price: 0.0000005,
-      },
-      {
-        time: `45:10 min`,
-        price: 0.0000035,
-      },
-      {
-        time: `30:14 min`,
-        price: 0.0000029,
-      },
-      {
-        time: `15:01 min`,
-        price: 0.0000025,
-      },
-    ],
-    txns: [
-      {
-        amount: 15,
-        timeStamp: "2025-01-02T09:45:00.000Z",
-      },
-      {
-        amount: 5,
-        timeStamp: "2025-01-02T09:47:30.000Z",
-      },
-      {
-        amount: 9,
-        timeStamp: "2025-01-02T09:50:15.000Z",
-      },
-      {
-        amount: 50,
-        timeStamp: "2025-01-02T09:52:45.000Z",
-      },
-      {
-        amount: 75,
-        timeStamp: "2025-01-02T09:55:10.000Z",
-      },
-      {
-        amount: 10,
-        timeStamp: "2025-01-02T09:57:35.000Z",
-      },
-      {
-        amount: 5,
-        timeStamp: "2025-01-02T10:00:05.000Z",
-      },
-      {
-        amount: 9,
-        timeStamp: "2025-01-02T10:02:25.000Z",
-      },
-      {
-        amount: 20,
-        timeStamp: "2025-01-02T10:04:50.000Z",
-      },
-      {
-        amount: 25,
-        timeStamp: "2025-01-02T10:07:15.000Z",
-      },
-    ],
-    created_At: new Date().toString(),
-    creator: {
-      name: "Peter Parker",
-      address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
-      amount: 199,
-    },
-    bondingCurve: 100,
-    bondingCurveRatio: 1500,
-
-    boughtAmount: 90,
-
-    isListed: false,
-    volume: 800,
-
-    price: 0.00000125,
-    buyers: [
-      {
-        ts: "2025-01-01T02:40:44.000Z",
-        walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",
-        amount: "10",
-        tradType: "buy",
-        telegramId: "criss",
-      },
-      {
-        ts: "2025-01-01T02:40:57.000Z",
-        walletAddress: "UQAI75sQMdQNFLVYI1b413lGsBv701-8qwCOIWPKR5mcHzDW",
-        amount: "200",
-        tradType: "buy",
-        telegramId: "deamen",
-      },
-      {
-        ts: "2025-01-01T19:46:57.000Z",
-        walletAddress: "UQCXKpag80kcf4zFucmH65pX2g02Q7AQw_oNZxTvoTjsXeWj",
-        amount: "50",
+        tokenAmount: 855800000,
         tradType: "sell",
-        telegramId: "kalici",
+        telegramId: "GoodDuck",
+        img: "/duck3.webp",
       },
       {
-        ts: "2025-01-01T19:33:36.000Z",
-        walletAddress: "UQBgXY9R-ew3O9qhx2ZntRyKyHUqRkcr8j7wtl-rxmWUmgcG",
-        amount: "45",
-        tradType: "sell",
-        telegramId: "javad22",
-      },
-      {
-        ts: "2025-01-01T19:23:04.000Z",
-        walletAddress: "UQBEfRmWqOqFufybHQ5qrnzgX-MuhM3pnPeOOmPMYG06VsBa",
-        amount: "6000",
-        tradType: "buy",
-        telegramId: "fatima2020",
-      },
-      {
-        ts: "2025-01-01T01:37:56.000Z",
-        walletAddress: "UQA58oWnswtUGDNp6lG07zG1vZpH467EhzyUZaXAMvnjO0Cx",
-        amount: "3000",
-        tradType: "sell",
-        telegramId: "reza2024",
-      },
-      {
-        ts: "2025-01-02T09:40:45.000Z",
+        ts: new Date().toString(),
         walletAddress: "UQDL2z2klq7iRPk903mUzWaxGm4b1klxicQ90ivj9wOqkmva",
-        amount: "7000",
+        amount: 7,
+        tokenAmount: 588200000,
         tradType: "buy",
-        telegramId: "john_doe",
-      },
-      {
-        ts: "2025-01-01T10:50:19.000Z",
-        walletAddress: "UQCO7VrL-G89JfUxWOQFaruFI2uNI7JbhIs4vW2cIf2L_Ess",
-        amount: "8500",
-        tradType: "buy",
-        telegramId: "emily_07",
-      },
-      {
-        ts: "2025-01-01T07:38:46.000Z",
-        walletAddress: "UQC_UyLi6nA0cqkLg5By7HjwZVn8vXMkhAafUiH2bCET7PiY",
-        amount: "4000",
-        tradType: "sell",
-        telegramId: "mark2023",
-      },
-      {
-        ts: "2025-01-01T05:19:19.000Z",
-        walletAddress: "UQCyRrwwpX9_EUlzUBIuWX50gPDN1w3DuHsYgY0FIS1V6Bim",
-        amount: "3500",
-        tradType: "sell",
-        telegramId: "alex_wilson",
+        telegramId: "SnowDuck",
+        img: "/duck4.webp",
       },
     ],
     comments: [
       {
         id: 1,
-        telegramId: "Parker",
-        userName: "Parker",
-        comment: "I Have To Say WooooW 😮😮",
-        timeStamp: "2025-01-02T09:45:00.000Z",
+        telegramId: "QuakHolder",
+        userName: "QuakHolder",
+        comment:
+          "This is the most quacktastic coin ever! So glad i found this gem. LFG!",
+        timeStamp: new Date().toString(),
+        img: "/duck1.webp",
       },
       {
         id: 2,
-        telegramId: "Patter",
-        userName: "Patter",
-        comment: "I really like this token! It’s amazing.",
-        timeStamp: "2025-01-02T09:47:30.000Z",
-      },
-
-      {
-        id: 4,
-        telegramId: "Elizabeth",
-        userName: "Elizabeth",
+        telegramId: "DuckLoverFor",
+        userName: "DuckLoverFor",
         comment:
-          "I’ve been using this for a while now and I’m seeing great results!",
-        timeStamp: "2025-01-02T09:52:45.000Z",
+          "Love the community around $QUACK! Everyone's so supportive and the vibes are great. This is going to be huge!",
+        timeStamp: new Date().toString(),
+        img: "/duck2.webp",
       },
       {
-        id: 5,
-        telegramId: "fatima2020",
-        userName: "fatima",
-        comment: "Does anyone know if there are any upcoming updates for this?",
-        timeStamp: "2025-01-02T09:55:10.000Z",
-      },
-      {
-        id: 6,
-        telegramId: "reza2024",
-        userName: "reza",
+        id: 3,
+        telegramId: "CryptoQuacker",
+        userName: "CryptoQuacker",
         comment:
-          "This is a fantastic initiative! Can’t wait to see the progress.",
+          "Just bought some $QUACK. Looking forward to seeing how this project develop.",
+        timeStamp: new Date().toString(),
+        img: "/duck3.webp",
         timeStamp: "2025-01-02T09:57:35.000Z",
       },
     ],
@@ -3035,6 +1460,6 @@ export const data = [
 export const lastboughtCoin = {
   walletAddress: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
   boughtAmount: 2,
-  coinName: "DuckCoin",
+  coinName: "FOXCOIN",
   timeStamp: new Date().toString(),
 };

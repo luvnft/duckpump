@@ -41,7 +41,7 @@ export default function HottestMemeCoinDetails() {
           >
             {/* //*title */}
             <Typography textTransform={"uppercase"} fontWeight={400}>
-              {tokenName} is skyrocketing 🚀
+              {tokenName} is skyrocketing
             </Typography>
 
             <Box
@@ -49,10 +49,10 @@ export default function HottestMemeCoinDetails() {
               display={"flex"}
               justifyContent={"space-between"}
               alignItems={"center"}
-              width={"90%"}
+              gap={"4rem"}
             >
               {/* //*details: Image , Mcap , Holders , Txs*/}
-              <Box component="div" textAlign={"center"} width={"45%"}>
+              <Box component="div" textAlign={"center"} width={"30%"}>
                 <MemeCoinIMHT
                   mcap={mcap}
                   holders={holders}
@@ -63,13 +63,15 @@ export default function HottestMemeCoinDetails() {
               </Box>
 
               {/* //*duck gif */}
-              <Box
-                component="img"
-                src="/hottestDuck.webp"
-                width={80}
-                height={130}
-                loading="lazy"
-              />
+              <Box width={"70%"}>
+                <Box
+                  component="img"
+                  src="/hottestDuck.webp"
+                  width={"100%"}
+                  height={"auto"}
+                  loading="lazy"
+                />
+              </Box>
             </Box>
           </Box>
         </CardContent>

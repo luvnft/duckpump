@@ -23,6 +23,7 @@ export default function MemeCoinsList() {
           tokenId={item?.tokenId}
           tokenName={item?.tokenName}
           creator={item?.creator?.name}
+          logo={item?.logo}
           createdAt={item?.created_At}
           mcap={item?.mcap}
           holders={item?.holders}

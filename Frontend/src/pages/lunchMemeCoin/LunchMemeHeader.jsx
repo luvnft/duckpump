@@ -6,13 +6,16 @@ import BackBtn from "../../ui/BackBtn";
 
 const steps = [
   {
-    step: "Simple, fun ,and ready to make waves! Our duck army is growing fast join us before we take off!",
+    step: "Craft Your Coin",
+    desc: "Simple, fun ,and ready to make waves! Our duck army is growing fast join us before we take off!",
   },
   {
-    step: "Simple, fun ,and ready to make waves! Our duck army is growing fast join us before we take off!",
+    step: "Build Your Flock",
+    desc: "Simple, fun ,and ready to make waves! Our duck army is growing fast join us before we take off!",
   },
   {
-    step: "Simple, fun ,and ready to make waves! Our duck army is growing fast join us before we take off!",
+    step: "Take Flight",
+    desc: "Simple, fun ,and ready to make waves! Our duck army is growing fast join us before we take off!",
   },
 ];
 
@@ -22,7 +25,12 @@ export default function LunchMemeHeader() {
       <Box>
         <BackBtn margin={"0.5rem"} />
         <Box width={"100%"} textAlign={"center"} marginTop={"2rem"}>
-          <Box component="img" src="/duck.jpg" alt="duck-img" height={"5rem"} />
+          <Box
+            component="img"
+            src="/pepeGif.webp"
+            alt="duck-img"
+            height={"7rem"}
+          />
         </Box>
       </Box>
       <Box bgcolor={colorLibrary.boxBgLighter} borderRadius={"1rem"}>
@@ -38,11 +46,11 @@ export default function LunchMemeHeader() {
             <React.Fragment key={i}>
               <Box>
                 <Typography color={colorLibrary.title} variant="body2">
-                  Step {i + 1}
+                  {step.step}
                 </Typography>
 
                 <Typography color={colorLibrary.text} variant="caption">
-                  {step.step}
+                  {step.desc}
                 </Typography>
               </Box>
               {i < steps.length - 1 && (

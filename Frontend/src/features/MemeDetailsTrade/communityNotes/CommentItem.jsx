@@ -5,7 +5,7 @@ import { getCustomRelativeTime } from "../../../utils/helpers";
 import { motion } from "motion/react";
 
 export default function CommentItem({
-  img,
+  img = "/duck1.webp",
   userId,
   userName,
   comment,
@@ -28,7 +28,7 @@ export default function CommentItem({
       borderRadius={"1rem 1rem 0 0"}
     >
       {/* //*left side (img ,id , comment)*/}
-      <Avatar alt="duck" src="/duck.jpg" sx={{ width: 50, height: 50 }} />
+      <Avatar alt="duck" src={img} sx={{ width: 50, height: 50 }} />
       <Box flexGrow={1}>
         <Typography variant="body2" color={colorLibrary.title}>
           @{userId || userName || "@duck"}

@@ -3,11 +3,10 @@ import { Avatar, Box, Typography } from "@mui/material";
 import {
   BarChartRounded,
   Groups2Rounded,
-  Image,
   SwapVertRounded,
 } from "@mui/icons-material";
 import { colorLibrary } from "../color-library";
-import img from "../../public/duck.jpg";
+
 import { formatBigPrice } from "../utils/helpers";
 
 //*this is meme image , market cap , holders and Txs
@@ -29,16 +28,16 @@ export default function MemeCoinIMHT({
       {/* //*MemeCoin icon (this one used in hottest memeCoin)*/}
       {showImg && (
         <Avatar
-          alt={img}
-          src={img}
-          sx={{ marginX: "auto", width: "80%", height: "80%" }}
+          alt="/cutePuppy.webp"
+          src="/cutePuppy.webp"
+          sx={{ marginX: "auto", width: "90%", height: "90%" }}
         />
       )}
       <Box display={"flex"} mt={"1rem"} component="div" color={text}>
         {showIcon && <BarChartRounded />}
         <Typography
           component="span"
-          margin={"0 0.8rem 0 0.2rem"}
+          margin={"0 0.4rem 0 0.2rem"}
           color={text}
           fontWeight={fontWeight}
         >
@@ -65,7 +64,7 @@ export default function MemeCoinIMHT({
         {showIcon && <Groups2Rounded />}
         <Typography
           component="span"
-          margin={"0 0.8rem 0 0.2rem"}
+          margin={"0 0.4rem 0 0.2rem"}
           color={text}
           fontWeight={fontWeight}
         >
@@ -77,7 +76,7 @@ export default function MemeCoinIMHT({
           color={value}
           fontWeight={400}
         >
-          {holders?.length}
+          {holders}
         </Typography>
       </Box>
       <Box
@@ -91,7 +90,7 @@ export default function MemeCoinIMHT({
         {showIcon && <SwapVertRounded />}
         <Typography
           component="span"
-          margin={"0 0.8rem 0 0.2rem"}
+          margin={"0 0.4rem 0 0.2rem"}
           color={text}
           fontWeight={fontWeight}
         >

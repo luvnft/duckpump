@@ -20,7 +20,7 @@ const MenuProps = {
   },
 };
 
-const names = ["Game", "Movie"];
+const names = ["Game", "Movie", "Music", "Car"];
 
 function getStyles(name, personName, theme) {
   return {

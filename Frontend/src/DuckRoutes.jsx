@@ -1,5 +1,6 @@
 import React, { lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LunchMemeReview from "./pages/lunchMemeReview/LunchMemeReview";
 
 // Lazy-loaded components
 const Layout = lazy(() => import("./pages/layout/Layout"));
@@ -38,6 +39,7 @@ export default function DuckRoutes() {
             element={<SwapPage />}
           />
           <Route path="/lunchMemeCoin" element={<LunchMemeCoin />} />
+          <Route path="/lunchMemeCoin/review" element={<LunchMemeReview />} />
         </Route>
       </Routes>
     </Router>

@@ -13,6 +13,7 @@ export default function MemeCoinDetailsHeader() {
   const {
     tokenName,
     symbol,
+    logo,
     created_at,
     mcap,
     tokenAddress,
@@ -43,6 +44,7 @@ export default function MemeCoinDetailsHeader() {
               showSymbol={true}
               tokenName={tokenName}
               symbol={symbol}
+              logo={logo}
               mcap={mcap}
               createdAt={created_at}
             />
