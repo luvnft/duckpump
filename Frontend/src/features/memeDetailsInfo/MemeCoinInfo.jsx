@@ -4,6 +4,8 @@ import { calcBondingCurve } from "../../utils/helpers";
 import MemeCoinInfoTop from "./topPart/MemeCoinInfoTop";
 
 import MemeCoinInfoMiddle from "./ middlePart/MemeCoinInfoMiddle";
+import { Box } from "@mui/material";
+import MemeCoinInfoBottom from "./BottomPart/MemeCoinInfoBottom";
 
 export default function MemeCoinInfo() {
   const { selectedMemeCoinData } = useSelectedMemeCoinContext();
@@ -26,6 +28,9 @@ export default function MemeCoinInfo() {
 
       {/* //* MIDDLE PART */}
       <MemeCoinInfoMiddle selectedMemeCoinData={selectedMemeCoinData} />
+
+      {/* //*Third PART */}
+      <MemeCoinInfoBottom />
     </>
   );
 }

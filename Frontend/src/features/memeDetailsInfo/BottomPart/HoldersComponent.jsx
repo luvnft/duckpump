@@ -1,13 +1,11 @@
-import { Avatar, Box, Button, Typography } from "@mui/material";
-import { motion } from "motion/react";
-import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
-import { convertWalletAddress } from "../../../utils/helpers";
 import { colorLibrary } from "../../../color-library";
-import { ContentCopyRounded } from "@mui/icons-material";
 
-export default function InfoCreator() {
-  const { selectedMemeCoinData } = useSelectedMemeCoinContext();
+import { Avatar, Box, Typography } from "@mui/material";
 
+import { motion } from "motion/react";
+import { convertWalletAddress } from "../../../utils/helpers";
+
+export default function HoldersComponent({ holder, symbol }) {
   return (
     <Box
       component={motion.li}
@@ -46,7 +44,7 @@ export default function InfoCreator() {
                 maxWidth: "30%",
               }}
             >
-              @{selectedMemeCoinData.creator.name}
+              @{holder.name}
             </Typography>{" "}
             <Typography
               variant="body2"
@@ -54,14 +52,8 @@ export default function InfoCreator() {
               fontWeight={"bold"}
             >
               {" "}
-              / {convertWalletAddress(selectedMemeCoinData.creator.address)}
+              / {convertWalletAddress(holder.address)}
             </Typography>
-            <Button size="small" sx={{ padding: 0 }}>
-              <ContentCopyRounded
-                fontSize="small"
-                sx={{ color: colorLibrary.text }}
-              />
-            </Button>
           </Box>
           <Typography
             variant="caption"
@@ -77,7 +69,7 @@ export default function InfoCreator() {
                 // color={color}
                 fontWeight={"bold"}
               >
-                Creator
+                600k {symbol}
                 {/* {tradType} */}
               </Typography>
               <Typography
@@ -106,15 +98,6 @@ export default function InfoCreator() {
           fontWeight={"bold"}
         >
           Owns 20%{/* {formatBigPrice(amount)} TON */}
-        </Typography>
-        <Typography
-          variant="body2"
-          fontWeight={"bold"}
-          color={colorLibrary.text}
-          sx={{ textWrap: "nowrap" }}
-        >
-          1200 {selectedMemeCoinData?.symbol}
-          {/* {formatBigPrice(tokenAmount)} ${tokenSymbol} */}
         </Typography>
       </Box>
     </Box>

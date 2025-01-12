@@ -9,7 +9,9 @@ export const data = [
     tokenAddress: "EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS",
     mcap: 27050,
     isHot: true,
+
     holders: 250,
+
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -257,6 +259,7 @@ export const data = [
     creator: {
       name: "DuckMaster",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      amount: 300,
     },
     bondingCurve: 500,
     bondingCurveRatio: 1000,
@@ -271,7 +274,6 @@ export const data = [
         ts: new Date().toString(),
         walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",
         amount: 2,
-
         tokenAmount: 5000000,
         tradType: "buy",
         telegramId: "QuakHolder",
@@ -370,7 +372,9 @@ export const data = [
     logo: "/lootbox.webp",
     tokenAddress: "EQBZ_cafPyDr5KUTs0aNxh0ZTDhkpEZONmLJA2SNGlLm4Cko",
     mcap: 10000,
+
     holders: 157,
+
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -618,6 +622,7 @@ export const data = [
     creator: {
       name: "LootLord",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      amount: 200,
     },
     bondingCurve: 900,
     bondingCurveRatio: 1000,
@@ -729,8 +734,10 @@ export const data = [
     symbol: "PopcornPT",
     logo: "/popcorn.webp",
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
+
     mcap: 41000,
     holders: 227,
+
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -978,6 +985,7 @@ export const data = [
     creator: {
       name: "MovieBuff",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      amount: 450,
     },
     bondingCurve: 800,
     bondingCurveRatio: 1500,
@@ -1091,6 +1099,7 @@ export const data = [
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
     mcap: 70200,
     holders: 156,
+
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -1338,6 +1347,7 @@ export const data = [
     creator: {
       name: "FilmFanatic",
       address: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
+      amount: 600,
     },
     bondingCurve: 499,
     bondingCurveRatio: 1000,
@@ -1441,6 +1451,7 @@ export const data = [
           "Just bought some $QUACK. Looking forward to seeing how this project develop.",
         timeStamp: new Date().toString(),
         img: "/duck3.webp",
+        timeStamp: "2025-01-02T09:57:35.000Z",
       },
     ],
   },
@@ -1449,6 +1460,6 @@ export const data = [
 export const lastboughtCoin = {
   walletAddress: "UQC9wxWwLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
   boughtAmount: 2,
-  coinName: "DuckCoin",
+  coinName: "FOXCOIN",
   timeStamp: new Date().toString(),
 };

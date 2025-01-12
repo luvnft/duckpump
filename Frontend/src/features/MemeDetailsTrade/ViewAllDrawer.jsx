@@ -19,7 +19,6 @@ const drawerBleeding = 56;
 
 const Puller = styled("div")(({ theme }) => ({
   width: 30,
-  width: 30,
   height: 6,
   backgroundColor: colorLibrary.bgLight3,
   borderRadius: 3,
