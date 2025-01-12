@@ -16,7 +16,7 @@ export default function MemeCoinINCT({
   showSymbol,
   tokenName,
   symbol,
-  logo = "/duck.jpg",
+  logo = "/duck6.jpg",
   creator,
   mcap,
   createdAt,

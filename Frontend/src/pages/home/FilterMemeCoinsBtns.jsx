@@ -7,14 +7,8 @@ import "swiper/css/scrollbar";
 import { A11y } from "swiper/modules";
 import { colorLibrary } from "../../color-library";
 import { motion } from "motion/react";
-import { Haptics, ImpactStyle } from "@capacitor/haptics";
 
 export default function FilterMemeCoinsBtns() {
-  //* Haptics (vibrate on button click)
-  const handleHaptics = async () => {
-    await Haptics.impact({ style: ImpactStyle.Medium });
-  };
-
   return (
     <Box
       sx={{
@@ -24,7 +18,6 @@ export default function FilterMemeCoinsBtns() {
       }}
     >
       <Swiper
-        onSlideChange={() => handleHaptics()}
         modules={[A11y]}
         slidesPerView="auto"
         spaceBetween={5}
@@ -74,6 +67,7 @@ export default function FilterMemeCoinsBtns() {
                   src={item.icon}
                   alt={item.icon}
                   height={"1rem"}
+                  loading="lazy"
                 />
                 {item.label}
               </Button>

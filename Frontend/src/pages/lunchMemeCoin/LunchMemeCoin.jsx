@@ -1,15 +1,22 @@
 import { Box } from "@mui/material";
-import LunchMemeForm from "../../features/lunchMemeForm/LunchMemeForm";
-import LunchMemeHeader from "./LunchMemeHeader";
+import { lazy, Suspense } from "react";
+import HomeLoading from "../../ui/HomeLoading";
+
+const LunchMemeForm = lazy(() =>
+  import("../../features/lunchMemeForm/LunchMemeForm")
+);
+const LunchMemeHeader = lazy(() => import("./LunchMemeHeader"));
 
 export default function LunchMemeCoin() {
   return (
-    <Box display={"flex"} flexDirection={"column"} gap={1}>
-      {/* //*header */}
-      <LunchMemeHeader />
+    <Suspense fallback={<HomeLoading />}>
+      <Box display={"flex"} flexDirection={"column"} gap={1}>
+        {/* //*header */}
+        <LunchMemeHeader />
 
-      {/* //*lunch form */}
-      <LunchMemeForm />
-    </Box>
+        {/* //*lunch form */}
+        <LunchMemeForm />
+      </Box>
+    </Suspense>
   );
 }

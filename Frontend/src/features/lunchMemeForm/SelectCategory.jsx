@@ -4,8 +4,9 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import { colorLibrary } from "../../color-library";
 import { Box } from "@mui/material";
+
+import { colorLibrary } from "../../color-library";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;

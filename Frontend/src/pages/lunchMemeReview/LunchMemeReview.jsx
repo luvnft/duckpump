@@ -1,8 +1,14 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
-import LunchMemeReviewHeader from "../../features/lunchMemeReviewDetails/LunchMemeReviewHeader";
+import React, { lazy } from "react";
+
 import { colorLibrary } from "../../color-library";
-import LunchMemeReviewTable from "../../features/lunchMemeReviewDetails/LunchMemeReviewTable";
+
+const LunchMemeReviewHeader = lazy(() =>
+  import("../../features/lunchMemeReviewDetails/LunchMemeReviewHeader")
+);
+const LunchMemeReviewTable = lazy(() =>
+  import("../../features/lunchMemeReviewDetails/LunchMemeReviewTable")
+);
 
 export default function LunchMemeReview() {
   return (
@@ -11,7 +17,7 @@ export default function LunchMemeReview() {
       <LunchMemeReviewHeader />
 
       {/* //*body */}
-      <Box display={"flex"} alignItems={"center"} gap={"1rem"}>
+      <Box display={"flex"} alignItems={"center"} gap={"1rem"} px={2}>
         <Typography color={colorLibrary.title} fontWeight={300}>
           YOU ARE JUST A STEP AWAY FROM MAKING HISTORY
         </Typography>
