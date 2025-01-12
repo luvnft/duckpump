@@ -18,3 +18,14 @@
 body {
   margin: 0;
 }
+
+#connect-wallet .go3572451881 button {
+  background-color: #39362f;
+  border: none; /* Remove border */
+  /* padding: 0 5px; Add padding */
+  border-radius: 8px; /* Round corners */
+  cursor: pointer; /* Pointer cursor */
+}
+#connect-wallet .go3572451881 button div {
+  color: #e2d171; /* White text */
+}

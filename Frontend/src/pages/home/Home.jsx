@@ -2,13 +2,13 @@ import React, { lazy } from "react";
 import { colorLibrary } from "../../color-library";
 import { Box } from "@mui/material";
 
+import Header from "../../ui/Header";
 const LastBoughtMemeCoin = lazy(() => import("./LastBoughtMemeCoin"));
 const HottestMemeCoin = lazy(() => import("./HottestMemeCoin"));
 const LunchTokenBtn = lazy(() => import("./LunchTokenBtn"));
 const SearchMemeCoin = lazy(() => import("./SearchMemeCoin"));
 const FilterMemeCoinsBtns = lazy(() => import("./FilterMemeCoinsBtns"));
 const MemeCoinsList = lazy(() => import("./MemeCoinsList"));
-const Header = lazy(() => import("../../ui/Header"));
 
 export default function Home() {
   return (

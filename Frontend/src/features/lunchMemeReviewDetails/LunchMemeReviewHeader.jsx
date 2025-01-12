@@ -34,8 +34,8 @@ export default function LunchMemeReviewHeader() {
         gap={"1rem"}
       >
         <Typography color={colorLibrary.title} fontWeight={300} paddingTop={2}>
-          how Much do you want
-          <br /> to own from {data?.name || "DuckiCoin"} ?{" "}
+          how Much do you want to
+          <br /> own from {data?.name || "DuckiCoin"} ?{" "}
         </Typography>
         <Box>
           <TextField
