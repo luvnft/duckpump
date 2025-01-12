@@ -9,7 +9,7 @@ export default function AiConversation({ content }) {
       {content?.map((data) => (
         <>
           <Box display={"flex"} gap={"0.5rem"}>
-            <Avatar src="/duck.jpg" alt="duck.jpg" />
+            <Avatar src="/duck6.webp" alt="duck.jpg" />
             <Typography variant="body2" color={colorLibrary.title}>
               {data.res}
             </Typography>
@@ -27,8 +27,8 @@ export default function AiConversation({ content }) {
             >
               <Box display={"flex"} justifyContent={"space-between"}>
                 <Avatar
-                  src="/duck.jpg"
-                  alt="duck.jpg"
+                  src="/tonIcon.webp"
+                  alt="TON.jpg"
                   sx={{ width: 25, height: 25 }}
                 />
                 <Typography variant="body1" color={colorLibrary.boxBgLightest}>
@@ -63,7 +63,7 @@ export default function AiConversation({ content }) {
 
               <Box display={"flex"} justifyContent={"space-between"}>
                 <Avatar
-                  src="/duck.jpg"
+                  src="/quackyCoin.webp"
                   alt="duck.jpg"
                   sx={{ width: 25, height: 25 }}
                 />

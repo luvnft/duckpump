@@ -20,7 +20,7 @@ export default function FormSocialMedia({ field }) {
         </Typography>
         <TextField
           fullWidth
-          placeholder="Your MemeCoin Name"
+          placeholder={`Your MemeCoin ${field}`}
           sx={{
             "& .MuiInputBase-root": {
               color: colorLibrary.text,

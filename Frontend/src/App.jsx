@@ -6,6 +6,7 @@ import { UserDetailsProvider } from "./context/UserDetailsProvider.jsx";
 
 import { SelectedMemeCoinProvider } from "./context/SelectedMemeCoinProvider.jsx";
 import { SwapPageDataProvider } from "./context/SwapPageDataProvider.jsx";
+import { LunchMemeProvider } from "./context/LunchMemeProvider.jsx";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
         <HomePageProvider>
           <SelectedMemeCoinProvider>
             <SwapPageDataProvider>
-              <DuckRoutes />
+              <LunchMemeProvider>
+                <DuckRoutes />
+              </LunchMemeProvider>
             </SwapPageDataProvider>
           </SelectedMemeCoinProvider>
         </HomePageProvider>

@@ -1,14 +1,30 @@
-import { Box, Button, IconButton, TextField, Typography } from "@mui/material";
-import { AddBox, AddCircle } from "@mui/icons-material";
 import React from "react";
-import { colorLibrary } from "../../color-library";
+import { Box, Button, TextField, Typography } from "@mui/material";
 import SelectCategory from "./SelectCategory";
 import FormSocialMedia from "./FormSocialMedia";
 import FormImgInput from "./FormImgInput";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+
+import { colorLibrary } from "../../color-library";
+import { useLunchMemeContext } from "../../context/LunchMemeProvider";
 
 const socialFields = ["Telegram Group", "X / Twitter", "Website"];
 
 export default function LunchMemeForm() {
+  const { setData } = useLunchMemeContext();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const navigate = useNavigate();
+
+  function onSubmit(data) {
+    setData(data);
+    navigate("review");
+  }
+
   return (
     <>
       <Box
@@ -47,6 +63,7 @@ export default function LunchMemeForm() {
           gap={"1rem"}
           padding={"0.5rem"}
           borderRadius={"1rem"}
+          onSubmit={handleSubmit(onSubmit)}
         >
           <Box
             bgcolor={colorLibrary.boxBgLighter1}
@@ -85,6 +102,16 @@ export default function LunchMemeForm() {
                 <Typography color={colorLibrary.text}>20</Typography>
               </Box>
               <TextField
+                defaultValue={"DuckiCoin"}
+                {...register("name", {
+                  required: "Name is necessary to see the next page!!",
+                  maxLength: {
+                    value: 12,
+                    message: "max Character should be 12",
+                  },
+                })}
+                error={!!errors.name}
+                helperText={errors.name?.message}
                 fullWidth
                 placeholder="Your MemeCoin Name"
                 sx={{
@@ -116,6 +143,13 @@ export default function LunchMemeForm() {
                 <Typography color={colorLibrary.text}>10</Typography>
               </Box>
               <TextField
+                defaultValue={"Ducki"}
+                {...register("ticker", {
+                  required: "Ticker is necessary to see the next page!!",
+                  maxLength: { value: 8, message: "Max Character should be 8" },
+                })}
+                error={!!errors.ticker}
+                helperText={errors.ticker?.message}
                 fullWidth
                 placeholder="A Shorter Name"
                 sx={{
