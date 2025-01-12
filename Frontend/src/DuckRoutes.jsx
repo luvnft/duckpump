@@ -1,6 +1,5 @@
 import React, { lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LunchMemeReview from "./pages/lunchMemeReview/LunchMemeReview";
 
 // Lazy-loaded components
 const Layout = lazy(() => import("./pages/layout/Layout"));
@@ -14,10 +13,11 @@ const MemeCoinTrade = lazy(() =>
 const MemeCoinInfo = lazy(() =>
   import("./features/memeDetailsInfo/MemeCoinInfo")
 );
-
 const SwapPage = lazy(() => import("./pages/swap/SwapPage"));
-
 const LunchMemeCoin = lazy(() => import("./pages/lunchMemeCoin/LunchMemeCoin"));
+const LunchMemeReview = lazy(() =>
+  import("./pages/lunchMemeReview/LunchMemeReview")
+);
 
 export default function DuckRoutes() {
   return (

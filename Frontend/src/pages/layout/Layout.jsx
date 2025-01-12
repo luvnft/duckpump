@@ -11,14 +11,7 @@ const Layout = () => {
       padding={2}
       bgcolor={colorLibrary.bg}
     >
-      {/* //*this must be just in home page */}
-      {/* <Box component="header" marginBottom={1}>
-        <Header />
-      </Box> */}
-
-      {/* <Box component="main"> */}
       <Outlet />
-      {/* </Box> */}
     </Box>
   );
 };

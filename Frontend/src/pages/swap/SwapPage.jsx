@@ -1,14 +1,17 @@
-import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
-import { useEffect, useRef, useState } from "react";
-import { colorLibrary } from "../../color-library";
-import SlippageModal from "./SlippageModal";
-import BackBtn from "../../ui/BackBtn";
-import SwapMiddlePart from "./SwapMiddlePart";
-import SwapBottomPart from "./SwapBottomPart";
-import SwapUpperPart from "./SwapUpperPart";
+import { Box } from "@mui/material";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { useParams } from "react-router-dom";
+
 import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
 import { useSwapPageDataProvider } from "../../context/SwapPageDataProvider";
-import { useParams } from "react-router-dom";
+import { colorLibrary } from "../../color-library";
+import HomeLoading from "../../ui/HomeLoading";
+
+const SlippageModal = lazy(() => import("./SlippageModal"));
+const BackBtn = lazy(() => import("../../ui/BackBtn"));
+const SwapMiddlePart = lazy(() => import("./SwapMiddlePart"));
+const SwapBottomPart = lazy(() => import("./SwapBottomPart"));
+const SwapUpperPart = lazy(() => import("./SwapUpperPart"));
 
 export default function SwapPage() {
   const { bg } = colorLibrary;
@@ -90,53 +93,58 @@ export default function SwapPage() {
   }, []);
 
   return (
-    <Box
-      display={"flex"}
-      bgcolor={bg}
-      width={"100%"}
-      height={viewportHeight + "px"}
-      flexDirection={"column"}
-      gap={2}
-    >
+    <Suspense fallback={<HomeLoading />}>
       <Box
         display={"flex"}
         bgcolor={bg}
         width={"100%"}
-        justifyContent={"start"}
+        height={viewportHeight + "px"}
+        flexDirection={"column"}
+        gap={2}
       >
-        <BackBtn />
+        <Box
+          display={"flex"}
+          bgcolor={bg}
+          width={"100%"}
+          justifyContent={"start"}
+        >
+          <BackBtn />
+        </Box>
+        {/* //* TOP */}
+
+        <SwapUpperPart
+          handleChange={handleChange}
+          activeTab={selectedSwapType}
+        />
+
+        {/* //* MIDDLE */}
+
+        <SwapMiddlePart
+          handleOpen={handleOpen}
+          slippage={slippage}
+          inputRef={inputRef}
+          inputValue={swapAmount}
+          setInputValue={setSwapAmount}
+          activeTab={selectedSwapType}
+        />
+
+        {/* //* DOWN */}
+
+        <SwapBottomPart
+          balance={balance}
+          activeTab={selectedSwapType}
+          setInputValue={setSwapAmount}
+        />
+
+        {/* //* MODAL */}
+
+        <SlippageModal
+          open={open}
+          handleClose={handleClose}
+          setInputValue={setSlippage}
+          inputValue={slippage}
+        />
       </Box>
-      {/* //* TOP */}
-
-      <SwapUpperPart handleChange={handleChange} activeTab={selectedSwapType} />
-
-      {/* //* MIDDLE */}
-
-      <SwapMiddlePart
-        handleOpen={handleOpen}
-        slippage={slippage}
-        inputRef={inputRef}
-        inputValue={swapAmount}
-        setInputValue={setSwapAmount}
-        activeTab={selectedSwapType}
-      />
-
-      {/* //* DOWN */}
-
-      <SwapBottomPart
-        balance={balance}
-        activeTab={selectedSwapType}
-        setInputValue={setSwapAmount}
-      />
-
-      {/* //* MODAL */}
-
-      <SlippageModal
-        open={open}
-        handleClose={handleClose}
-        setInputValue={setSlippage}
-        inputValue={slippage}
-      />
-    </Box>
+    </Suspense>
   );
 }

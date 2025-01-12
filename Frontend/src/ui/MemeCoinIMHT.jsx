@@ -5,8 +5,8 @@ import {
   Groups2Rounded,
   SwapVertRounded,
 } from "@mui/icons-material";
-import { colorLibrary } from "../color-library";
 
+import { colorLibrary } from "../color-library";
 import { formatBigPrice } from "../utils/helpers";
 
 //*this is meme image , market cap , holders and Txs

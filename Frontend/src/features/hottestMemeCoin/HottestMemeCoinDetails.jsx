@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   Card,
@@ -10,7 +11,6 @@ import {
 import { useHomeContext } from "../../context/HomePageProvider";
 import { colorLibrary } from "../../color-library";
 import MemeCoinIMHT from "../../ui/MemeCoinIMHT";
-import { useNavigate } from "react-router-dom";
 
 export default function HottestMemeCoinDetails() {
   const { allMemeCoin } = useHomeContext();

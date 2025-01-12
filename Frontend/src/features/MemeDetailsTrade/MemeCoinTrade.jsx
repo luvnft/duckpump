@@ -1,12 +1,15 @@
-import React from "react";
-import MemeCoinDetailsHeader from "./header/MemeCoinDetailsHeader";
-import MemeChart from "./header/MemeChart";
-import ChartControlBtns from "./header/ChartControlBtns";
-import MemeTable from "./body/MemeTable";
-import CommunityNotes from "./communityNotes/CommunityNotes";
-import Transactions from "./transactions/Transactions";
-import SwapBtns from "./SwapBtns";
-import AskAiAbout from "./askAI/AskAiAbout";
+import React, { lazy } from "react";
+
+const MemeCoinDetailsHeader = lazy(() =>
+  import("./header/MemeCoinDetailsHeader")
+);
+const MemeChart = lazy(() => import("./header/MemeChart"));
+const ChartControlBtns = lazy(() => import("./header/ChartControlBtns"));
+const MemeTable = lazy(() => import("./body/MemeTable"));
+const CommunityNotes = lazy(() => import("./communityNotes/CommunityNotes"));
+const Transactions = lazy(() => import("./transactions/Transactions"));
+const SwapBtns = lazy(() => import("./SwapBtns"));
+const AskAiAbout = lazy(() => import("./askAI/AskAiAbout"));
 
 export default function MemeCoinTrade() {
   return (

@@ -1,7 +1,8 @@
 import { Box } from "@mui/material";
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Outlet, useParams } from "react-router-dom";
 
+import HomeLoading from "../../ui/HomeLoading";
 import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
 import BottomDetailsNavigation from "./BottomDetailsNavigation";
 import BackBtn from "../../ui/BackBtn";
@@ -22,9 +23,11 @@ export default function MemeCoinDetails() {
       <BackBtn />
 
       {/* //*children */}
-      <Box display={"flex"} flexDirection={"column"} gap={2}>
-        <Outlet />
-      </Box>
+      <Suspense fallback={<HomeLoading />}>
+        <Box display={"flex"} flexDirection={"column"} gap={2}>
+          <Outlet />
+        </Box>
+      </Suspense>
 
       {/* //!----------------------------------------------------------------------- */}
       {/* //*bottom nav */}

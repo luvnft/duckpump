@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Box, Typography, styled, IconButton } from "@mui/material";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import DeleteIcon from "@mui/icons-material/Delete";
+
 import { colorLibrary } from "../../color-library";
 
 // Styled components using MUI's styled API

@@ -1,10 +1,12 @@
 import { StrictMode, Suspense } from "react";
 import { createRoot } from "react-dom/client";
+import { ErrorBoundary } from "react-error-boundary";
+
 import App from "./App.jsx";
 import "./index.css";
-import PropTypes from "prop-types";
-import { ErrorBoundary } from "react-error-boundary";
+
 import MainErrorFallback from "./ui/MainErrorFallback.jsx";
+import HomeLoading from "./ui/HomeLoading.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -12,7 +14,7 @@ createRoot(document.getElementById("root")).render(
       FallbackComponent={MainErrorFallback}
       onReset={() => window.location.replace("/")}
     >
-      <Suspense fallback={<div>loading ...</div>}>
+      <Suspense fallback={<HomeLoading />}>
         <App />
       </Suspense>
     </ErrorBoundary>

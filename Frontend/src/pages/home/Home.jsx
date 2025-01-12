@@ -1,20 +1,20 @@
-import React from "react";
+import React, { lazy } from "react";
 import { colorLibrary } from "../../color-library";
 import { Box } from "@mui/material";
 
-import LastBoughtMemeCoin from "./LastBoughtMemeCoin";
-import HottestMemeCoin from "./HottestMemeCoin";
-import LunchTokenBtn from "./LunchTokenBtn";
-import SearchMemeCoin from "./SearchMemeCoin";
-import FilterMemeCoinsBtns from "./FilterMemeCoinsBtns";
-import MemeCoinsList from "./MemeCoinsList";
-import Header from "../../ui/Header";
-import { useNavigate } from "react-router-dom";
+const LastBoughtMemeCoin = lazy(() => import("./LastBoughtMemeCoin"));
+const HottestMemeCoin = lazy(() => import("./HottestMemeCoin"));
+const LunchTokenBtn = lazy(() => import("./LunchTokenBtn"));
+const SearchMemeCoin = lazy(() => import("./SearchMemeCoin"));
+const FilterMemeCoinsBtns = lazy(() => import("./FilterMemeCoinsBtns"));
+const MemeCoinsList = lazy(() => import("./MemeCoinsList"));
+const Header = lazy(() => import("../../ui/Header"));
 
 export default function Home() {
   return (
     <Box display={"flex"} flexDirection={"column"} gap={1}>
       {/* //*header */}
+
       <Header />
 
       {/* //*head */}

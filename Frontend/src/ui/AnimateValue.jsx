@@ -1,7 +1,6 @@
 // AnimatedValue.jsx
 import React, { useState, useEffect } from "react";
 import { Typography } from "@mui/material";
-import { useSelectedMemeCoinContext } from "../context/SelectedMemeCoinProvider";
 
 const AnimatedValue = ({
   value,
