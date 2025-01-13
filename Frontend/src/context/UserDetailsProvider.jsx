@@ -33,7 +33,7 @@ export const UserDetailsProvider = ({ children }) => {
         // Set up the status change listener
         const unsubscribe = connector.onStatusChange(
           (walletInfo) => {
-            console.log("Connection status:", walletInfo);
+            // console.log("Connection status:", walletInfo);
           },
           (err) => {
             console.error(

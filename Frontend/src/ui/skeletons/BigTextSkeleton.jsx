@@ -8,11 +8,13 @@ export default function BigTextSkeleton({
   width = "100%",
   height = 50,
   round = false,
+  bgColor = colorLibrary.boxBg,
+  textColor = colorLibrary.bgLight3,
 }) {
   return (
     <Stack
       borderRadius={"1rem"}
-      bgcolor={colorLibrary.boxBg}
+      bgcolor={bgColor}
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}
@@ -23,7 +25,7 @@ export default function BigTextSkeleton({
       sx={{
         borderRadius: round ? "2rem" : "0.5rem",
         "& .MuiSkeleton-root": {
-          bgcolor: colorLibrary.bgLight3,
+          bgcolor: textColor,
         },
       }}
     >

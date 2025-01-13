@@ -15,6 +15,7 @@ export default function FormSocialMedia({ field }) {
           letterSpacing={"0.1rem"}
           variant="caption"
           color={colorLibrary.title}
+          fontFamily={"'Quicksand', sans-serif"}
         >
           {field} (optional)
         </Typography>

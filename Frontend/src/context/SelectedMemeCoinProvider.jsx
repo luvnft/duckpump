@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { data } from "../data";
-import { calcMcapHistory } from "../utils/helpers";
 
 const SelectedMemeCoinContext = createContext();
 
@@ -8,10 +7,7 @@ function SelectedMemeCoinProvider({ children }) {
   //*this will set after the user click on a memCoin(1.using in the MemeCoinDetails)
   const [selectedMemeCoinId, setSelectedMemeCoinId] = useState(null);
   const [selectedMemeCoinData, setSelectedMemeCoinData] = useState({});
-  const mcapResults = calcMcapHistory(
-    selectedMemeCoinData?.priceHistory,
-    selectedMemeCoinData?.mcap
-  );
+
   //*these are change the chart (price or Mcap) and filter time btns
   const [chartType, setChartType] = useState("price");
   const [chartTimeBtns, setChartTimeBtns] = useState("1min");
@@ -54,8 +50,6 @@ function SelectedMemeCoinProvider({ children }) {
 
         selectedMemeCoinData,
         setSelectedMemeCoinData,
-
-        mcapResults,
 
         chartType,
         setChartType,

@@ -7,15 +7,15 @@ import BackBtn from "../../ui/BackBtn";
 const steps = [
   {
     step: "Craft Your Coin",
-    desc: "Simple, fun ,and ready to make waves! Our duck army is growing fast join us before we take off!",
+    desc: "Give your memecoin a unique identity. This is where you define the core characteristics of your memecoin.",
   },
   {
     step: "Build Your Flock",
-    desc: "Simple, fun ,and ready to make waves! Our duck army is growing fast join us before we take off!",
+    desc: "Create a Telegram group and other social media channels to build your community. ",
   },
   {
     step: "Take Flight",
-    desc: "Simple, fun ,and ready to make waves! Our duck army is growing fast join us before we take off!",
+    desc: "Review your settings and launch your token onto the Duckpump. Watch your community grow as users discover and trade your creation.",
   },
 ];
 

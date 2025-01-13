@@ -2,7 +2,7 @@ import React from "react";
 
 import BigBoxSkeleton from "./skeletons/BigBoxSkeleton";
 import BigTextSkeleton from "./skeletons/BigTextSkeleton";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import CardSkeleton from "./skeletons/CardSkeleton";
 import { colorLibrary } from "../color-library";
 
@@ -13,10 +13,20 @@ export default function HomeLoading() {
       flexDirection={"column"}
       gap={2}
       bgcolor={colorLibrary.bg}
+      padding={1}
     >
-      <BigTextSkeleton />
+      <Typography
+        justifySelf={"left"}
+        variant="h6"
+        fontFamily={"'Quicksand', sans-serif"}
+        color={colorLibrary.title}
+      >
+        DuckPump
+      </Typography>
+
+      <BigTextSkeleton bgColor={colorLibrary.bgLight1} />
       <BigBoxSkeleton />
-      <BigTextSkeleton width="70%" />
+      <BigTextSkeleton width="70%" textColor={colorLibrary.text} />
       <BigTextSkeleton width="30%" height={20} round={true} />
       {/* //*filter btns */}
       <Box display={"flex"}>

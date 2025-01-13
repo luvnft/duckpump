@@ -8,7 +8,7 @@ export default function BigBoxSkeleton() {
   return (
     <Stack
       borderRadius={"1rem"}
-      bgcolor={colorLibrary.boxBg}
+      bgcolor={colorLibrary.boxBgLightest}
       display={"flex"}
       flexDirection={"column"}
       justifyContent={"center"}
