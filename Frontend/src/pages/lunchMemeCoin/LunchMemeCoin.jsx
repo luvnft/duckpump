@@ -3,9 +3,11 @@ import { lazy, Suspense } from "react";
 import DuckLoading from "../../ui/DuckLoading";
 
 const LunchMemeForm = lazy(() =>
-  import("../../features/lunchMemeForm/LunchMemeForm")
+  import("../../features/lunchMeme/LunchMemeForm")
 );
-const LunchMemeHeader = lazy(() => import("./LunchMemeHeader"));
+const LunchMemeHeader = lazy(() =>
+  import("../../features/lunchMeme/LunchMemeHeader")
+);
 
 export default function LunchMemeCoin() {
   return (
