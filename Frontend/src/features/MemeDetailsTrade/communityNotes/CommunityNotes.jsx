@@ -7,8 +7,9 @@ import CommentItem from "./CommentItem";
 import { KeyboardArrowDown } from "@mui/icons-material";
 
 export default function CommunityNotes() {
-  const { allComments } = useSelectedMemeCoinContext();
-  const { userId, userName, comment, timeStamp } = allComments?.[0] || {};
+  const { selectedMemeCoinData } = useSelectedMemeCoinContext();
+  const { comments } = selectedMemeCoinData || {};
+  const { userId, userName, comment, timeStamp } = comments?.[0] || {};
 
   return (
     <Box bgcolor={colorLibrary.boxBg} borderRadius={"1rem"} overflow={"hidden"}>
@@ -36,7 +37,7 @@ export default function CommunityNotes() {
           }}
           btnContent={"View all "}
           btnIcon={<KeyboardArrowDown />}
-          content={allComments}
+          content={comments}
           type="comment"
         />
       </Box>

@@ -37,8 +37,6 @@ export default function SwapPage() {
     slippage,
     setSlippage,
   } = useSwapPageDataProvider();
-  console.log(selectedSwapType);
-  console.log(selectedMemeCoinData);
 
   const [open, setOpen] = useState(false);
 

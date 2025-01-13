@@ -103,7 +103,6 @@ export default function ViewAllDrawer({
                   timeStamp={comment?.timeStamp}
                   viewAllComment={true}
                 />
-                
 
                 {index < content?.length - 1 && (
                   <Divider

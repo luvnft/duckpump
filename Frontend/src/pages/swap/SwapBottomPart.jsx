@@ -1,19 +1,24 @@
 import { Box, Button, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { colorLibrary } from "../../color-library";
+import TransitionsModal from "../../ui/TransitionsModal";
+
+const customButtonStyles = {
+  padding: "2px 2px",
+  bgcolor: colorLibrary.bgLight3,
+  color: colorLibrary.bg,
+  border: "none",
+  borderRadius: "15px",
+  fontWeight: 500,
+  fontSize: ".7rem",
+};
 
 export default function SwapBottomPart({ balance, activeTab, setInputValue }) {
-  const { bg, boxBg, text, bgBuy, bgSell, bgLight3 } = colorLibrary;
+  const { bg, boxBg, text, bgBuy, bgSell } = colorLibrary;
 
-  const customButtonStyles = {
-    padding: "2px 2px",
-    bgcolor: bgLight3,
-    color: bg,
-    border: "none",
-    borderRadius: "15px",
-    fontWeight: 500,
-    fontSize: ".7rem",
-  };
+  const [openModal, setOpenModal] = useState(false);
+  const handleOpenModal = () => setOpenModal(true);
+  const handleCloseModal = () => setOpenModal(false);
 
   return (
     <Box display={"flex"} flexDirection={"column"} gap={1} paddingY={3}>
@@ -106,20 +111,25 @@ export default function SwapBottomPart({ balance, activeTab, setInputValue }) {
           </Button>
         </Box>
       </Box>
-      <Box display={"flex"} width={"100%"} justifyContent={"center"}>
-        <Button
-          sx={{
-            width: "100%",
-            bgcolor: activeTab === "buy" ? bgBuy : bgSell,
-            color: bg,
-            paddingY: ".7rem",
-            fontSize: "1rem",
-            borderRadius: "10px",
-          }}
-        >
-          {activeTab === "buy" ? "BUY" : "SELL"}
-        </Button>
-      </Box>
+      {/* <Box display={"flex"} width={"100%"} justifyContent={"center"}> */}
+      <Button
+        sx={{
+          width: "100%",
+          bgcolor: activeTab === "buy" ? bgBuy : bgSell,
+          color: bg,
+          paddingY: ".7rem",
+          fontSize: "1rem",
+          borderRadius: "10px",
+        }}
+        onClick={handleOpenModal}
+      >
+        {activeTab === "buy" ? "BUY" : "SELL"}
+      </Button>
+      {/* </Box> */}
+      <TransitionsModal
+        openModal={openModal}
+        handleCloseModal={handleCloseModal}
+      />
     </Box>
   );
 }

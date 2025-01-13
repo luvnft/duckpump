@@ -16,7 +16,7 @@ export const UserDetailsProvider = ({ children }) => {
         connector = new OKXTonConnectUI({
           dappMetaData: {
             name: "DuckPump",
-            icon: "duck.jpg",
+            icon: "/logo.webp",
           },
           actionsConfiguration: {
             returnStrategy: "none",
@@ -68,27 +68,27 @@ export const UserDetailsProvider = ({ children }) => {
   }, []);
 
   //*telegram mini app
-  // const webapp = window.Telegram.WebApp;
-  // // console.log(webapp);
-  // //*authentication
-  // useEffect(() => {
-  //   // Initialize Telegram WebApp
-  //   webapp.ready();
+  const webapp = window.Telegram.WebApp;
+  // console.log(webapp);
+  //*authentication
+  useEffect(() => {
+    // Initialize Telegram WebApp
+    webapp.ready();
 
-  //   async function initializeAuth() {
-  //     try {
-  //       const data = await authenticateUser(webapp, "start");
+    // async function initializeAuth() {
+    //   try {
+    //     const data = await authenticateUser(webapp, "start");
 
-  //       // console.log(data);
-  //     } catch (error) {
-  //       throw new Error(
-  //         error.message || "Something went Wrong in Authentication!!"
-  //       );
-  //     }
-  //   }
+    //     // console.log(data);
+    //   } catch (error) {
+    //     throw new Error(
+    //       error.message || "Something went Wrong in Authentication!!"
+    //     );
+    //   }
+    // }
 
-  //   initializeAuth();
-  // }, []);
+    // initializeAuth();
+  }, []);
 
   return <UserDetailsContext.Provider>{children}</UserDetailsContext.Provider>;
 };
