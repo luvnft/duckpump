@@ -2,7 +2,7 @@ import moment from "moment";
 
 export const data = [
   {
-    tokenId: crypto.randomUUID(),
+    tokenId: "277c357e-d91f-446b-881a-5621e02689ff",
     tokenName: "FoxCoin",
     symbol: "Fox",
     logo: "/cutePuppy.webp",
@@ -487,7 +487,7 @@ export const data = [
     ],
   },
   {
-    tokenId: crypto.randomUUID(),
+    tokenId: "277c357e-d91f-446b-881a-5621e02689ff",
     tokenName: "Quakie Coin",
     symbol: "Quakie",
     logo: "/quackyCoin.webp",
@@ -495,7 +495,7 @@ export const data = [
     mcap: 4150,
     isHot: true,
 
-    holders: 1560,
+    holders: 160,
     holdersDetails: [
       {
         id: 1,
@@ -971,7 +971,7 @@ export const data = [
     ],
   },
   {
-    tokenId: crypto.randomUUID(),
+    tokenId: "f9b9afb8-7920-4d8d-9ce3-2323856ad16e",
 
     tokenName: "LootBox Larry",
     symbol: "LootBL",
@@ -1456,7 +1456,7 @@ export const data = [
     ],
   },
   {
-    tokenId: crypto.randomUUID(),
+    tokenId: "b3824175-539d-4309-9a56-eaa7ee61f752",
     tokenName: "Popcorn Planet",
     symbol: "PopcornPT",
     logo: "/popcorn.webp",
@@ -1940,7 +1940,7 @@ export const data = [
     ],
   },
   {
-    tokenId: crypto.randomUUID(),
+    tokenId: "c5f77ef7-30b3-4f62-8767-0a081b78aea9",
     tokenName: "Blockbuster Bunny",
     symbol: "BBB",
     logo: "/blockbuster.webp",
