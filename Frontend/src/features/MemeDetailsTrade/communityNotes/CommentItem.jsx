@@ -10,7 +10,7 @@ export default function CommentItem({
   userName,
   comment,
   timeStamp,
-  viewAllComment,
+  
 }) {
   return (
     <Box

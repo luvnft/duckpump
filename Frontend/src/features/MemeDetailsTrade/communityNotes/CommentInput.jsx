@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { Box, Fab, TextField } from "@mui/material";
 import { Telegram } from "@mui/icons-material";
+
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 import { colorLibrary } from "../../../color-library";
+import TransitionsModal from "../../../ui/TransitionsModal";
 
 export default function CommentInput() {
-  const { selectedMemeCoinData, handleUserAddedComment } =
-    useSelectedMemeCoinContext();
-  const [comment, setComment] = useState("");
+  const { selectedMemeCoinData } = useSelectedMemeCoinContext();
 
-  const handleSubmit = (e) => {
+  const [openModal, setOpenModal] = useState(false);
+  const handleOpenModal = () => setOpenModal(true);
+  const handleCloseModal = () => setOpenModal(false);
+  function handleSubmit(e) {
     e.preventDefault();
-    if (comment.trim()) {
-      handleUserAddedComment(comment.trim());
-      setComment(""); // Clear the input field
-    }
-  };
+    handleOpenModal();
+  }
 
   return (
     <Box
@@ -51,8 +51,8 @@ export default function CommentInput() {
             "&::placeholder": { color: colorLibrary.bg },
           },
         }}
-        value={comment}
-        onChange={(e) => setComment(e.target.value)}
+        // value={comment}
+        // onChange={(e) => setComment(e.target.value)}
       />
 
       <Fab
@@ -67,6 +67,10 @@ export default function CommentInput() {
       >
         <Telegram />
       </Fab>
+      <TransitionsModal
+        openModal={openModal}
+        handleCloseModal={handleCloseModal}
+      />
     </Box>
   );
 }

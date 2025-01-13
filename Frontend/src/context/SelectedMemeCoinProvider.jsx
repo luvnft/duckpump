@@ -15,32 +15,11 @@ function SelectedMemeCoinProvider({ children }) {
   //*controlling the table below the chart
   const [showLastDayOnTable, setShowLastDayOnTable] = useState(true);
 
-  //*users comments control
-  const { comments } = selectedMemeCoinData || [];
-  const [allComments, setAllComments] = useState([]);
-
   useEffect(() => {
     setSelectedMemeCoinData(
       data.find((coin) => coin?.tokenId === selectedMemeCoinId)
     );
   }, [selectedMemeCoinId]);
-
-  useEffect(() => {
-    setAllComments(comments);
-  }, [comments]);
-
-  //*handlers
-  function handleUserAddedComment(comment) {
-    setAllComments([
-      ...allComments,
-      {
-        id: crypto.randomUUID(),
-        telegramId: "Your Comment",
-        userName: "You",
-        comment,
-      },
-    ]);
-  }
 
   return (
     <SelectedMemeCoinContext.Provider
@@ -58,10 +37,6 @@ function SelectedMemeCoinProvider({ children }) {
 
         showLastDayOnTable,
         setShowLastDayOnTable,
-
-        comments,
-        allComments,
-        handleUserAddedComment,
       }}
     >
       {children}

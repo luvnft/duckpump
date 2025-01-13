@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLunchMemeContext } from "../../context/LunchMemeProvider";
 import { Avatar, Box, Button, Divider, Typography } from "@mui/material";
 import { colorLibrary } from "../../color-library";
+import TransitionsModal from "../../ui/TransitionsModal";
 
 const table = [
   { title: "Total supply", value: "1,000,000,000" },
@@ -13,6 +14,9 @@ const table = [
 
 export default function LunchMemeReviewTable() {
   const { data } = useLunchMemeContext();
+  const [openModal, setOpenModal] = useState(false);
+  const handleOpenModal = () => setOpenModal(true);
+  const handleCloseModal = () => setOpenModal(false);
   return (
     <>
       {/* //*head card */}
@@ -101,9 +105,14 @@ export default function LunchMemeReviewTable() {
           borderRadius: "0.5rem",
           fontFamily: "'Quicksand', sans-serif",
         }}
+        onClick={handleOpenModal}
       >
         Create token
       </Button>
+      <TransitionsModal
+        openModal={openModal}
+        handleCloseModal={handleCloseModal}
+      />
     </>
   );
 }
