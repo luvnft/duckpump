@@ -1,5 +1,4 @@
-import * as React from "react";
-import { useTheme } from "@mui/material/styles";
+import React, { useState } from "react";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -15,25 +14,16 @@ const MenuProps = {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
       width: "50%",
-      color: colorLibrary.text,
-      backgroundColor: colorLibrary.boxBgLighter2,
+      color: colorLibrary.title,
+      backgroundColor: colorLibrary.boxBgLighter1,
     },
   },
 };
 
 const names = ["Game", "Movie", "Music", "Car"];
 
-function getStyles(name, personName, theme) {
-  return {
-    fontWeight: personName.includes(name)
-      ? theme.typography.fontWeightMedium
-      : theme.typography.fontWeightRegular,
-  };
-}
-
 export default function SelectCategory() {
-  const theme = useTheme();
-  const [personName, setPersonName] = React.useState([]);
+  const [personName, setPersonName] = useState([]);
 
   const handleChange = (event) => {
     const {
@@ -46,14 +36,21 @@ export default function SelectCategory() {
   };
 
   return (
-    <Box bgcolor={colorLibrary.boxBgLighter2} borderRadius={"1rem"}>
+    <Box
+      bgcolor={colorLibrary.boxBgLighter2}
+      borderRadius={"1rem"}
+      sx={{
+        "& .MuiSelect-select": {
+          color: colorLibrary.text,
+        },
+      }}
+    >
       <FormControl
         sx={{
           width: "100%",
         }}
       >
         <Select
-          multiple
           displayEmpty
           value={personName}
           onChange={handleChange}
@@ -76,11 +73,7 @@ export default function SelectCategory() {
             <em>Choose Your MemeCoin Category</em>
           </MenuItem>
           {names.map((name) => (
-            <MenuItem
-              key={name}
-              value={name}
-              style={getStyles(name, personName, theme)}
-            >
+            <MenuItem key={name} value={name}>
               {name}
             </MenuItem>
           ))}

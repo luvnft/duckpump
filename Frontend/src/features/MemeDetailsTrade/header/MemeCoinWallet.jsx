@@ -49,6 +49,7 @@ export default function MemeCoinWallet({ tokenAddress }) {
 
       {/* //*Snackbar for notification */}
       <Snackbar
+      
         open={open}
         autoHideDuration={2000}
         onClose={handleClose}

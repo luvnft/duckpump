@@ -7,7 +7,7 @@ export const data = [
     symbol: "Fox",
     logo: "/cutePuppy.webp",
     tokenAddress: "EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS",
-    mcap: 21756,
+    mcap: 5756,
     isHot: true,
 
     holders: 220,
@@ -59,6 +59,77 @@ export const data = [
         wallet: "UQCSkfS5wLbAAJNi1fhe2xPSaxKesLbEbiC4ml1UXPk3HMCai",
         amount: 700000,
         percentage: 0.7,
+      },
+    ],
+    mcapHistory: [
+      {
+        time: `${moment().subtract(1, "days").format("D MMM")} `,
+        price: 4756,
+      },
+      {
+        time: `${moment().subtract(2, "days").format("D MMM")} `,
+        price: 7756,
+      },
+      {
+        time: `${moment().subtract(3, "days").format("D MMM")} `,
+        price: 7756,
+      },
+      {
+        time: `${moment().subtract(4, "days").format("D MMM")} `,
+        price: 8756,
+      },
+      {
+        time: `${moment().subtract(5, "days").format("D MMM")} `,
+        price: 9756,
+      },
+      {
+        time: `06:36 hour`,
+        price: 1756,
+      },
+      {
+        time: `05:35 hour`,
+        price: 1156,
+      },
+      {
+        time: `04:48 hour`,
+        price: 3956,
+      },
+      {
+        time: `03:25 hour`,
+        price: 4756,
+      },
+      {
+        time: `02:15 hour`,
+        price: 1700,
+      },
+
+      {
+        time: `01:01 hour`,
+        price: 3756,
+      },
+      {
+        time: `06:14 min`,
+        price: 5956,
+      },
+      {
+        time: `5:14 min`,
+        price: 6756,
+      },
+      {
+        time: `04:15 min`,
+        price: 4756,
+      },
+      {
+        time: `03:19 min`,
+        price: 5256,
+      },
+      {
+        time: `02:18 min`,
+        price: 5556,
+      },
+      {
+        time: `01:15 min`,
+        price: 5756,
       },
     ],
 
@@ -265,7 +336,7 @@ export const data = [
     ],
     txns: [
       {
-        amount: 15,
+        amount: 14,
         timeStamp: "2025-01-02T09:45:00.000Z",
       },
       {
@@ -417,14 +488,14 @@ export const data = [
   },
   {
     tokenId: crypto.randomUUID(),
-    tokenName: "FoxCoin",
-    symbol: "Fox",
+    tokenName: "Quakie Coin",
+    symbol: "Quakie",
     logo: "/quackyCoin.webp",
     tokenAddress: "EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS",
-    mcap: 27050,
+    mcap: 4150,
     isHot: true,
 
-    holders: 250,
+    holders: 1560,
     holdersDetails: [
       {
         id: 1,
@@ -475,7 +546,77 @@ export const data = [
         percentage: 0.7,
       },
     ],
+    mcapHistory: [
+      {
+        time: `${moment().subtract(1, "days").format("D MMM")} `,
+        price: 756,
+      },
+      {
+        time: `${moment().subtract(2, "days").format("D MMM")} `,
+        price: 756,
+      },
+      {
+        time: `${moment().subtract(3, "days").format("D MMM")} `,
+        price: 756,
+      },
+      {
+        time: `${moment().subtract(4, "days").format("D MMM")} `,
+        price: 756,
+      },
+      {
+        time: `${moment().subtract(5, "days").format("D MMM")} `,
+        price: 756,
+      },
+      {
+        time: `06:36 hour`,
+        price: 1756,
+      },
+      {
+        time: `05:35 hour`,
+        price: 1156,
+      },
+      {
+        time: `04:48 hour`,
+        price: 3956,
+      },
+      {
+        time: `03:25 hour`,
+        price: 4756,
+      },
+      {
+        time: `02:15 hour`,
+        price: 1700,
+      },
 
+      {
+        time: `01:01 hour`,
+        price: 3756,
+      },
+      {
+        time: `06:14 min`,
+        price: 3956,
+      },
+      {
+        time: `5:14 min`,
+        price: 3756,
+      },
+      {
+        time: `04:15 min`,
+        price: 4756,
+      },
+      {
+        time: `03:19 min`,
+        price: 5256,
+      },
+      {
+        time: `02:18 min`,
+        price: 5556,
+      },
+      {
+        time: `01:15 min`,
+        price: 4150,
+      },
+    ],
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -679,7 +820,7 @@ export const data = [
     ],
     txns: [
       {
-        amount: 15,
+        amount: 5,
         timeStamp: "2025-01-02T09:45:00.000Z",
       },
       {
@@ -687,7 +828,7 @@ export const data = [
         timeStamp: "2025-01-02T09:47:30.000Z",
       },
       {
-        amount: 5,
+        amount: 3,
         timeStamp: "2025-01-02T09:50:15.000Z",
       },
       {
@@ -836,7 +977,7 @@ export const data = [
     symbol: "LootBL",
     logo: "/lootbox.webp",
     tokenAddress: "EQBZ_cafPyDr5KUTs0aNxh0ZTDhkpEZONmLJA2SNGlLm4Cko",
-    mcap: 10000,
+    mcap: 2000,
 
     holders: 157,
     holdersDetails: [
@@ -889,7 +1030,77 @@ export const data = [
         percentage: 0.7,
       },
     ],
+    mcapHistory: [
+      {
+        time: `${moment().subtract(1, "days").format("D MMM")} `,
+        price: 4756,
+      },
+      {
+        time: `${moment().subtract(2, "days").format("D MMM")} `,
+        price: 7756,
+      },
+      {
+        time: `${moment().subtract(3, "days").format("D MMM")} `,
+        price: 7756,
+      },
+      {
+        time: `${moment().subtract(4, "days").format("D MMM")} `,
+        price: 8756,
+      },
+      {
+        time: `${moment().subtract(5, "days").format("D MMM")} `,
+        price: 9756,
+      },
+      {
+        time: `06:36 hour`,
+        price: 1756,
+      },
+      {
+        time: `05:35 hour`,
+        price: 1156,
+      },
+      {
+        time: `04:48 hour`,
+        price: 3956,
+      },
+      {
+        time: `03:25 hour`,
+        price: 4756,
+      },
+      {
+        time: `02:15 hour`,
+        price: 1700,
+      },
 
+      {
+        time: `01:01 hour`,
+        price: 3756,
+      },
+      {
+        time: `06:14 min`,
+        price: 5956,
+      },
+      {
+        time: `5:14 min`,
+        price: 6756,
+      },
+      {
+        time: `04:15 min`,
+        price: 4756,
+      },
+      {
+        time: `03:19 min`,
+        price: 5256,
+      },
+      {
+        time: `02:18 min`,
+        price: 5556,
+      },
+      {
+        time: `01:15 min`,
+        price: 5756,
+      },
+    ],
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -1105,11 +1316,11 @@ export const data = [
         timeStamp: "2025-01-02T09:50:15.000Z",
       },
       {
-        amount: 20,
+        amount: 3,
         timeStamp: "2025-01-02T09:52:45.000Z",
       },
       {
-        amount: 2,
+        amount: 5,
         timeStamp: "2025-01-02T09:55:10.000Z",
       },
       {
@@ -1140,7 +1351,7 @@ export const data = [
       amount: 200,
       img: "/duck7.webp",
     },
-    bondingCurve: 900,
+    bondingCurve: 650,
     bondingCurveRatio: 1000,
     boughtAmount: 300,
 
@@ -1251,8 +1462,8 @@ export const data = [
     logo: "/popcorn.webp",
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
 
-    mcap: 41000,
-    holders: 227,
+    mcap: 3000,
+    holders: 27,
     holdersDetails: [
       {
         id: 1,
@@ -1303,7 +1514,77 @@ export const data = [
         percentage: 0.7,
       },
     ],
+    mcapHistory: [
+      {
+        time: `${moment().subtract(1, "days").format("D MMM")} `,
+        price: 4756,
+      },
+      {
+        time: `${moment().subtract(2, "days").format("D MMM")} `,
+        price: 7756,
+      },
+      {
+        time: `${moment().subtract(3, "days").format("D MMM")} `,
+        price: 7756,
+      },
+      {
+        time: `${moment().subtract(4, "days").format("D MMM")} `,
+        price: 8756,
+      },
+      {
+        time: `${moment().subtract(5, "days").format("D MMM")} `,
+        price: 9756,
+      },
+      {
+        time: `06:36 hour`,
+        price: 1756,
+      },
+      {
+        time: `05:35 hour`,
+        price: 1156,
+      },
+      {
+        time: `04:48 hour`,
+        price: 3956,
+      },
+      {
+        time: `03:25 hour`,
+        price: 4756,
+      },
+      {
+        time: `02:15 hour`,
+        price: 1700,
+      },
 
+      {
+        time: `01:01 hour`,
+        price: 3756,
+      },
+      {
+        time: `06:14 min`,
+        price: 5956,
+      },
+      {
+        time: `5:14 min`,
+        price: 6756,
+      },
+      {
+        time: `04:15 min`,
+        price: 4756,
+      },
+      {
+        time: `03:19 min`,
+        price: 5256,
+      },
+      {
+        time: `02:18 min`,
+        price: 5556,
+      },
+      {
+        time: `01:15 min`,
+        price: 5756,
+      },
+    ],
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -1507,7 +1788,7 @@ export const data = [
     ],
     txns: [
       {
-        amount: 5,
+        amount: 1,
         timeStamp: "2025-01-02T09:45:00.000Z",
       },
       {
@@ -1519,7 +1800,7 @@ export const data = [
         timeStamp: "2025-01-02T09:50:15.000Z",
       },
       {
-        amount: 20,
+        amount: 1,
         timeStamp: "2025-01-02T09:52:45.000Z",
       },
       {
@@ -1527,7 +1808,7 @@ export const data = [
         timeStamp: "2025-01-02T09:55:10.000Z",
       },
       {
-        amount: 10,
+        amount: 5,
         timeStamp: "2025-01-02T09:57:35.000Z",
       },
       {
@@ -1535,11 +1816,11 @@ export const data = [
         timeStamp: "2025-01-02T10:00:05.000Z",
       },
       {
-        amount: 3,
+        amount: 1,
         timeStamp: "2025-01-02T10:02:25.000Z",
       },
       {
-        amount: 8,
+        amount: 2,
         timeStamp: "2025-01-02T10:04:50.000Z",
       },
       {
@@ -1554,7 +1835,7 @@ export const data = [
       amount: 450,
       img: "/duck7.webp",
     },
-    bondingCurve: 800,
+    bondingCurve: 659,
     bondingCurveRatio: 1500,
     boughtAmount: 300,
 
@@ -1664,8 +1945,8 @@ export const data = [
     symbol: "BBB",
     logo: "/blockbuster.webp",
     tokenAddress: "EQAvlWFDxGF2lXm67y4yzC17wYKD9A0guwPkMs1gOsM__NOT",
-    mcap: 70200,
-    holders: 156,
+    mcap: 700,
+    holders: 6,
     holdersDetails: [
       {
         id: 1,
@@ -1716,7 +1997,77 @@ export const data = [
         percentage: 0.7,
       },
     ],
+    mcapHistory: [
+      {
+        time: `${moment().subtract(1, "days").format("D MMM")} `,
+        price: 4756,
+      },
+      {
+        time: `${moment().subtract(2, "days").format("D MMM")} `,
+        price: 7756,
+      },
+      {
+        time: `${moment().subtract(3, "days").format("D MMM")} `,
+        price: 7756,
+      },
+      {
+        time: `${moment().subtract(4, "days").format("D MMM")} `,
+        price: 8756,
+      },
+      {
+        time: `${moment().subtract(5, "days").format("D MMM")} `,
+        price: 9756,
+      },
+      {
+        time: `06:36 hour`,
+        price: 1756,
+      },
+      {
+        time: `05:35 hour`,
+        price: 1156,
+      },
+      {
+        time: `04:48 hour`,
+        price: 3956,
+      },
+      {
+        time: `03:25 hour`,
+        price: 4756,
+      },
+      {
+        time: `02:15 hour`,
+        price: 1700,
+      },
 
+      {
+        time: `01:01 hour`,
+        price: 3756,
+      },
+      {
+        time: `06:14 min`,
+        price: 5956,
+      },
+      {
+        time: `5:14 min`,
+        price: 6756,
+      },
+      {
+        time: `04:15 min`,
+        price: 4756,
+      },
+      {
+        time: `03:19 min`,
+        price: 5256,
+      },
+      {
+        time: `02:18 min`,
+        price: 5556,
+      },
+      {
+        time: `01:15 min`,
+        price: 5756,
+      },
+    ],
     priceHistory: [
       {
         time: `${moment().subtract(1, "days").format("D MMM")} `,
@@ -1920,43 +2271,33 @@ export const data = [
     ],
     txns: [
       {
-        amount: 15,
+        amount: 1,
         timeStamp: "2025-01-02T09:45:00.000Z",
       },
       {
-        amount: 35,
+        amount: 1,
         timeStamp: "2025-01-02T09:47:30.000Z",
       },
+
       {
-        amount: 100,
-        timeStamp: "2025-01-02T09:50:15.000Z",
-      },
-      {
-        amount: 10,
+        amount: 1,
         timeStamp: "2025-01-02T09:52:45.000Z",
       },
+
       {
-        amount: 750,
-        timeStamp: "2025-01-02T09:55:10.000Z",
-      },
-      {
-        amount: 20,
-        timeStamp: "2025-01-02T09:57:35.000Z",
-      },
-      {
-        amount: 100,
+        amount: 3,
         timeStamp: "2025-01-02T10:00:05.000Z",
       },
       {
-        amount: 10,
+        amount: 1,
         timeStamp: "2025-01-02T10:02:25.000Z",
       },
       {
-        amount: 20,
+        amount: 1,
         timeStamp: "2025-01-02T10:04:50.000Z",
       },
       {
-        amount: 205,
+        amount: 2,
         timeStamp: "2025-01-02T10:07:15.000Z",
       },
     ],
@@ -1967,7 +2308,7 @@ export const data = [
       amount: 600,
       img: "/duck7.webp",
     },
-    bondingCurve: 499,
+    bondingCurve: 299,
     bondingCurveRatio: 1000,
 
     boughtAmount: 900,

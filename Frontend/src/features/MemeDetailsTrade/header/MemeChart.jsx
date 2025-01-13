@@ -7,11 +7,10 @@ import {
   Tooltip,
   ResponsiveContainer,
   CartesianGrid,
-  Legend,
 } from "recharts";
 import { colorLibrary } from "../../../color-library";
 import { Box } from "@mui/material";
-import { calcMcapHistory, formatSmallNumber } from "../../../utils/helpers";
+import { formatBigPrice, formatSmallNumber } from "../../../utils/helpers";
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 
 export default function MemeChart() {
@@ -19,7 +18,7 @@ export default function MemeChart() {
   //*chartTimebtns is filter btns bellow the chart
   const { selectedMemeCoinData, chartType, chartTimeBtns } =
     useSelectedMemeCoinContext();
-  const { priceHistory, fiveMinuteHistory, fifteenMinuteHistory, mcap } =
+  const { priceHistory, mcapHistory, fiveMinuteHistory, fifteenMinuteHistory } =
     selectedMemeCoinData || {};
 
   //*its change by change the filter btns bellow the chart
@@ -34,21 +33,20 @@ export default function MemeChart() {
     setDataFilter(dataMap[chartTimeBtns] || priceHistory);
   }, [chartTimeBtns, priceHistory, fiveMinuteHistory, fifteenMinuteHistory]);
 
-  //*price * mcap from data
-  const mcapResults = calcMcapHistory(dataFilter, mcap);
-
+  const addDolorSign = (num) => `$${formatBigPrice(num)}`;
   return (
     <Box
       sx={{
         border: `0.1rem solid ${colorLibrary.boxBg}`,
         borderRadius: "0.5rem",
-        padding: "0.2rem 0.2rem 0.2rem 0.6rem",
+        padding: "0.2rem 0.2rem 0.2rem 0.2rem",
+        overflow: "hidden",
       }}
     >
       <ResponsiveContainer width="100%" height={300}>
         <AreaChart
-          data={chartType === "price" ? dataFilter : mcapResults}
-          margin={{ top: 10, right: 0, left: 0, bottom: 10 }}
+          data={chartType === "price" ? dataFilter : mcapHistory}
+          margin={{ top: 2, right: 10, left: 0, bottom: 2 }}
         >
           {/* //*Gradient Colors */}
           <defs>
@@ -68,12 +66,7 @@ export default function MemeChart() {
 
           <CartesianGrid strokeDasharray={"4 4"} strokeOpacity={"0.2"} />
           {/* //*XAxis for Dynamic Time */}
-          <XAxis
-            dataKey="time"
-            axisLine={true}
-            tickLine={false}
-            // padding={{ right: 10 }}
-          />
+          <XAxis dataKey="time" axisLine={true} tickLine={false} />
 
           {/* //*YAxis for Dynamic Price on the Right */}
           <YAxis
@@ -81,13 +74,15 @@ export default function MemeChart() {
             axisLine={true}
             tickLine={false}
             orientation="right"
-            tickFormatter={formatSmallNumber}
+            tickFormatter={
+              chartType === "price" ? formatSmallNumber : addDolorSign
+            }
             padding={{ bottom: 10 }}
           />
 
           {/* Tooltip */}
           <Tooltip
-            formatter={formatSmallNumber}
+            formatter={chartType === "price" ? formatSmallNumber : addDolorSign}
             wrapperStyle={{ borderRadius: "1rem" }}
             labelStyle={{ color: colorLibrary.title }}
             itemStyle={{ color: colorLibrary.text }}

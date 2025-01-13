@@ -91,7 +91,7 @@ export default function HoldersComponent({ holder }) {
           textAlign={"right"}
           fontWeight={"bold"}
         >
-          Owns {holder.percentage}
+          Owns {holder.percentage} %
         </Typography>
       </Box>
     </Box>

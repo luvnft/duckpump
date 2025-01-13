@@ -99,15 +99,16 @@ export const formatSmallNumber = (num) => {
 };
 
 //its return the Mcap object include time from price history
-export function calcMcapHistory(priceHistory, mcap) {
-  if (!priceHistory || !mcap) return;
-  const mcapResults = priceHistory?.map((data) => {
-    const calcMcap = (data.price * mcap).toFixed(2);
+// export function calcMcapHistory(priceHistory, mcap) {
+//   if (!priceHistory || !mcap) return;
+//   const mcapResults = priceHistory?.map((data) => {
+//     const calcMcap = mcap * data.price;
+//     console.log(calcMcap);
+//     return { time: data.time, price: +formatBigPrice(calcMcap) };
+//   });
 
-    return { time: data.time, price: +formatBigPrice(calcMcap) };
-  });
-  return mcapResults;
-}
+//   return mcapResults;
+// }
 
 // Function to clean and convert input values to numbers
 export function cleanNumbers({ value, buy, sell }) {
