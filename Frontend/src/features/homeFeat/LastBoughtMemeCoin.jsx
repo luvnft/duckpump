@@ -9,7 +9,7 @@ import {
 } from "../../utils/helpers";
 import moment from "moment";
 
-export default function LastBoughtItem() {
+export default function LastBoughtMemeCoin() {
   const {
     lastBoughtMemeCoin: { walletAddress, boughtAmount, coinName, timeStamp },
   } = useHomeContext();

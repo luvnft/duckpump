@@ -3,12 +3,24 @@ import { colorLibrary } from "../../color-library";
 import { Box } from "@mui/material";
 
 import Header from "../../ui/Header";
-const LastBoughtMemeCoin = lazy(() => import("./LastBoughtMemeCoin"));
-const HottestMemeCoin = lazy(() => import("./HottestMemeCoin"));
-const LunchTokenBtn = lazy(() => import("./LunchTokenBtn"));
-const SearchMemeCoin = lazy(() => import("./SearchMemeCoin"));
-const FilterMemeCoinsBtns = lazy(() => import("./FilterMemeCoinsBtns"));
-const MemeCoinsList = lazy(() => import("./MemeCoinsList"));
+const HottestMemeCoinDetails = lazy(() =>
+  import("../../features/homeFeat/HottestMemeCoinDetails")
+);
+const LastBoughtMemeCoin = lazy(() =>
+  import("../../features/homeFeat/LastBoughtMemeCoin")
+);
+const LunchTokenBtn = lazy(() =>
+  import("../../features/homeFeat/LunchTokenBtn")
+);
+const SearchMemeCoin = lazy(() =>
+  import("../../features/homeFeat/SearchMemeCoin")
+);
+const FilterMemeCoinsBtns = lazy(() =>
+  import("../../features/homeFeat/FilterMemeCoinsBtns")
+);
+const MemeCoinsList = lazy(() =>
+  import("../../features/homeFeat/MemeCoinsList")
+);
 
 export default function Home() {
   return (
@@ -19,7 +31,7 @@ export default function Home() {
 
       {/* //*head */}
       <LastBoughtMemeCoin />
-      <HottestMemeCoin />
+      <HottestMemeCoinDetails />
       <LunchTokenBtn />
 
       {/* //*main */}
