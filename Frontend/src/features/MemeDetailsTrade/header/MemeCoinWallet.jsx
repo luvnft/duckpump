@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, IconButton, Snackbar, Box, Button } from "@mui/material";
+import { Snackbar, Button } from "@mui/material";
 import { ContentCopyRounded } from "@mui/icons-material";
 
 import { colorLibrary } from "../../../color-library";

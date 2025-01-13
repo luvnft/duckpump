@@ -8,6 +8,16 @@ import { A11y } from "swiper/modules";
 import { colorLibrary } from "../../color-library";
 import { motion } from "motion/react";
 
+import hatchgIcon from "/hatchg.webp";
+import hotGifIcon from "/hotGif.webp";
+import listIcon from "/list.webp";
+import topGifIcon from "/topGif.webp";
+import gameIcon from "/game.webp";
+import movieIcon from "/movie.webp";
+import musicIcon from "/music.webp";
+import carIcon from "/car.webp";
+import mcap from "/mcap.webp";
+
 export default function FilterMemeCoinsBtns() {
   return (
     <Box
@@ -24,15 +34,15 @@ export default function FilterMemeCoinsBtns() {
         loop={false}
       >
         {[
-          { icon: "/hatchg.webp", label: "New" },
-          { icon: "/hotGif.webp", label: "Hot" },
-          { icon: "/list.webp", label: "Listed" },
-          { icon: "/topGif.webp", label: "Top Volume" },
-          { icon: "/game.webp", label: "Game" },
-          { icon: "/movie.webp", label: "Movie" },
-          { icon: "/music.webp", label: "Music" },
-          { icon: "/car.webp", label: "Car" },
-          { icon: "/topGif.webp", label: "Mcap" },
+          { icon: hatchgIcon, label: "New" },
+          { icon: hotGifIcon, label: "Hot" },
+          { icon: listIcon, label: "Listed" },
+          { icon: topGifIcon, label: "Top Volume" },
+          { icon: mcap, label: "Mcap" },
+          { icon: gameIcon, label: "Game" },
+          { icon: movieIcon, label: "Movie" },
+          { icon: musicIcon, label: "Music" },
+          { icon: carIcon, label: "Car" },
         ].map((item, index) => (
           <SwiperSlide
             key={index}
@@ -60,12 +70,14 @@ export default function FilterMemeCoinsBtns() {
                   textWrap: "nowrap",
                   boxShadow:
                     "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset",
+                  fontFamily: "'Quicksand', sans-serif",
                 }}
               >
                 <Box
                   component={"img"}
                   src={item.icon}
                   alt={item.icon}
+                  width={"1rem"}
                   height={"1rem"}
                   loading="lazy"
                 />

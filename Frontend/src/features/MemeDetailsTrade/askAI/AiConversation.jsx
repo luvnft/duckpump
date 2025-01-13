@@ -10,7 +10,12 @@ export default function AiConversation({ content }) {
         <>
           <Box display={"flex"} gap={"0.5rem"}>
             <Avatar src="/duck6.webp" alt="duck.jpg" />
-            <Typography variant="body2" color={colorLibrary.title}>
+            <Typography
+              variant="body2"
+              color={colorLibrary.title}
+              fontFamily={"'Quicksand', sans-serif"}
+              fontWeight={700}
+            >
               {data.res}
             </Typography>
           </Box>
@@ -82,6 +87,8 @@ export default function AiConversation({ content }) {
               textAlign={"right"}
               padding={"0.4rem 0.6rem"}
               borderRadius={"1rem"}
+              fontFamily={"'Quicksand', sans-serif"}
+              maxWidth={"80%"}
             >
               {data.ques}
             </Typography>

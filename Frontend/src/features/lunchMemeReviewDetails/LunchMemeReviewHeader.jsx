@@ -33,11 +33,16 @@ export default function LunchMemeReviewHeader() {
         flexDirection={"column"}
         gap={"1rem"}
       >
-        <Typography color={colorLibrary.title} fontWeight={300} paddingTop={2}>
+        <Typography
+          color={colorLibrary.title}
+          fontWeight={300}
+          paddingTop={2}
+          fontFamily={"'Quicksand', sans-serif"}
+        >
           how Much do you want to
           <br /> own from {data?.name || "DuckiCoin"} ?{" "}
         </Typography>
-        <Box>
+        <Box fontFamily={"'Quicksand', sans-serif"}>
           <TextField
             type="number"
             defaultValue={inputValue}

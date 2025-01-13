@@ -32,8 +32,9 @@ export default function TraderINWTT({
         <Typography
           variant="caption"
           color={colorLibrary.title}
-          fontWeight={"bold"}
+          fontWeight={500}
           sx={{ textWrap: "nowrap" }}
+          fontFamily={"'Quicksand', sans-serif"}
         >
           @{traderName} / {convertWalletAddress(traderWallet)}
         </Typography>

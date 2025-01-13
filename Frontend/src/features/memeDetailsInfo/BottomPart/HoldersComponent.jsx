@@ -31,28 +31,25 @@ export default function HoldersComponent({ holder }) {
           flexDirection={"column"}
           justifyContent={"space-evenly"}
         >
-          <Box display={"flex"}>
+          <Box display={"flex"} alignItems={"center"}>
             <Typography
               variant="body2"
               color={colorLibrary.title}
-              fontWeight={"bold"}
+              fontWeight={700}
               sx={{
                 textWrap: "nowrap",
-                overflow: "hidden",
-                whiteSpace: "nowrap",
-                textOverflow: "ellipsis",
-                maxWidth: "30%",
               }}
+              fontFamily={"'Quicksand', sans-serif"}
             >
-              @{holder.name}
+              @{holder.name} /
             </Typography>{" "}
             <Typography
               variant="body2"
               color={colorLibrary.title}
-              fontWeight={"bold"}
+              marginLeft={"0.3rem"}
             >
               {" "}
-              / {convertWalletAddress(holder.wallet)}
+              {convertWalletAddress(holder.wallet)}
             </Typography>
           </Box>
           <Typography
@@ -65,10 +62,7 @@ export default function HoldersComponent({ holder }) {
             }}
           >
             <Box display={"flex"} alignItems={"center"} gap={"0.3rem"}>
-              <Typography
-                // color={color}
-                fontWeight={"bold"}
-              >
+              <Typography fontWeight={500}>
                 {formatBigPrice(holder.amount)} $Quack
                 {/* {tradType} */}
               </Typography>

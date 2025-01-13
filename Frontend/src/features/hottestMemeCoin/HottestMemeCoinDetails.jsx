@@ -40,7 +40,11 @@ export default function HottestMemeCoinDetails() {
             gap={2}
           >
             {/* //*title */}
-            <Typography textTransform={"uppercase"} fontWeight={400}>
+            <Typography
+              textTransform={"uppercase"}
+              fontWeight={600}
+              fontFamily={"'Quicksand', sans-serif"}
+            >
               {tokenName} is skyrocketing
             </Typography>
 

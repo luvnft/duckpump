@@ -39,13 +39,21 @@ export default function LunchMemeHeader() {
             variant="body1"
             color={colorLibrary.title}
             textAlign={"center"}
+            fontFamily={"'Quicksand', sans-serif"}
+            fontWeight={600}
+            marginBottom={1}
           >
             Create your own MemeCoin
           </Typography>
           {steps?.map((step, i) => (
             <React.Fragment key={i}>
               <Box>
-                <Typography color={colorLibrary.title} variant="body2">
+                <Typography
+                  color={colorLibrary.title}
+                  variant="body2"
+                  fontFamily={"'Quicksand', sans-serif"}
+                  fontWeight={500}
+                >
                   {step.step}
                 </Typography>
 

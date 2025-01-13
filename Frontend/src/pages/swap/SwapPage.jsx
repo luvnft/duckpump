@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
 import { useSwapPageDataProvider } from "../../context/SwapPageDataProvider";
 import { colorLibrary } from "../../color-library";
-import HomeLoading from "../../ui/HomeLoading";
+import DuckLoading from "../../ui/DuckLoading";
 
 const SlippageModal = lazy(() => import("./SlippageModal"));
 const BackBtn = lazy(() => import("../../ui/BackBtn"));
@@ -93,7 +93,7 @@ export default function SwapPage() {
   }, []);
 
   return (
-    <Suspense fallback={<HomeLoading />}>
+    <Suspense fallback={<DuckLoading />}>
       <Box
         display={"flex"}
         bgcolor={bg}

@@ -6,6 +6,7 @@ import HomeLoading from "../../ui/HomeLoading";
 import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvider";
 import BottomDetailsNavigation from "./BottomDetailsNavigation";
 import BackBtn from "../../ui/BackBtn";
+import DuckLoading from "../../ui/DuckLoading";
 
 export default function MemeCoinDetails() {
   const { memeCoinID } = useParams();
@@ -23,11 +24,11 @@ export default function MemeCoinDetails() {
       <BackBtn />
 
       {/* //*children */}
-      <Suspense fallback={<HomeLoading />}>
-        <Box display={"flex"} flexDirection={"column"} gap={2}>
+      <Box display={"flex"} flexDirection={"column"} gap={2}>
+        <Suspense fallback={<DuckLoading />}>
           <Outlet />
-        </Box>
-      </Suspense>
+        </Suspense>
+      </Box>
 
       {/* //!----------------------------------------------------------------------- */}
       {/* //*bottom nav */}
