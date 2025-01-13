@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { colorLibrary } from "../../color-library";
 import TransitionsModal from "../../ui/TransitionsModal";
+import QuickSelectButtons from "./QuickSelectButtons";
 
 const customButtonStyles = {
   padding: "2px 2px",
@@ -13,8 +14,12 @@ const customButtonStyles = {
   fontSize: ".7rem",
 };
 
-export default function SwapBottomPart({ balance, activeTab, setInputValue }) {
+export default function SwapBottomPart({ activeTab, setInputValue }) {
   const { bg, boxBg, text, bgBuy, bgSell } = colorLibrary;
+  const [balance] = useState({
+    ton: 50,
+    meme: 200,
+  });
 
   const [openModal, setOpenModal] = useState(false);
   const handleOpenModal = () => setOpenModal(true);
@@ -48,7 +53,7 @@ export default function SwapBottomPart({ balance, activeTab, setInputValue }) {
           Fee : 0.3 TON
         </Typography>
       </Box>
-      <Box
+      {/* <Box
         display={"flex"}
         width={"100%"}
         justifyContent={"center"}
@@ -110,7 +115,15 @@ export default function SwapBottomPart({ balance, activeTab, setInputValue }) {
             MAX
           </Button>
         </Box>
-      </Box>
+      </Box> */}
+
+      {/* //*quick select btns component */}
+      <QuickSelectButtons
+        activeTab={activeTab}
+        setInputValue={setInputValue}
+        balance={balance}
+        customButtonStyles={customButtonStyles}
+      />
       {/* <Box display={"flex"} width={"100%"} justifyContent={"center"}> */}
       <Button
         sx={{

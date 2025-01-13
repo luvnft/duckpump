@@ -12,7 +12,6 @@ import { useSelectedMemeCoinContext } from "../../context/SelectedMemeCoinProvid
 export default function SwapMiddlePart({
   handleOpen,
   slippage,
-  inputRef,
   inputValue,
   setInputValue,
   activeTab,
@@ -59,7 +58,8 @@ export default function SwapMiddlePart({
       </Button>
       <Box display={"flex"} justifyContent={"center"}>
         <TextField
-          inputRef={inputRef}
+          // inputRef={inputRef}
+          autoFocus
           type="number"
           value={inputValue}
           onChange={(event) => setInputValue(event.target.value)}

@@ -46,6 +46,7 @@ export default function LunchMemeReviewHeader() {
           <TextField
             type="number"
             defaultValue={inputValue}
+            autoFocus
             onChange={(event) => setInputValue(event.target.value)}
             InputProps={{
               endAdornment: (
