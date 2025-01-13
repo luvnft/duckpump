@@ -14,7 +14,6 @@ export default function CommentItem({
 }) {
   return (
     <Box
-    
       component={motion.li}
       initial={{ opacity: 0, x: 50 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -31,7 +30,12 @@ export default function CommentItem({
       {/* //*left side (img ,id , comment)*/}
       <Avatar alt="duck" src={img} sx={{ width: 50, height: 50 }} />
       <Box flexGrow={1}>
-        <Typography variant="body2" color={colorLibrary.title}>
+        <Typography
+          variant="body2"
+          color={colorLibrary.title}
+          fontFamily={"'Quicksand', sans-serif"}
+          fontWeight={500}
+        >
           @{userId || userName || "@duck"}
         </Typography>
         <Typography color={colorLibrary.text}>{comment}</Typography>

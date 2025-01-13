@@ -15,4 +15,5 @@ export const colorLibrary = {
   bgSell: "#E46465",
   title: "#E2D171",
   text: "#D5CFAA",
+
 };

@@ -29,3 +29,30 @@ body {
 #connect-wallet .go3572451881 button div {
   color: #e2d171; /* White text */
 }
+/* From Uiverse.io by gagan-gv */
+.loader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10rem;
+}
+.loader span {
+  color: #e2d171;
+  font-size: 2rem;
+  font-family: "Quicksand", Courier, monospace;
+  font-weight: 600;
+  animation: blur 3s linear infinite;
+  line-height: 20px;
+  transition: all 0.5s;
+  letter-spacing: 0.2em;
+}
+
+@keyframes blur {
+  0%,
+  50% {
+    filter: blur(0);
+  }
+
+  50% {
+    filter: blur(10px);
+  }
+}

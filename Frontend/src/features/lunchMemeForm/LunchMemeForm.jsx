@@ -48,6 +48,7 @@ export default function LunchMemeForm() {
           color={colorLibrary.title}
           padding={"0.5rem 1rem"}
           variant="body2"
+          fontFamily={"'Quicksand', sans-serif"}
         >
           Token information
         </Typography>
@@ -75,6 +76,7 @@ export default function LunchMemeForm() {
               color={colorLibrary.title}
               marginLeft={"1rem"}
               letterSpacing={"0.1rem"}
+              fontFamily={"'Quicksand', sans-serif"}
             >
               MemeCoin Icon *
             </Typography>
@@ -96,7 +98,11 @@ export default function LunchMemeForm() {
                 mx={"1rem"}
                 letterSpacing={"0.1rem"}
               >
-                <Typography variant="caption" color={colorLibrary.title}>
+                <Typography
+                  variant="caption"
+                  color={colorLibrary.title}
+                  fontFamily={"'Quicksand', sans-serif"}
+                >
                   Name *
                 </Typography>
                 <Typography color={colorLibrary.text}>20</Typography>
@@ -137,7 +143,11 @@ export default function LunchMemeForm() {
                 mx={"1rem"}
                 letterSpacing={"0.1rem"}
               >
-                <Typography variant="caption" color={colorLibrary.title}>
+                <Typography
+                  variant="caption"
+                  color={colorLibrary.title}
+                  fontFamily={"'Quicksand', sans-serif"}
+                >
                   Ticker *
                 </Typography>
                 <Typography color={colorLibrary.text}>10</Typography>
@@ -177,6 +187,7 @@ export default function LunchMemeForm() {
                 letterSpacing={"0.1rem"}
                 variant="caption"
                 color={colorLibrary.title}
+                fontFamily={"'Quicksand', sans-serif"}
               >
                 Description *
               </Typography>
@@ -207,6 +218,7 @@ export default function LunchMemeForm() {
                 letterSpacing={"0.1rem"}
                 variant="caption"
                 color={colorLibrary.title}
+                fontFamily={"'Quicksand', sans-serif"}
               >
                 Category *
               </Typography>
@@ -230,6 +242,7 @@ export default function LunchMemeForm() {
           marginTop: "0.5rem",
           color: colorLibrary.title,
           borderRadius: "0.5rem",
+          fontFamily: "'Quicksand', sans-serif",
         }}
       >
         Continue

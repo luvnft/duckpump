@@ -34,6 +34,7 @@ export default function MemeCoinINCT({
           color={colorLibrary.title}
           fontWeight={500}
           sx={{ letterSpacing: showSymbol ? 0 : "0.1rem" }}
+          fontFamily={"'Quicksand', sans-serif"}
         >
           {tokenName} {showSymbol ? `/$${symbol}` : ""}
         </Typography>

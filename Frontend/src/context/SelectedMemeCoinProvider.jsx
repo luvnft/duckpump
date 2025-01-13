@@ -22,7 +22,6 @@ function SelectedMemeCoinProvider({ children }) {
   //*users comments control
   const { comments } = selectedMemeCoinData || [];
   const [allComments, setAllComments] = useState([]);
-  const [scrollToLastComment, setScrollToLastComment] = useState(false);
 
   useEffect(() => {
     setSelectedMemeCoinData(
@@ -45,7 +44,6 @@ function SelectedMemeCoinProvider({ children }) {
         comment,
       },
     ]);
-    setScrollToLastComment(true);
   }
 
   return (
@@ -53,7 +51,9 @@ function SelectedMemeCoinProvider({ children }) {
       value={{
         selectedMemeCoinId,
         setSelectedMemeCoinId,
+
         selectedMemeCoinData,
+        setSelectedMemeCoinData,
 
         mcapResults,
 
@@ -68,8 +68,6 @@ function SelectedMemeCoinProvider({ children }) {
         comments,
         allComments,
         handleUserAddedComment,
-        scrollToLastComment,
-        setScrollToLastComment,
       }}
     >
       {children}

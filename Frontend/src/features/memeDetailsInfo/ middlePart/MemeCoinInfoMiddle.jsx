@@ -9,9 +9,6 @@ import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinPro
 import InfoCreator from "./InfoCreator";
 
 export default function MemeCoinInfoMiddle() {
-  const { selectedMemeCoinData } = useSelectedMemeCoinContext();
-  console.log(selectedMemeCoinData);
-
   return (
     <Box
       bgcolor={colorLibrary.boxBg}
@@ -25,7 +22,13 @@ export default function MemeCoinInfoMiddle() {
         bgcolor={colorLibrary.boxBg}
         padding={"0.5rem 0.6rem"}
       >
-        <Typography color={colorLibrary.title}>Token Information</Typography>
+        <Typography
+          color={colorLibrary.title}
+          fontFamily={"'Quicksand', sans-serif"}
+          fontWeight={500}
+        >
+          Token Information
+        </Typography>
       </Box>
 
       <Box

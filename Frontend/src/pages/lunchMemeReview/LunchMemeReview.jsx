@@ -17,8 +17,12 @@ export default function LunchMemeReview() {
       <LunchMemeReviewHeader />
 
       {/* //*body */}
-      <Box display={"flex"} alignItems={"center"} gap={"1rem"} px={2}>
-        <Typography color={colorLibrary.title} fontWeight={300}>
+      <Box display={"flex"} alignItems={"center"} gap={"1rem"} px={1}>
+        <Typography
+          color={colorLibrary.title}
+          fontWeight={400}
+          fontFamily={"'Quicksand', sans-serif"}
+        >
           YOU ARE JUST A STEP AWAY FROM MAKING HISTORY
         </Typography>
         <Box

@@ -40,8 +40,9 @@ export default function AskAiAbout() {
         borderRadius: "0.5rem",
         fontSize: "0.8rem",
         letterSpacing: "0.1rem",
-        fontWeight: 400,
+        fontWeight: 600,
         textTransform: "capitalize",
+        fontFamily: "'Quicksand', sans-serif",
       }}
       content={conversation}
       type={"ai"}

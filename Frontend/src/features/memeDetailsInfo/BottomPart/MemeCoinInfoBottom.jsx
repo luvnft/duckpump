@@ -30,7 +30,13 @@ export default function MemeCoinInfoBottom() {
           zIndex: 1,
         }}
       >
-        <Typography color={colorLibrary.title}>Holders</Typography>
+        <Typography
+          color={colorLibrary.title}
+          fontFamily={"'Quicksand', sans-serif"}
+          fontWeight={500}
+        >
+          Holders
+        </Typography>
       </Box>
 
       <Box
@@ -46,11 +52,7 @@ export default function MemeCoinInfoBottom() {
         }}
       >
         {selectedMemeCoinData?.holdersDetails?.map((holder, i) => (
-          <HoldersComponent
-            key={i}
-            holder={holder}
-            // symbol={selectedMemeCoinData.symbol}
-          />
+          <HoldersComponent key={i} holder={holder} />
         ))}
       </Box>
     </Box>

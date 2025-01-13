@@ -27,12 +27,23 @@ export default function LunchMemeReviewTable() {
         <Box display={"flex"} alignItems={"center"} gap={"0.5rem"}>
           <Avatar src="/duck5.webp" sx={{ height: "4rem", width: "4rem" }} />
           <Box>
-            <Typography color={colorLibrary.title}>NAME</Typography>
+            <Typography
+              color={colorLibrary.title}
+              fontFamily={"'Quicksand', sans-serif"}
+              fontWeight={700}
+            >
+              NAME
+            </Typography>
             <Typography color={colorLibrary.text}>TICKER</Typography>
           </Box>
         </Box>
         <Box>
-          <Typography color={colorLibrary.title} letterSpacing={0.4}>
+          <Typography
+            color={colorLibrary.title}
+            letterSpacing={0.4}
+            fontFamily={"'Quicksand', sans-serif"}
+            fontWeight={700}
+          >
             {data?.name || "DuckiCoin"}
           </Typography>
           <Typography color={colorLibrary.text} textAlign={"right"}>
@@ -55,9 +66,10 @@ export default function LunchMemeReviewTable() {
             <Box display={"flex"} justifyContent={"space-between"}>
               <Typography
                 color={colorLibrary.title}
-                fontWeight={300}
+                fontWeight={600}
                 letterSpacing={1}
                 variant="body2"
+                fontFamily={"'Quicksand', sans-serif"}
               >
                 {item.title}
               </Typography>
@@ -87,6 +99,7 @@ export default function LunchMemeReviewTable() {
           marginTop: "0.5rem",
           color: colorLibrary.title,
           borderRadius: "0.5rem",
+          fontFamily: "'Quicksand', sans-serif",
         }}
       >
         Create token
