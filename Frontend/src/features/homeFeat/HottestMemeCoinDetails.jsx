@@ -73,7 +73,7 @@ export default function HottestMemeCoinDetails() {
                   component="img"
                   src={hottestDuck}
                   width={"100%"}
-                  height={"auto"}
+                  alt="'duck img"
                 />
               </Box>
             </Box>
