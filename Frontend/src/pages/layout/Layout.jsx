@@ -2,7 +2,6 @@ import { Outlet } from "react-router-dom";
 import { Box } from "@mui/material";
 
 import { colorLibrary } from "../../color-library";
-import DuckLoading from "../../ui/DuckLoading";
 
 const Layout = () => {
   return (

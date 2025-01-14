@@ -1,69 +1,32 @@
-import { Box, Divider, Typography } from "@mui/material";
+import { Divider } from "@mui/material";
 import React from "react";
 
 import { colorLibrary } from "../../../color-library";
 import { useSelectedMemeCoinContext } from "../../../context/SelectedMemeCoinProvider";
 import TransactionItem from "./TransactionItem";
+import ActionsList from "../../../ui/tokenDetails/ActionsList";
 
 export default function Transactions() {
-  const { selectedMemeCoinData } = useSelectedMemeCoinContext();
-  const { buyers, symbol } = selectedMemeCoinData || {};
+  const { selectedMemeCoinData: { traders, symbol } = {} } =
+    useSelectedMemeCoinContext();
   return (
-    <Box bgcolor={colorLibrary.boxBg} borderRadius={"1rem"} overflow={"hidden"}>
-      {/* //*header */}
-      <Box
-        display={"flex"}
-        bgcolor={colorLibrary.boxBg}
-        padding={"0rem 0.6rem "}
-      >
-        <Typography
-          variant={"caption"}
-          color={colorLibrary.title}
-          sx={{ opacity: 0.8, paddingTop: 1.1 }}
-        >
-          Transaction
-        </Typography>
-      </Box>
-
-      {/* //*transaction list  */}
-
-      <Box
-        component={"ul"}
-        display={"flex"}
-        flexDirection={"column"}
-        alignItems={"center"}
-        gap={1}
-        overflow={"auto"}
-        bgcolor={colorLibrary.boxBgLighter}
-        borderRadius={"1rem"}
-        padding={"0.8rem 0.6rem 1.4rem"}
-        marginBottom={"4rem"}
-      >
-        {buyers?.map((buyer, index) => (
-          <React.Fragment key={buyer.telegramId}>
-            <TransactionItem
-              traderImg={buyer.img}
-              traderName={buyer.telegramId}
-              traderWallet={buyer.walletAddress}
-              tradType={buyer.tradType}
-              timeStamp={buyer.ts}
-              amount={buyer.amount}
-              tokenAmount={buyer.tokenAmount}
-              tokenSymbol={symbol}
+    // *transaction list
+    <ActionsList title={"Transaction"}>
+      {traders?.map((trader, index) => (
+        <React.Fragment key={trader.telegramId}>
+          <TransactionItem trader={trader} tokenSymbol={symbol} />
+          {index < traders?.length - 1 && (
+            <Divider
+              variant="middle"
+              sx={{
+                borderColor: colorLibrary.bgLight3,
+                width: "80%",
+                marginLeft: "25%",
+              }}
             />
-            {index < buyers?.length - 1 && (
-              <Divider
-                variant="middle"
-                sx={{
-                  borderColor: colorLibrary.bgLight3,
-                  width: "80%",
-                  marginLeft: "25%",
-                }}
-              />
-            )}
-          </React.Fragment>
-        ))}
-      </Box>
-    </Box>
+          )}
+        </React.Fragment>
+      ))}
+    </ActionsList>
   );
 }

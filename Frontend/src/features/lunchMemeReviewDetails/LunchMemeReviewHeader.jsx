@@ -44,10 +44,11 @@ export default function LunchMemeReviewHeader() {
         </Typography>
         <Box fontFamily={"'Quicksand', sans-serif"}>
           <TextField
-            type="number"
+            inputMode="numeric"
             defaultValue={inputValue}
             autoFocus
             onChange={(event) => setInputValue(event.target.value)}
+            slotProps={{ htmlInput: { maxLength: 3 } }}
             InputProps={{
               endAdornment: (
                 <InputAdornment>

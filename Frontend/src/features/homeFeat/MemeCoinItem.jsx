@@ -1,18 +1,14 @@
 import React from "react";
-import { colorLibrary } from "../../color-library";
-import MemeCoinIMHT from "../../ui/MemeCoinIMHT";
-import MemeCoinINCT from "../../ui/MemeCoinINCT";
-import {
-  Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  Typography,
-} from "@mui/material";
+
+import { Box, Card, CardActionArea, CardContent } from "@mui/material";
 import MemeCoinLinearProgress from "../../ui/MemeCoinLinearProgress";
 import { calcBondingCurve } from "../../utils/helpers";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
+
+import { colorLibrary } from "../../color-library";
+import MemeCoinIMHT from "../../ui/MemeCoinIMHT";
+import MemeCoinINCT from "../../ui/MemeCoinINCT";
 
 const memeCoinDetails = {
   mcap: "11,11",
@@ -39,10 +35,10 @@ export default function MemeCoinItem({
 
   return (
     <Card
-      component={motion.div}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      component={motion.li}
+      initial={{ opacity: 0, scaleX: 0.8 }}
+      whileInView={{ opacity: 1, scaleX: 1 }}
+      viewport={{ once: true, amount: 0.8 }}
       sx={{
         bgcolor: colorLibrary.boxBgLighter,
         marginBottom: 2,

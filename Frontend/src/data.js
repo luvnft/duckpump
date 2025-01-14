@@ -391,7 +391,7 @@ export const data = [
     volume: 1200,
 
     price: 0.052,
-    buyers: [
+    traders: [
       {
         ts: new Date().toString(),
         walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",
@@ -493,7 +493,6 @@ export const data = [
     logo: "/quackyCoin.webp",
     tokenAddress: "EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS",
     mcap: 4150,
-    isHot: true,
 
     holders: 160,
     holdersDetails: [
@@ -875,7 +874,7 @@ export const data = [
     volume: 1200,
 
     price: 0.012,
-    buyers: [
+    traders: [
       {
         ts: new Date().toString(),
         walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",
@@ -1359,7 +1358,7 @@ export const data = [
     volume: 800,
 
     price: 0.00012,
-    buyers: [
+    traders: [
       {
         ts: new Date().toString(),
         walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",
@@ -1843,7 +1842,7 @@ export const data = [
     volume: 800,
 
     price: 0.00012,
-    buyers: [
+    traders: [
       {
         ts: new Date().toString(),
         walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",
@@ -2317,7 +2316,7 @@ export const data = [
     volume: 800,
 
     price: 0.00000125,
-    buyers: [
+    traders: [
       {
         ts: new Date().toString(),
         walletAddress: "UQDdKWfGpaaY6x7yhkJNDSvQSaHDEuyVVlLMbi6oWM2iba1z",

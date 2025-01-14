@@ -18,10 +18,12 @@ const LunchMemeCoin = lazy(() => import("./pages/lunchMemeCoin/LunchMemeCoin"));
 const LunchMemeReview = lazy(() =>
   import("./pages/lunchMemeReview/LunchMemeReview")
 );
+const ScrollToTop = lazy(() => import("./ScrollToTop"));
 
 export default function DuckRoutes() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

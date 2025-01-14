@@ -1,22 +1,28 @@
-import MemeCoinInfoTop from "./topPart/MemeCoinInfoTop";
-import MemeCoinInfoMiddle from "./ middlePart/MemeCoinInfoMiddle";
-import MemeCoinInfoBottom from "./BottomPart/MemeCoinInfoBottom";
+import { lazy, Suspense } from "react";
+import DuckLoading from "../../ui/DuckLoading";
+
+const MemeCoinInfoTop = lazy(() => import("./topPart/MemeCoinInfoTop"));
+const MemeCoinInfoMiddle = lazy(() =>
+  import("./ middlePart/MemeCoinInfoMiddle")
+);
+const MemeCoinInfoBottom = lazy(() =>
+  import("./BottomPart/MemeCoinInfoBottom")
+);
+const SwapBtns = lazy(() => import("../MemeDetailsTrade/SwapBtns"));
 
 export default function MemeCoinInfo() {
   return (
-    <>
+    <Suspense fallback={<DuckLoading />}>
       {/* //* TOP PART */}
-      <MemeCoinInfoTop
-      // tokenName={tokenName}
-      // symbol={symbol}
-      // progressValue={progressValue}
-      />
+      <MemeCoinInfoTop />
 
       {/* //* MIDDLE PART */}
       <MemeCoinInfoMiddle />
 
       {/* //*Third PART */}
       <MemeCoinInfoBottom />
-    </>
+
+      <SwapBtns />
+    </Suspense>
   );
 }

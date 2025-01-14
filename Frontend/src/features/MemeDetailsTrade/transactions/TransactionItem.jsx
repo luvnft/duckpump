@@ -1,40 +1,25 @@
 import React from "react";
 import { Box } from "@mui/material";
-
-import TraderINWTT from "./TraderINWTT";
-import TradedAmount from "./TradedAmount";
 import { motion } from "motion/react";
 
+import TradedAmount from "./TradedAmount";
+import ActionItemLeftSide from "../../../ui/tokenDetails/ActionItemLeftSide";
+import CustomMotionLi from "../../../ui/tokenDetails/CustomMotionLi";
+
 export default function TransactionItem({
-  traderImg,
-  traderName,
-  traderWallet,
-  tradType,
-  timeStamp,
-  amount,
+  trader: { img, telegramId, walletAddress, tradType, ts, amount },
   tokenAmount,
   tokenSymbol,
 }) {
   return (
-    <Box
-      component={motion.li}
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      display={"flex"}
-      justifyContent={"space-between"}
-      alignItems={"center"}
-      gap={1}
-      my={"0.2rem"}
-      width={"100%"}
-    >
+    <CustomMotionLi>
       {/* // * left side : trader img ,name , wallet , trade type , trade time */}
-      <TraderINWTT
-        traderImg={traderImg}
-        traderName={traderName}
-        traderWallet={traderWallet}
+      <ActionItemLeftSide
+        Img={img}
+        Name={telegramId}
+        Wallet={walletAddress}
         tradType={tradType}
-        timeStamp={timeStamp}
+        timeStamp={ts}
       />
       {/* //*right side : traded amount , token amount */}
       <TradedAmount
@@ -42,6 +27,6 @@ export default function TransactionItem({
         tokenAmount={tokenAmount}
         tokenSymbol={tokenSymbol}
       />
-    </Box>
+    </CustomMotionLi>
   );
 }

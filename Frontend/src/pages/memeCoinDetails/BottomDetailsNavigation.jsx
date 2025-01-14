@@ -8,11 +8,13 @@ import {
   TextsmsRounded,
 } from "@mui/icons-material";
 import { colorLibrary } from "../../color-library";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { Snackbar } from "@mui/material";
 
 export default function BottomDetailsNavigation() {
-  const [value, setValue] = useState("trade");
+  const [value, setValue] = useState(
+    location.pathname.split("/").filter(Boolean).pop()
+  );
   const [state, setState] = useState({
     open: false,
     vertical: "bottom",
