@@ -38,7 +38,7 @@ export default function MemeCoinItem({
       component={motion.li}
       initial={{ opacity: 0, scaleX: 0.8 }}
       whileInView={{ opacity: 1, scaleX: 1 }}
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 0.4 }}
       sx={{
         bgcolor: colorLibrary.boxBgLighter,
         marginBottom: 2,
