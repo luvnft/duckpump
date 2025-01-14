@@ -1,4 +1,5 @@
-import React, { lazy } from "react";
+import React, { lazy, Suspense } from "react";
+import DuckLoading from "../../ui/DuckLoading";
 
 const MemeCoinDetailsHeader = lazy(() =>
   import("./header/MemeCoinDetailsHeader")
@@ -13,7 +14,7 @@ const AskAiAbout = lazy(() => import("./askAI/AskAiAbout"));
 
 export default function MemeCoinTrade() {
   return (
-    <>
+    <Suspense fallback={<DuckLoading />}>
       {/* //*header (current meme coin card) */}
       <MemeCoinDetailsHeader />
       {/* //* (Meme coin chart) */}
@@ -39,6 +40,6 @@ export default function MemeCoinTrade() {
       {/* //!----------------------------------------------------------------------- */}
       {/* //*swap btns */}
       <SwapBtns />
-    </>
+    </Suspense>
   );
 }

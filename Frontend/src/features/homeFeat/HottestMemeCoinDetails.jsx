@@ -11,6 +11,7 @@ import {
 import { useHomeContext } from "../../context/HomePageProvider";
 import { colorLibrary } from "../../color-library";
 import MemeCoinIMHT from "../../ui/MemeCoinIMHT";
+import hottestDuck from "/hottestDuck.webp";
 
 export default function HottestMemeCoinDetails() {
   const { allMemeCoin } = useHomeContext();
@@ -70,10 +71,9 @@ export default function HottestMemeCoinDetails() {
               <Box width={"70%"}>
                 <Box
                   component="img"
-                  src="/hottestDuck.webp"
+                  src={hottestDuck}
                   width={"100%"}
                   height={"auto"}
-                  loading="lazy"
                 />
               </Box>
             </Box>

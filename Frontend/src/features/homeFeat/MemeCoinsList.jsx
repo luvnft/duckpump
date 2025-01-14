@@ -13,7 +13,7 @@ export default function MemeCoinsList() {
       sx={{
         listStyle: "none",
         margin: 0,
-        overflow: "auto",
+        overflowY: "scroll",
         padding: "0 0.1rem 0.1rem 0.1rem",
       }}
     >
