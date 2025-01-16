@@ -21,7 +21,7 @@ export default function HomeLoading() {
         fontFamily={"'Quicksand', sans-serif"}
         color={colorLibrary.title}
       >
-        DuckPump
+        🅰️Duck
       </Typography>
 
       <BigTextSkeleton bgColor={colorLibrary.bgLight1} />

@@ -15,7 +15,7 @@ export const UserDetailsProvider = ({ children }) => {
       if (buttonRoot) {
         connector = new OKXTonConnectUI({
           dappMetaData: {
-            name: "DuckPump",
+            name: "ADuck",
             icon: "/logo.webp",
           },
           actionsConfiguration: {

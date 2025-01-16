@@ -1,6 +1,6 @@
-# DuckPump: The Next-Gen Meme Coin Launchpad on Telegram
+# ADuck: The Next-Gen Meme Coin Launchpad on Telegram
 
-DuckPump is a revolutionary meme coin launchpad built directly into Telegram, designed to simplify the creation, trading, and discovery of meme coins for everyone, especially those new to Web3. We leverage AI agents, advanced analytics, and a powerful tradebot to provide a seamless and user-friendly experience.
+🅰️Duck is a revolutionary meme coin launchpad built directly into Telegram, designed to simplify the creation, trading, and discovery of meme coins for everyone, especially those new to Web3. We leverage AI agents, advanced analytics, and a powerful tradebot to provide a seamless and user-friendly experience.
 
 ## Key Features
 
@@ -14,4 +14,4 @@ DuckPump is a revolutionary meme coin launchpad built directly into Telegram, de
 
 ## Open Source
 
-The DuckPump frontend is open source and available for review and contribution. The backend will be open-sourced upon completion.😊
+The 🅰️Duck frontend is open source and available for review and contribution. The backend will be open-sourced upon completion.😊

@@ -6,16 +6,16 @@ import BackBtn from "../../ui/BackBtn";
 
 const steps = [
   {
-    step: "Craft Your Coin",
-    desc: "Give your memecoin a unique identity. This is where you define the core characteristics of your memecoin.",
+    step: "Craft Your 🅰️D",
+    desc: "Give your memecoin Biz 🅰️D a unique identity. This is where you define the core characteristics of your biz.",
   },
   {
     step: "Build Your Flock",
-    desc: "Create a Telegram group and other social media channels to build your community. ",
+    desc: "Create a LUV NFT FUN group and other social media channels to build your tribe. ",
   },
   {
     step: "Take Flight",
-    desc: "Review your settings and launch your token onto the Duckpump. Watch your community grow as users discover and trade your creation.",
+    desc: "Review your settings and launch your 🅰️D onto the ADuck. Watch your tribe grow as users discover and trade your creation.",
   },
 ];
 

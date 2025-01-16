@@ -11,7 +11,7 @@ export default function Header() {
       alignItems={"center"}
     >
       <Typography variant="h6" fontFamily={"'Quicksand', sans-serif"}>
-        DuckPump
+      🅰️Duck
       </Typography>
 
       <div id="connect-wallet"></div>

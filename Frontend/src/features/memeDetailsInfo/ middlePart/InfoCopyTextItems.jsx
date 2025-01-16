@@ -13,7 +13,7 @@ export default function InfoCopyTextItems() {
   const handleCopy = () => {
     const textToCopy =
       selectedMemeCoinData?.tokenAddress ||
-      "EQCvxJy4eG8hyHBFsZ7eePxrRsUQSFE_jpptRAYBmcG_DOGS"; // The text to copy
+      "7iNzESXq8Ln3wyww5hgLM1G2NKKkmzczk1bv2tARpump"; // The text to copy
     navigator.clipboard.writeText(textToCopy).then(() => {
       setOpen(true); // Show notification
     });
@@ -151,7 +151,7 @@ export default function InfoCopyTextItems() {
                 }}
                 color={colorLibrary.text}
               >
-                {"https://t.me/DuckChainAnn"}
+                {"https://t.me/luvnftv"}
               </Typography>
               <ContentCopyRounded />
             </Button>
